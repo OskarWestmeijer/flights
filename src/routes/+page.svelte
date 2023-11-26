@@ -1,16 +1,20 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import './styles.css';
-  
+
 	onMount(async () => {
 		const Globe = await import('globe.gl');
-		const N = 300;
-		const gData = [...Array(N).keys()].map(() => ({
-			lat: (Math.random() - 0.5) * 180,
-			lng: (Math.random() - 0.5) * 360,
-			size: Math.random() / 3,
-			color: ['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)]
-		}));
+
+		// connect hamburg with helsinki
+		const gData: object[] = [
+			[
+				// Coordinates for Hamburg (ham)
+				[53.551086, 9.993682, 0],
+				// Coordinates for Helsinki (hel)
+				[60.192059, 24.945831, 0]
+			]
+		];
+		console.log(gData);
 
 		const globeElement = document.getElementById('helloWorld') as HTMLElement;
 
@@ -22,10 +26,21 @@
 			.globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
 			//.pointsData(gData)
 			.backgroundImageUrl('https://unpkg.com/three-globe/example/img/night-sky.png')
+			.bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
+			.pointOfView({lat: 53.551086, lng: 9.993682, altitude: 1},1)
 			.pointAltitude('size')
-			.atmosphereColor('lightskyblue')
-			.atmosphereAltitude(.15)
-			.pointColor('color')(globeElement);
+			.pathsData(gData)
+			.pathStroke(10)
+			.pathColor(() => ['rgba(0,0,255,0.6)', 'rgba(255,0,0,0.6)'])
+			.pathDashLength(0.01)
+			.pathDashGap(0.004)
+			.pathDashAnimateTime(100000)(globeElement);
+
+		setTimeout(() => {
+			Globe.default()
+				.pathPointAlt((pnt) => pnt[2]) // set altitude accessor
+				.pathTransitionDuration(4000);
+		}, 6000);
 	});
 </script>
 
