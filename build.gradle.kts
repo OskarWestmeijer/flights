@@ -8,8 +8,8 @@ plugins {
     kotlin("plugin.serialization") version "1.9.21"
 }
 
-group = "com.oskar-westmeijer"
-version = "0.0.1"
+group = "westmeijer.oskar"
+version = "1.0.0"
 
 application {
     mainClass.set("westmeijer.oskar.ApplicationKt")
