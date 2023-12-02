@@ -3,6 +3,9 @@
 	import { getDistance, convertDistance } from 'geolib';
 	import './styles.css';
 	import type { GeolibInputCoordinates } from 'geolib/es/types';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 
 	onMount(async () => {
 		const Globe = await import('globe.gl');
@@ -10,61 +13,32 @@
 		// belgrade
 		const MAP_CENTER = { lat: 44.787197, lng: 20.457273, altitude: 1.25 };
 
-		const ham: GeolibInputCoordinates = { latitude: 51.5103, longitude: 7.49347 };
-		const hel: GeolibInputCoordinates = { latitude: 60.192059, longitude: 24.945831 };
+		const from: GeolibInputCoordinates = {
+			latitude: data.routes.from.latitude,
+			longitude: data.routes.from.longitude
+		};
+		const to: GeolibInputCoordinates = {
+			latitude: data.routes.to.latitude,
+			longitude: data.routes.to.longitude
+		};
 
-		// Distance = Speed × Time
-		const distM: number = getDistance(ham, hel);
-		const distKm: number = Math.floor(convertDistance(distM, 'km'));
+		const distKm: number = Math.floor(convertDistance(getDistance(from, to), 'km'));
 
-		const planeSpeedKmH = 840;
-		const planeSpeedKmMs = planeSpeedKmH / 3.6e6;
-
-		const flightDurationHours = distKm / planeSpeedKmH;
-		const flightDurationMs = flightDurationHours * 60 * 60 * 1000;
-
-		// Remaining Distance = Total Distance - (Speed of Airplane * Time Left)
-		const oneHourMs = 60 * 60 * 1000;
-		const arrivalTimeMs = Date.now() + oneHourMs + oneHourMs;
-		const currentTimeMs = Date.now();
-		const tackeOffTimeMs = arrivalTimeMs - flightDurationMs;
-
-		if (arrivalTimeMs < currentTimeMs) {
-			console.log('Plane has arrived');
-		} else if (currentTimeMs < tackeOffTimeMs) {
-			console.log('Plane still waiting for take off');
-		} else {
-			console.log('Plane in flight.');
-			const remainingDistKm: number = calculateRemainingDistance();
-			console.log('remainingDistKm: ' + remainingDistKm);
-		}
-
-		function calculateRemainingDistance() {
-			const timeTillArrival = arrivalTimeMs - currentTimeMs;
-			return distKm - planeSpeedKmMs * timeTillArrival;
-		}
-
-		// connect hamburg with helsinki
-		const pathData: object[] = [
-			[
-				// Coordinates for Hamburg (ham)
-				[53.551086, 9.993682, 0],
-				// Coordinates for Helsinki (hel)
-				[60.192059, 24.945831, 0]
-			]
-		];
-
+		data.routes.from.aiportCode;
 		const arcsData: object[] = [
 			{
-				startName: 'HAM',
-				startLat: 53.551086,
-				startLng: 9.993682,
-				endName: 'HEL',
-				endLat: 60.192059,
-				endLng: 24.945831,
-				color: ['red', 'blue']
+				startName: data.routes.from.aiportCode,
+				startLat: data.routes.from.latitude,
+				startLng: data.routes.from.longitude,
+				endName: data.routes.to.aiportCode,
+				endLat: data.routes.to.latitude,
+				endLng: data.routes.to.longitude,
+				color: ['green', 'green'],
+				distance: distKm
 			}
 		];
+
+		console.log(arcsData);
 
 		const globeElement = document.getElementById('helloWorld') as HTMLElement;
 
@@ -77,12 +51,12 @@
 			.arcsData(arcsData)
 			.arcStroke(0.5)
 			.arcColor('color')
-			// TODO: you know the plane location. display it on the arc.
-			.arcDashLength(0.5)
+			.arcDashLength(1)
 			.arcDashGap(0.35)
-			.arcLabel((arc) => `${arc.startName} - ${arc.endName} ` + distKm + ' km')
+			.arcLabel((arc) => `${arc.startName} - ${arc.endName} ${arc.distance} ` + ' km')(
 			//.arcDashAnimateTime(2000)
-			(globeElement);
+			globeElement
+		);
 	});
 </script>
 
