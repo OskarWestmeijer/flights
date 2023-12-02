@@ -8,7 +8,7 @@
 	export let data: PageData;
 
 	// map response in required globe arcs format
-	const arcsData: object[] = data.routes.map((route: any) => {
+	const arcsData: object[] = data.flightRoutes.map((route: any) => {
 		const from: GeolibInputCoordinates = {
 			latitude: route.from.latitude,
 			longitude: route.from.longitude
@@ -20,10 +20,10 @@
 
 		const distKm: number = Math.floor(convertDistance(getDistance(from, to), 'km'));
 		return {
-			startName: route.from.aiportCode,
+			startName: route.from.airportCode,
 			startLat: route.from.latitude,
 			startLng: route.from.longitude,
-			endName: route.to.aiportCode,
+			endName: route.to.airportCode,
 			endLat: route.to.latitude,
 			endLng: route.to.longitude,
 			color: ['green', 'green'],

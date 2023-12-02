@@ -3,9 +3,12 @@ package westmeijer.oskar.routes
 import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
-import westmeijer.oskar.models.Airport
+import io.ktor.util.logging.*
 import westmeijer.oskar.models.FlightRoute
 import westmeijer.oskar.models.FlightRouteResponse
+import westmeijer.oskar.services.AirportService
+
+internal val log = KtorSimpleLogger("westmeijer.oskar.routes.FlightRoutes")
 
 fun Application.registerFlightRoutes() {
     routing {
@@ -15,11 +18,14 @@ fun Application.registerFlightRoutes() {
 
 
 fun Route.getFlightRoutes() {
-    get("/routes") {
-        val hel = Airport("HEL", "60.192059", "24.945831")
-        val ham = Airport("HAM", "51.5103", "7.49347")
+    get("/flight-routes") {
+        val hel = AirportService.getAirport("HEL")
+        val ham = AirportService.getAirport("HAM")
+
         val flightRoute = FlightRoute(1, hel, ham)
         val flightRouteResponse = FlightRouteResponse(listOf(flightRoute))
+
+        log.info(flightRouteResponse.toString())
 
         call.respond(flightRouteResponse)
     }
