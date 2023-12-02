@@ -7,38 +7,35 @@
 
 	export let data: PageData;
 
+	// map response in required globe arcs format
+	const arcsData: object[] = data.routes.map((route: any) => {
+		const from: GeolibInputCoordinates = {
+			latitude: route.from.latitude,
+			longitude: route.from.longitude
+		};
+		const to: GeolibInputCoordinates = {
+			latitude: route.to.latitude,
+			longitude: route.to.longitude
+		};
+
+		const distKm: number = Math.floor(convertDistance(getDistance(from, to), 'km'));
+		return {
+			startName: route.from.aiportCode,
+			startLat: route.from.latitude,
+			startLng: route.from.longitude,
+			endName: route.to.aiportCode,
+			endLat: route.to.latitude,
+			endLng: route.to.longitude,
+			color: ['green', 'green'],
+			distance: distKm
+		};
+	});
+
 	onMount(async () => {
 		const Globe = await import('globe.gl');
 
 		// belgrade
 		const MAP_CENTER = { lat: 44.787197, lng: 20.457273, altitude: 1.25 };
-
-		const from: GeolibInputCoordinates = {
-			latitude: data.routes.from.latitude,
-			longitude: data.routes.from.longitude
-		};
-		const to: GeolibInputCoordinates = {
-			latitude: data.routes.to.latitude,
-			longitude: data.routes.to.longitude
-		};
-
-		const distKm: number = Math.floor(convertDistance(getDistance(from, to), 'km'));
-
-		data.routes.from.aiportCode;
-		const arcsData: object[] = [
-			{
-				startName: data.routes.from.aiportCode,
-				startLat: data.routes.from.latitude,
-				startLng: data.routes.from.longitude,
-				endName: data.routes.to.aiportCode,
-				endLat: data.routes.to.latitude,
-				endLng: data.routes.to.longitude,
-				color: ['green', 'green'],
-				distance: distKm
-			}
-		];
-
-		console.log(arcsData);
 
 		const globeElement = document.getElementById('helloWorld') as HTMLElement;
 

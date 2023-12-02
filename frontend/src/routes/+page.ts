@@ -1,6 +1,14 @@
 import type { PageLoad } from './$types';
 
-export const load: PageLoad = ({ params }) => {
+export const load: PageLoad = async ({ fetch }) => {
+	const res = await fetch('http://localhost:8080/routes');
+	const data = await res.json();
+
+	/*
+	data.routes.map();
+	console.log(data.routes[0].id);
+	console.log('fetched routes: ' + JSON.stringify(data));
+
 	return {
 		routes: {
 			id: 1,
@@ -16,4 +24,6 @@ export const load: PageLoad = ({ params }) => {
 			}
 		}
 	};
+    */
+	return data;
 };
