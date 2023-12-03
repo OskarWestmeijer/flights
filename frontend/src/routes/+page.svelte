@@ -4,6 +4,7 @@
 	import './styles.css';
 	import type { GeolibInputCoordinates } from 'geolib/es/types';
 	import type { PageData } from './$types';
+	import type { GlobeInstance } from 'globe.gl';
 
 	export let data: PageData;
 
@@ -27,8 +28,13 @@
 			endLat: route.to.latitude,
 			endLng: route.to.longitude,
 			color: ['green', 'green'],
-			distance: distKm
+			distance: distKm,
+			name: route.to.airportCode
 		};
+	});
+
+	const labelsData: object[] = arcsData.map((arc) => {
+		return { lat: arc.endLat, lng: arc.endLng, name: arc.endName };
 	});
 
 	onMount(async () => {
@@ -39,7 +45,7 @@
 
 		const globeElement = document.getElementById('helloWorld') as HTMLElement;
 
-		Globe.default()
+		const instance: GlobeInstance = Globe.default()
 			//.globeImageUrl('BlackMarble_2016_3km.jpg')
 			.globeImageUrl('earth-night.jpg')
 			.backgroundImageUrl('https://unpkg.com/three-globe/example/img/night-sky.png')
@@ -50,12 +56,21 @@
 			.arcDashLength(1)
 			.arcDashGap(0.8)
 			.arcDashInitialGap(() => Math.random())
-			.arcDashAnimateTime(4000)
-			.arcColor((d) => [`rgba(0, 255, 0, 0.4)`, `rgba(255, 0, 0, 0.4)`])
+			.arcColor((d) => [`rgba(0, 255, 0, 0.35)`, `rgba(255, 0, 0, 0.4)`])
 			.arcsTransitionDuration(0)
-			.arcLabel((arc) => `${arc.startName} - ${arc.endName} ${arc.distance} ` + ' km')(
-			globeElement
-		);
+			.arcDashAnimateTime(4000)
+			.arcLabel((arc) => `${arc.startName} - ${arc.endName} ${arc.distance} ` + ' km')
+			// city labels
+			.labelsData(labelsData)
+			.labelLat('lat')
+			.labelLng('lng')
+			.labelText('name')
+			.labelSize(0.5)
+			.labelDotRadius(0.2)
+			.labelColor(() => 'rgba(255, 165, 0, 0.75)')
+			.labelResolution(2);
+
+		instance(globeElement).onArcHover((hover) => console.log('hovering over ' + hover));
 	});
 </script>
 
