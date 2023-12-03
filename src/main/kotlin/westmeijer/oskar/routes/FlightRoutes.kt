@@ -9,6 +9,7 @@ import westmeijer.oskar.services.FlightRoutesService
 
 internal val log = KtorSimpleLogger("westmeijer.oskar.routes.FlightRoutes")
 
+
 fun Application.registerFlightRoutes() {
     routing {
         getFlightRoutes()
@@ -18,11 +19,8 @@ fun Application.registerFlightRoutes() {
 
 fun Route.getFlightRoutes() {
     get("/flight-routes") {
-
         val flightRoutes = FlightRoutesService.getFlightRoutes()
         val flightRouteResponse = FlightRouteResponse(flightRoutes)
-        log.info(flightRouteResponse.toString())
-
         call.respond(flightRouteResponse)
     }
 }

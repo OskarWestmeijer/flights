@@ -1,5 +1,6 @@
 package westmeijer.oskar.services
 
+import io.ktor.util.logging.*
 import org.apache.commons.csv.CSVFormat
 import westmeijer.oskar.models.Airport
 import java.nio.file.Files
@@ -8,17 +9,29 @@ import java.nio.file.Paths
 
 object AirportService {
 
-    private var airportMap: Map<String, Airport> = emptyMap()
+    private val log = KtorSimpleLogger("westmeijer.oskar.services.AirportService")
 
-    fun getAirport(airportCode: String): Airport {
+    private val airportMap: Map<String, Airport>
+
+    init {
+        airportMap = readCsv()
+        log.info("Init AirportMap entries with count: ${airportMap.size}")
+    }
+
+    fun getAirport(airportCode: String): Airport? {
         if (airportMap.isEmpty()) {
-            airportMap = readCsv()
+            throw RuntimeException("Airport map is empty!")
         }
 
-        return airportMap[airportCode]!!
+        val airport = airportMap[airportCode]
+        if (airport == null) {
+            log.warn("No mapping for airportCode: $airportCode");
+        }
+        return airport
     }
 
     private fun readCsv(): Map<String, Airport> {
+        log.info("entered csv reading")
         val uri = ClassLoader.getSystemResource("airports.csv").toURI()
         val inStream = Files.newInputStream(Paths.get(uri))
 

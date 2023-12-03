@@ -10,25 +10,32 @@ import io.ktor.server.plugins.cors.routing.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import westmeijer.oskar.routes.registerFlightRoutes
+import westmeijer.oskar.services.AirportService
 
 fun main() {
     embeddedServer(Netty, port = 8080, host = "0.0.0.0", module = Application::module).start(wait = true)
 }
 
 fun Application.module() {
+
     val config = ApplicationConfig("application.yaml")
     Secrets.apiKey = config.propertyOrNull("api.key")!!.getString()
     Secrets.baseUrl = config.propertyOrNull("api.url")!!.getString()
 
     configureServerSerialization()
+
     install(CORS) {
         allowHost("*")
         allowHeader(HttpHeaders.ContentType)
     }
+
     routing {
         get("/") {
             call.respondText { "Hello from maps backend!" }
         }
     }
     registerFlightRoutes()
+
+    // init services after startup
+    AirportService.getAirport("HEL")
 }

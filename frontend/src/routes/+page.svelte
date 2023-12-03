@@ -27,7 +27,10 @@
 			endLat: route.to.latitude,
 			endLng: route.to.longitude,
 			color: ['green', 'green'],
-			distance: distKm
+			distance: distKm,
+			arcDashLength: 2 * Math.random(),
+			arcDashGap: 0.05 * Math.random(),
+			arcDashAnimation: 2000 * Math.random()
 		};
 	});
 
@@ -46,14 +49,12 @@
 			.bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
 			.pointOfView(MAP_CENTER, 0.1)
 			.arcsData(arcsData)
-			.arcStroke(0.5)
+			.arcStroke(0.1)
 			.arcColor('color')
-			.arcDashLength(1)
-			.arcDashGap(0.35)
-			.arcLabel((arc) => `${arc.startName} - ${arc.endName} ${arc.distance} ` + ' km')(
-			//.arcDashAnimateTime(2000)
-			globeElement
-		);
+			.arcDashLength(2)
+			.arcDashGap(0.1)
+			.arcLabel((arc) => `${arc.startName} - ${arc.endName} ${arc.distance} ` + ' km')
+			.arcDashAnimateTime((arc) => arc.arcDashAnimation)(globeElement);
 	});
 </script>
 
