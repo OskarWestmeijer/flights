@@ -1,13 +1,10 @@
 package westmeijer.oskar.services
 
-import io.ktor.util.logging.*
 import org.apache.commons.csv.CSVFormat
 import westmeijer.oskar.models.Airport
 import java.nio.file.Files
 import java.nio.file.Paths
 
-
-internal val log = KtorSimpleLogger("westmeijer.oskar.AirportService")
 
 object AirportService {
 

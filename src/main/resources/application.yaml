@@ -1,0 +1,3 @@
+api:
+  url: "https://rest.api.hamburg-airport.de"
+  key: "$HAM_API_KEY"
