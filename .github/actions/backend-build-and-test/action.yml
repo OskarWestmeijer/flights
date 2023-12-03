@@ -13,10 +13,11 @@ runs:
       run: |
         chmod +x gradlew 
         ./gradlew clean check
+        ./gradlew buildFatJar
 
     - name: Upload Jar
       uses: actions/upload-artifact@v3
       with:
-        name: app-jar
-        path: target/app.jar
+        name: app
+        path: build/libs/app.jar
         retention-days: 1
