@@ -20,7 +20,7 @@ runs:
     - name: npm test
       shell: bash
       working-directory: ${{ inputs.frontend-directory }}
-      run: npm run test-headless
+      run: npm run test
     - name: npm run build
       shell: bash
       working-directory: ${{ inputs.frontend-directory }}
