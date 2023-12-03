@@ -1,0 +1,22 @@
+name: pull-request-build-test
+
+on:
+  pull_request:
+
+jobs:
+  backend-build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/backend-build-and-test
+        with:
+          code-cov: ${{ secrets.DOCKER_USERNAME }}
+
+
+  frontend-build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/frontend-build-and-test
+        with:
+          frontend-directory: frontend
