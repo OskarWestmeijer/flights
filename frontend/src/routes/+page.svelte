@@ -41,15 +41,14 @@
 		const Globe = await import('globe.gl');
 
 		// belgrade
-		const MAP_CENTER = { lat: 44.787197, lng: 20.457273, altitude: 0.8 };
+		const MAP_CENTER = { lat: 44.787197, lng: 20.457273, altitude: 0.7 };
 
 		const globeElement = document.getElementById('helloWorld') as HTMLElement;
 
 		const instance: GlobeInstance = Globe.default()
-			//.globeImageUrl('BlackMarble_2016_3km.jpg')
 			.globeImageUrl('earth-night.jpg')
-			.backgroundImageUrl('https://unpkg.com/three-globe/example/img/night-sky.png')
-			.bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
+			.backgroundImageUrl('night-sky.png')
+			.bumpImageUrl('earth-topology.png')
 			.pointOfView(MAP_CENTER, 0.1)
 			.arcsData(arcsData)
 			.arcStroke(0.15)
