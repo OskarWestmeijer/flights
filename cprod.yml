@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  maps-api:
+    image: oskarwestmeijer/maps-api:latest
+    container_name: maps-api
+    deploy:
+      resources:
+        limits:
+          memory: 300m
+        reservations:
+          memory: 300m
+    expose:
+      - "8080"
+    restart: always
+    environment:
+      - HAM_API_KEY=${HAM_API_KEY}
+  maps-ui:
+    image: oskarwestmeijer/maps-ui:latest
+    container_name: maps-ui
+    deploy:
+      resources:
+        limits:
+          memory: 100m
+        reservations:
+          memory: 100m
+    expose:
+      - "80"
+    restart: always
+    environment:
+      - NODE_ENV=production
+networks:
+  default:
+    name: proxy
+    external: true

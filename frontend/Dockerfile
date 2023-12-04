@@ -1,13 +1,17 @@
-# build-stage
-FROM node:20.9.0-alpine3.18 as build-stage
+FROM 20.10.0-alpine3.18
 
-WORKDIR /usr/local/app
-COPY ./ ./
-RUN npm install
+LABEL Developers="Oskar Westmeijer"
+
+WORKDIR /app
+
+COPY . .
+
+RUN npm ci
 RUN npm run build
 
-# production-stage
-FROM nginx:1.25.3-alpine3.18-slim as production-stage
+# Delete source code files that were used to build the app that are no longer needed
+RUN rm -rf src/ static/
 
-COPY --from=build-stage /usr/local/app/.svelte-kit /usr/share/nginx/html
-CMD ["nginx", "-g", "daemon off;"]
+USER node:node
+
+CMD ["node","build/index.js"]
