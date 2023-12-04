@@ -3,8 +3,6 @@ package westmeijer.oskar.services
 import io.ktor.util.logging.*
 import org.apache.commons.csv.CSVFormat
 import westmeijer.oskar.models.Airport
-import java.nio.file.Files
-import java.nio.file.Paths
 
 
 object AirportService {
@@ -31,9 +29,9 @@ object AirportService {
     }
 
     private fun readCsv(): Map<String, Airport> {
-        log.info("entered csv reading")
-        val uri = ClassLoader.getSystemResource("airports.csv").toURI()
-        val inStream = Files.newInputStream(Paths.get(uri))
+        log.info("Reading airports.csv")
+
+        val inStream = ClassLoader.getSystemResourceAsStream("airports.csv")
 
         return CSVFormat.Builder.create(CSVFormat.DEFAULT).apply {
             setIgnoreSurroundingSpaces(true)
