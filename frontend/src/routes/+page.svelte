@@ -41,7 +41,7 @@
 		const Globe = await import('globe.gl');
 
 		// belgrade
-		const MAP_CENTER = { lat: 44.787197, lng: 20.457273, altitude: 1.25 };
+		const MAP_CENTER = { lat: 44.787197, lng: 20.457273, altitude: 0.8 };
 
 		const globeElement = document.getElementById('helloWorld') as HTMLElement;
 
