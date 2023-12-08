@@ -1,3 +1,9 @@
+ktor:
+  deployment:
+    port: 8080
+  application:
+    modules:
+      - westmeijer.oskar.ApplicationKt.module
 api:
-  url: "$HAM_API_URL"
-  key: "$HAM_API_KEY"
+  url: "http://localhost:9000"
+  key: "secret1234"

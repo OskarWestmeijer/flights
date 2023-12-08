@@ -12,6 +12,7 @@ runs:
     - shell: bash
       run: |
         chmod +x gradlew 
+        docker compose up -d
         ./gradlew clean check
         ./gradlew buildFatJar
 
