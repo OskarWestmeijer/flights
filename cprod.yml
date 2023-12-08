@@ -14,6 +14,8 @@ services:
       - "8080"
     restart: always
     environment:
+      - BACKEND_ENV=production
+      - HAM_API_URL=${HAM_API_URL}
       - HAM_API_KEY=${HAM_API_KEY}
   maps-ui:
     image: oskarwestmeijer/maps-ui:latest

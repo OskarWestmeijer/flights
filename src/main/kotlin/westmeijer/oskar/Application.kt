@@ -18,7 +18,12 @@ fun main() {
 
 fun Application.module() {
 
-    val config = ApplicationConfig("application.yaml")
+    val envFile = when (System.getenv("BACKEND_ENV")) {
+        "production" -> "application.yaml"
+        else -> "application-local.yaml"
+    }
+
+    val config = ApplicationConfig(envFile)
     Secrets.apiKey = config.propertyOrNull("api.key")!!.getString()
     Secrets.baseUrl = config.propertyOrNull("api.url")!!.getString()
 

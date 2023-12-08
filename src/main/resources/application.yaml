@@ -1,3 +1,3 @@
 api:
-  url: "https://rest.api.hamburg-airport.de"
+  url: "$HAM_API_URL"
   key: "$HAM_API_KEY"
