@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  ham-api:
+    image: wiremock/wiremock:3.3.1
+    ports:
+      - "9000:8080"
+    volumes:
+      - ./src/test/resources/wiremock/mappings:/home/wiremock/mappings
