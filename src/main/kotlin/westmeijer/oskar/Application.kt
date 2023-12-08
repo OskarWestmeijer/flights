@@ -4,23 +4,17 @@ import configureServerSerialization
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.config.*
-import io.ktor.server.engine.*
-import io.ktor.server.netty.*
 import io.ktor.server.plugins.cors.routing.*
-import io.ktor.server.response.*
-import io.ktor.server.routing.*
 import westmeijer.oskar.routes.registerFlightRoutes
 import westmeijer.oskar.services.AirportService
 
-fun main() {
-    embeddedServer(Netty, port = 8080, host = "0.0.0.0", module = Application::module).start(wait = true)
-}
+fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
 fun Application.module() {
 
     val envFile = when (System.getenv("BACKEND_ENV")) {
-        "production" -> "application.yaml"
-        else -> "application-local.yaml"
+        "production" -> "application-prod.yaml"
+        else -> "application.yaml"
     }
 
     val config = ApplicationConfig(envFile)
@@ -34,11 +28,6 @@ fun Application.module() {
         allowHeader(HttpHeaders.ContentType)
     }
 
-    routing {
-        get("/") {
-            call.respondText { "Hello from maps backend!" }
-        }
-    }
     registerFlightRoutes()
 
     // init services after startup

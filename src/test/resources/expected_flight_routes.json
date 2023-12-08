@@ -1,0 +1,1707 @@
+{
+  "flightRoutes": [
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MUC",
+        "latitude": "48.3538",
+        "longitude": "11.7861"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "STR",
+        "latitude": "48.6899",
+        "longitude": "9.22196"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MAD",
+        "latitude": "40.4719",
+        "longitude": "-3.56264"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "CDG",
+        "latitude": "49.0097",
+        "longitude": "2.54778"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "AMS",
+        "latitude": "52.3086",
+        "longitude": "4.76389"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "PMI",
+        "latitude": "39.5517",
+        "longitude": "2.73881"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MUC",
+        "latitude": "48.3538",
+        "longitude": "11.7861"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "LHR",
+        "latitude": "51.4775",
+        "longitude": "-0.461389"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "VIE",
+        "latitude": "48.1103",
+        "longitude": "16.5697"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "WAW",
+        "latitude": "52.1657",
+        "longitude": "20.9671"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "IST",
+        "latitude": "41.2753",
+        "longitude": "28.7519"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "FRA",
+        "latitude": "50.0333",
+        "longitude": "8.57056"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "CPH",
+        "latitude": "55.6179",
+        "longitude": "12.656"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "BRU",
+        "latitude": "50.9014",
+        "longitude": "4.48444"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "LIS",
+        "latitude": "38.7813",
+        "longitude": "-9.13592"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "PMI",
+        "latitude": "39.5517",
+        "longitude": "2.73881"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "HRG",
+        "latitude": "27.1783",
+        "longitude": "33.7994"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "LHR",
+        "latitude": "51.4775",
+        "longitude": "-0.461389"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "ZRH",
+        "latitude": "47.4647",
+        "longitude": "8.54917"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MUC",
+        "latitude": "48.3538",
+        "longitude": "11.7861"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "DUS",
+        "latitude": "51.2895",
+        "longitude": "6.76678"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "VIE",
+        "latitude": "48.1103",
+        "longitude": "16.5697"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "BEG",
+        "latitude": "44.8184",
+        "longitude": "20.3091"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "ACE",
+        "latitude": "28.9455",
+        "longitude": "-13.6052"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "LPA",
+        "latitude": "27.9319",
+        "longitude": "-15.3866"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MUC",
+        "latitude": "48.3538",
+        "longitude": "11.7861"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "STN",
+        "latitude": "51.885",
+        "longitude": "0.235"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "AMS",
+        "latitude": "52.3086",
+        "longitude": "4.76389"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "FUE",
+        "latitude": "28.4527",
+        "longitude": "-13.8638"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MUC",
+        "latitude": "48.3538",
+        "longitude": "11.7861"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "IST",
+        "latitude": "41.2753",
+        "longitude": "28.7519"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "CPH",
+        "latitude": "55.6179",
+        "longitude": "12.656"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "ZRH",
+        "latitude": "47.4647",
+        "longitude": "8.54917"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MIR",
+        "latitude": "35.7581",
+        "longitude": "10.7547"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "BCN",
+        "latitude": "41.2971",
+        "longitude": "2.07846"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "FRA",
+        "latitude": "50.0333",
+        "longitude": "8.57056"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "OPO",
+        "latitude": "41.2356",
+        "longitude": "-8.67806"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "ARN",
+        "latitude": "59.6519",
+        "longitude": "17.9186"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "BCN",
+        "latitude": "41.2971",
+        "longitude": "2.07846"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "OSL",
+        "latitude": "60.1939",
+        "longitude": "11.1004"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "DUB",
+        "latitude": "53.4213",
+        "longitude": "-6.27007"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "SAW",
+        "latitude": "40.8986",
+        "longitude": "29.3092"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "ZRH",
+        "latitude": "47.4647",
+        "longitude": "8.54917"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "VIE",
+        "latitude": "48.1103",
+        "longitude": "16.5697"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MUC",
+        "latitude": "48.3538",
+        "longitude": "11.7861"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "LHR",
+        "latitude": "51.4775",
+        "longitude": "-0.461389"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "AMS",
+        "latitude": "52.3086",
+        "longitude": "4.76389"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "SAW",
+        "latitude": "40.8986",
+        "longitude": "29.3092"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MUC",
+        "latitude": "48.3538",
+        "longitude": "11.7861"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "BRU",
+        "latitude": "50.9014",
+        "longitude": "4.48444"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "FRA",
+        "latitude": "50.0333",
+        "longitude": "8.57056"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MUC",
+        "latitude": "48.3538",
+        "longitude": "11.7861"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "GDN",
+        "latitude": "54.3776",
+        "longitude": "18.4662"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "PMI",
+        "latitude": "39.5517",
+        "longitude": "2.73881"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "CDG",
+        "latitude": "49.0097",
+        "longitude": "2.54778"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "GRZ",
+        "latitude": "46.9911",
+        "longitude": "15.4396"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "WAW",
+        "latitude": "52.1657",
+        "longitude": "20.9671"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "FCO",
+        "latitude": "41.8003",
+        "longitude": "12.2389"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "ATH",
+        "latitude": "37.9364",
+        "longitude": "23.9445"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "LHR",
+        "latitude": "51.4775",
+        "longitude": "-0.461389"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "VIE",
+        "latitude": "48.1103",
+        "longitude": "16.5697"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "CPH",
+        "latitude": "55.6179",
+        "longitude": "12.656"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "OSL",
+        "latitude": "60.1939",
+        "longitude": "11.1004"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "VIE",
+        "latitude": "48.1103",
+        "longitude": "16.5697"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "CGN",
+        "latitude": "50.8659",
+        "longitude": "7.14274"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "HEL",
+        "latitude": "60.3172",
+        "longitude": "24.9633"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "OTP",
+        "latitude": "44.5711",
+        "longitude": "26.085"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MUC",
+        "latitude": "48.3538",
+        "longitude": "11.7861"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "FRA",
+        "latitude": "50.0333",
+        "longitude": "8.57056"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "STR",
+        "latitude": "48.6899",
+        "longitude": "9.22196"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "ZRH",
+        "latitude": "47.4647",
+        "longitude": "8.54917"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "LHR",
+        "latitude": "51.4775",
+        "longitude": "-0.461389"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "STR",
+        "latitude": "48.6899",
+        "longitude": "9.22196"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "CDG",
+        "latitude": "49.0097",
+        "longitude": "2.54778"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "FRA",
+        "latitude": "50.0333",
+        "longitude": "8.57056"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "GDN",
+        "latitude": "54.3776",
+        "longitude": "18.4662"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "ZRH",
+        "latitude": "47.4647",
+        "longitude": "8.54917"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "SZG",
+        "latitude": "47.7933",
+        "longitude": "13.0043"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "AMS",
+        "latitude": "52.3086",
+        "longitude": "4.76389"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "DXB",
+        "latitude": "25.2528",
+        "longitude": "55.3644"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "DUS",
+        "latitude": "51.2895",
+        "longitude": "6.76678"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "SAW",
+        "latitude": "40.8986",
+        "longitude": "29.3092"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "SKP",
+        "latitude": "41.9616",
+        "longitude": "21.6214"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MXP",
+        "latitude": "45.6306",
+        "longitude": "8.72811"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "VAR",
+        "latitude": "43.2321",
+        "longitude": "27.8251"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "CPH",
+        "latitude": "55.6179",
+        "longitude": "12.656"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "SCN",
+        "latitude": "49.2146",
+        "longitude": "7.10951"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "EDI",
+        "latitude": "55.95",
+        "longitude": "-3.3725"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "EDI",
+        "latitude": "55.95",
+        "longitude": "-3.3725"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "GVA",
+        "latitude": "46.2381",
+        "longitude": "6.10895"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "LIS",
+        "latitude": "38.7813",
+        "longitude": "-9.13592"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MUC",
+        "latitude": "48.3538",
+        "longitude": "11.7861"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "LHR",
+        "latitude": "51.4775",
+        "longitude": "-0.461389"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MAD",
+        "latitude": "40.4719",
+        "longitude": "-3.56264"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "CGN",
+        "latitude": "50.8659",
+        "longitude": "7.14274"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "LGW",
+        "latitude": "51.1481",
+        "longitude": "-0.190278"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "HEL",
+        "latitude": "60.3172",
+        "longitude": "24.9633"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "BUD",
+        "latitude": "47.4298",
+        "longitude": "19.2611"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "STR",
+        "latitude": "48.6899",
+        "longitude": "9.22196"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "FRA",
+        "latitude": "50.0333",
+        "longitude": "8.57056"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MUC",
+        "latitude": "48.3538",
+        "longitude": "11.7861"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "VIE",
+        "latitude": "48.1103",
+        "longitude": "16.5697"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "LHR",
+        "latitude": "51.4775",
+        "longitude": "-0.461389"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "BRU",
+        "latitude": "50.9014",
+        "longitude": "4.48444"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "FRA",
+        "latitude": "50.0333",
+        "longitude": "8.57056"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "IST",
+        "latitude": "41.2753",
+        "longitude": "28.7519"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "CDG",
+        "latitude": "49.0097",
+        "longitude": "2.54778"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "LUX",
+        "latitude": "49.6233",
+        "longitude": "6.20444"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MUC",
+        "latitude": "48.3538",
+        "longitude": "11.7861"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "AMS",
+        "latitude": "52.3086",
+        "longitude": "4.76389"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "AMS",
+        "latitude": "52.3086",
+        "longitude": "4.76389"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "ZRH",
+        "latitude": "47.4647",
+        "longitude": "8.54917"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "ZRH",
+        "latitude": "47.4647",
+        "longitude": "8.54917"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MUC",
+        "latitude": "48.3538",
+        "longitude": "11.7861"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "LHR",
+        "latitude": "51.4775",
+        "longitude": "-0.461389"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "CDG",
+        "latitude": "49.0097",
+        "longitude": "2.54778"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "ARN",
+        "latitude": "59.6519",
+        "longitude": "17.9186"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "DXB",
+        "latitude": "25.2528",
+        "longitude": "55.3644"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "FRA",
+        "latitude": "50.0333",
+        "longitude": "8.57056"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "RIX",
+        "latitude": "56.9236",
+        "longitude": "23.9711"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "LGW",
+        "latitude": "51.1481",
+        "longitude": "-0.190278"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "WAW",
+        "latitude": "52.1657",
+        "longitude": "20.9671"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "CPH",
+        "latitude": "55.6179",
+        "longitude": "12.656"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MUC",
+        "latitude": "48.3538",
+        "longitude": "11.7861"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "ZRH",
+        "latitude": "47.4647",
+        "longitude": "8.54917"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "VIE",
+        "latitude": "48.1103",
+        "longitude": "16.5697"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "MAN",
+        "latitude": "53.3537",
+        "longitude": "-2.27495"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "FRA",
+        "latitude": "50.0333",
+        "longitude": "8.57056"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "FRA",
+        "latitude": "50.0333",
+        "longitude": "8.57056"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "FRA",
+        "latitude": "50.0333",
+        "longitude": "8.57056"
+      }
+    },
+    {
+      "id": 1,
+      "from": {
+        "airportCode": "HAM",
+        "latitude": "53.6304",
+        "longitude": "9.98823"
+      },
+      "to": {
+        "airportCode": "FRA",
+        "latitude": "50.0333",
+        "longitude": "8.57056"
+      }
+    }
+  ]
+}
