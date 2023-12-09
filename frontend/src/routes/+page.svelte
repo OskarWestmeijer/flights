@@ -41,7 +41,7 @@
 		const Globe = await import('globe.gl');
 
 		// belgrade
-		const MAP_CENTER = { lat: 44.787197, lng: 20.457273, altitude: 0.85 };
+		const MAP_CENTER = { lat: 44.787197, lng: 20.457273, altitude: 0.9 };
 
 		const globeElement = document.getElementById('helloWorld') as HTMLElement;
 
@@ -71,7 +71,7 @@
 			.labelResolution(2);
 
 		// init globe
-		instance(globeElement)
+		instance(globeElement);
 
 		// example of programatic access
 		// instance.onArcHover((hover) => console.log('hovering over ' + JSON.stringify(hover)));

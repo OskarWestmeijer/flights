@@ -14,7 +14,7 @@ class ApplicationTest {
     fun testRoot() = testApplication {
         val response = client.get("/flight-routes")
 
-        val filePath = "expected_flight_routes.json" // Replace with your JSON file path
+        val filePath = "expected_flight_routes.json"
         val inStream = ClassLoader.getSystemResourceAsStream(filePath)
         val expected = inStream!!.bufferedReader().use { it.readText() }.trimIndent()
 
