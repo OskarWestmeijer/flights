@@ -18,7 +18,7 @@ object FlightRoutesService {
         return hamburgFlightRoutes
     }
 
-    private suspend fun refreshFlightRoutes() {
+    suspend fun refreshFlightRoutes() {
         log.info("Start refreshing flight routes")
         val destinations: List<Destination> = HamAirportClient.getDestinations()
         hamburgFlightRoutes = map(destinations)
