@@ -5,5 +5,5 @@ ktor:
     modules:
       - westmeijer.oskar.ApplicationKt.module
 api:
-  url: "http://localhost:9000"
-  key: "secret1234"
+  url: "$HAM_API_URL:http://localhost:9000"
+  key: "$HAM_API_KEY:secret1234"

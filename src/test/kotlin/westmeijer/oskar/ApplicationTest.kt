@@ -10,7 +10,6 @@ import kotlin.test.assertEquals
 
 class ApplicationTest {
 
-
     @Test
     fun testRoot() = testApplication {
         val response = client.get("/flight-routes")
