@@ -70,7 +70,11 @@
 			.labelColor(() => 'rgba(255, 165, 0, 0.75)')
 			.labelResolution(2);
 
-		//instance(globeElement).onArcHover((hover) => console.log('hovering over ' + hover));
+		// init globe
+		instance(globeElement)
+
+		// example of programatic access
+		// instance.onArcHover((hover) => console.log('hovering over ' + JSON.stringify(hover)));
 	});
 </script>
 
