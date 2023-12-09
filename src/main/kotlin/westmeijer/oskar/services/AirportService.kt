@@ -11,6 +11,8 @@ object AirportService {
 
     private val airportMap: Map<String, Airport>
 
+    val HAM_AIRPORT = Airport("HAM", "53.6304", "9.98823")
+
     init {
         airportMap = readCsv()
         log.info("Init AirportMap entries with count: ${airportMap.size}")

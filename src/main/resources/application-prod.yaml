@@ -1,3 +1,0 @@
-api:
-  url: "$HAM_API_URL"
-  key: "$HAM_API_KEY"

@@ -41,7 +41,7 @@
 		const Globe = await import('globe.gl');
 
 		// belgrade
-		const MAP_CENTER = { lat: 44.787197, lng: 20.457273, altitude: 0.7 };
+		const MAP_CENTER = { lat: 44.787197, lng: 20.457273, altitude: 0.85 };
 
 		const globeElement = document.getElementById('helloWorld') as HTMLElement;
 
@@ -59,6 +59,7 @@
 			.arcsTransitionDuration(0)
 			.arcDashAnimateTime(4000)
 			.arcLabel((arc) => `${arc.startName} - ${arc.endName} ${arc.distance} ` + ' km')
+
 			// city labels
 			.labelsData(labelsData)
 			.labelLat('lat')
@@ -69,7 +70,7 @@
 			.labelColor(() => 'rgba(255, 165, 0, 0.75)')
 			.labelResolution(2);
 
-		instance(globeElement).onArcHover((hover) => console.log('hovering over ' + hover));
+		//instance(globeElement).onArcHover((hover) => console.log('hovering over ' + hover));
 	});
 </script>
 
