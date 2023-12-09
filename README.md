@@ -13,37 +13,22 @@ Displays Hamburg airport connections on a 3d globe.
 ```
 - Kotlin & Ktor
 - Typescript & Sveltekit
-- GlobeJs
+- GlobeJs, Tailwindcss & DaisyUI
 ```
 
 ## Build & Test
-
-### Backend
 
 ``` bash
 ./gradlew clean test
 ./gradlew clean build
 ```
 
-### Frontend
-
-``` bash
-cd frontend
-npm install
-npm run test
-```
-
 ## How-to Run
-
-### Backend
 
 ``` bash
 ./gradlew run
 ```
 
-### Frontend
+## Frontend
 
-``` bash
-cd frontend
-npm run dev
-```
+Refer to the `frontend/README.md` for instructions.
