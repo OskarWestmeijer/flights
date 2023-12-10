@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Destination(
+data class DepartingFlight(
     @SerialName("destinationAirport3LCode")
     val destinationAirport3LCode: String
 )
