@@ -30,7 +30,7 @@ object FlightRoutesService {
         return destinations
             .mapNotNull { AirportService.getAirport(it.destinationAirport3LCode) }
             .map {
-                FlightRoute(1, AirportService.HAM_AIRPORT, it)
+                FlightRoute(AirportService.HAM_AIRPORT, it)
             }
     }
 
