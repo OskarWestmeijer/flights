@@ -1,7 +1,8 @@
 package westmeijer.oskar.services
 
 import io.ktor.util.logging.*
-import westmeijer.oskar.models.Destination
+import westmeijer.oskar.models.AirportCode
+import westmeijer.oskar.models.DepartingFlight
 import westmeijer.oskar.models.FlightRoute
 
 object FlightRoutesService {
@@ -20,18 +21,27 @@ object FlightRoutesService {
 
     suspend fun refreshFlightRoutes() {
         log.info("Start refreshing flight routes")
-        val destinations: List<Destination> = HamAirportClient.getDestinations()
-        hamburgFlightRoutes = map(destinations)
-        log.info("Retrieved destinations count: ${destinations.size}, mapped flightRoutes count: ${hamburgFlightRoutes.size}")
+        val departingFlights: List<DepartingFlight> = HamAirportClient.getDepartingFlights()
+        val flights: Map<AirportCode, Int> = aggregateFlights(departingFlights)
+        hamburgFlightRoutes = map(flights)
+        log.info("Departing flights count: ${departingFlights.size}, mapped flight routes count: ${hamburgFlightRoutes.size}")
         log.info("Finish refreshing flight routes")
     }
 
-    private fun map(destinations: List<Destination>): List<FlightRoute> {
-        return destinations
-            .mapNotNull { AirportService.getAirport(it.destinationAirport3LCode) }
+    private fun map(flights: Map<AirportCode, Int>): List<FlightRoute> {
+        return flights
+            .filterKeys { AirportService.getAirport(it.code) != null }
             .map {
-                FlightRoute(AirportService.HAM_AIRPORT, it)
+                FlightRoute(AirportService.HAM_AIRPORT, AirportService.getAirport(it.key.code)!!, it.value)
             }
+            .sortedByDescending { it.flightCount }
+    }
+
+    private fun aggregateFlights(departingFlights: List<DepartingFlight>): Map<AirportCode, Int> {
+        return departingFlights
+            .map { AirportCode(it.destinationAirport3LCode) }
+            .groupingBy { it }
+            .eachCount()
     }
 
 }

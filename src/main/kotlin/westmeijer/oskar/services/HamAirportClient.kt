@@ -10,7 +10,7 @@ import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import kotlinx.serialization.json.Json
 import westmeijer.oskar.Secrets
-import westmeijer.oskar.models.Destination
+import westmeijer.oskar.models.DepartingFlight
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 
@@ -37,7 +37,7 @@ private val client = HttpClient(CIO) {
 
 object HamAirportClient {
 
-    suspend fun getDestinations(): List<Destination> {
+    suspend fun getDepartingFlights(): List<DepartingFlight> {
         val today = Instant.now().truncatedTo(ChronoUnit.DAYS)
         val tomorrow = Instant.now().plus(1, ChronoUnit.DAYS).truncatedTo(ChronoUnit.DAYS)
 
@@ -52,7 +52,7 @@ object HamAirportClient {
                 }
 
         val destinationAsText = response.bodyAsText().trimIndent()
-        return decoder.decodeFromString<List<Destination>>(destinationAsText)
+        return decoder.decodeFromString<List<DepartingFlight>>(destinationAsText)
     }
 
 }
