@@ -1,41 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { getDistance, convertDistance } from 'geolib';
 	import './styles.css';
-	import type { GeolibInputCoordinates } from 'geolib/es/types';
 	import type { PageData } from './$types';
 	import type { GlobeInstance } from 'globe.gl';
 
 	export let data: PageData;
 
-	// map response in required globe arcs format
-	const arcsData: object[] = data.flightRoutes.map((route: any) => {
-		const from: GeolibInputCoordinates = {
-			latitude: route.from.latitude,
-			longitude: route.from.longitude
-		};
-		const to: GeolibInputCoordinates = {
-			latitude: route.to.latitude,
-			longitude: route.to.longitude
-		};
-
-		const distKm: number = Math.floor(convertDistance(getDistance(from, to), 'km'));
-		return {
-			startName: route.from.airportCode,
-			startLat: route.from.latitude,
-			startLng: route.from.longitude,
-			endName: route.to.airportCode,
-			endLat: route.to.latitude,
-			endLng: route.to.longitude,
-			color: ['green', 'green'],
-			distance: distKm,
-			name: route.to.airportCode
-		};
-	});
-
-	const labelsData: object[] = arcsData.map((arc) => {
-		return { lat: arc.endLat, lng: arc.endLng, name: arc.endName };
-	});
+	const globeData: GlobeData[] = data.props.arcData;
+	const labelData: LabelData[] = data.props.labelData;
 
 	onMount(async () => {
 		const Globe = await import('globe.gl');
@@ -50,24 +22,24 @@
 			.backgroundImageUrl('night-sky.png')
 			.bumpImageUrl('earth-topology.png')
 			.pointOfView(MAP_CENTER, 0.1)
-			.arcsData(arcsData)
-			.arcStroke(0.15)
+			.arcsData(globeData)
+			.arcStroke((d) => d.stroke)
 			.arcDashLength(1)
 			.arcDashGap(0.8)
 			.arcDashInitialGap(() => Math.random())
-			.arcColor((d) => [`rgba(0, 255, 0, 0.35)`, `rgba(255, 0, 0, 0.4)`])
+			.arcColor((d) => d.color)
 			.arcsTransitionDuration(0)
 			.arcDashAnimateTime(4000)
 			.arcLabel((arc) => `${arc.startName} - ${arc.endName} ${arc.distance} ` + ' km')
 
 			// city labels
-			.labelsData(labelsData)
+			.labelsData(labelData)
 			.labelLat('lat')
 			.labelLng('lng')
 			.labelText('name')
-			.labelSize(0.5)
-			.labelDotRadius(0.2)
-			.labelColor(() => 'rgba(255, 165, 0, 0.75)')
+			.labelSize('size')
+			.labelDotRadius('dotRadius')
+			.labelColor('color')
 			.labelResolution(2);
 
 		// init globe
@@ -75,6 +47,7 @@
 
 		// example of programatic access
 		// instance.onArcHover((hover) => console.log('hovering over ' + JSON.stringify(hover)));
+		// instance.onLabelHover((label) => console.log(label));
 	});
 </script>
 
