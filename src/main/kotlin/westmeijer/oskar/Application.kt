@@ -8,6 +8,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.time.delay
+import westmeijer.oskar.routes.registerAirports
 import westmeijer.oskar.routes.registerFlightRoutes
 import westmeijer.oskar.services.AirportService
 import westmeijer.oskar.services.FlightRoutesService
@@ -29,6 +30,7 @@ fun Application.module() {
     }
 
     registerFlightRoutes()
+    registerAirports()
 
     // init with csv after startup
     AirportService.getAirport("HEL")
