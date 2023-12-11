@@ -11,6 +11,8 @@ object AirportService {
 
     private val airportMap: Map<String, Airport>
 
+    val unmappedAirports: MutableSet<String> = mutableSetOf()
+
     val HAM_AIRPORT = Airport("HAM", "53.6304", "9.98823")
 
     init {
@@ -25,6 +27,7 @@ object AirportService {
 
         val airport = airportMap[airportCode]
         if (airport == null) {
+            unmappedAirports.add(airportCode)
             log.warn("No mapping for airportCode: $airportCode");
         }
         return airport
