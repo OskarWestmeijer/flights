@@ -8,6 +8,7 @@ plugins {
     kotlin("jvm") version "1.9.21"
     id("io.ktor.plugin") version "2.3.6"
     kotlin("plugin.serialization") version "1.9.21"
+    id("jacoco")
 }
 
 group = "westmeijer.oskar"
@@ -28,6 +29,13 @@ ktor {
 
 repositories {
     mavenCentral()
+}
+
+tasks.test {
+    finalizedBy(tasks.jacocoTestReport)
+}
+tasks.jacocoTestReport {
+    dependsOn(tasks.test)
 }
 
 dependencies {
