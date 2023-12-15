@@ -8,10 +8,10 @@ import org.skyscreamer.jsonassert.JSONAssert
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-class ApplicationTest {
+class FlightRoutesTest {
 
     @Test
-    fun testRoot() = testApplication {
+    fun testFlightRoutes() = testApplication {
         val response = client.get("/flight-routes")
 
         val filePath = "expected_flight_routes.json"
