@@ -1,4 +1,4 @@
-package westmeijer.oskar
+package westmeijer.oskar.routes
 
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
