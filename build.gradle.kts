@@ -31,11 +31,18 @@ repositories {
     mavenCentral()
 }
 
-tasks.test {
+tasks.check {
     finalizedBy(tasks.jacocoTestReport)
 }
 tasks.jacocoTestReport {
-    dependsOn(tasks.test)
+    dependsOn(tasks.check)
+}
+
+tasks.jacocoTestReport {
+    reports {
+        xml.required = true
+        csv.required = true
+    }
 }
 
 dependencies {
