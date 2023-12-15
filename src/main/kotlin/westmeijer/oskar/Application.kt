@@ -10,6 +10,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.time.delay
 import westmeijer.oskar.routes.registerAirports
 import westmeijer.oskar.routes.registerFlightRoutes
+import westmeijer.oskar.routes.registerOpenapi
 import westmeijer.oskar.services.AirportService
 import westmeijer.oskar.services.FlightRoutesService
 import java.time.Duration
@@ -31,6 +32,7 @@ fun Application.module() {
 
     registerFlightRoutes()
     registerAirports()
+    registerOpenapi()
 
     // init with csv after startup
     AirportService.getAirport("HEL")
@@ -43,4 +45,5 @@ fun Application.module() {
             delay(Duration.of(1, ChronoUnit.HOURS))
         }
     }
+
 }
