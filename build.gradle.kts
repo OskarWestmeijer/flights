@@ -8,7 +8,7 @@ plugins {
     kotlin("jvm") version "1.9.21"
     id("io.ktor.plugin") version "2.3.6"
     kotlin("plugin.serialization") version "1.9.21"
-    id("jacoco")
+    id("org.jetbrains.kotlinx.kover") version "0.7.5"
 }
 
 group = "westmeijer.oskar"
@@ -32,17 +32,7 @@ repositories {
 }
 
 tasks.check {
-    finalizedBy(tasks.jacocoTestReport)
-}
-tasks.jacocoTestReport {
-    dependsOn(tasks.check)
-}
-
-tasks.jacocoTestReport {
-    reports {
-        xml.required = true
-        csv.required = true
-    }
+    finalizedBy(tasks.koverHtmlReport, tasks.koverXmlReport, tasks.koverLog)
 }
 
 dependencies {
