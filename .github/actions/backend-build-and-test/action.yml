@@ -29,5 +29,7 @@ runs:
 
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3
+      with:
+        files: build/reports/kover/report.xml
       env:
         CODECOV_TOKEN: ${{ inputs.code-cov }}
