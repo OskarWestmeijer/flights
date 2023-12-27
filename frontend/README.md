@@ -22,7 +22,10 @@ npm run dev
 ```bash
 npm install -g npm-check-updates
 ncu
+
+# granular updates
+ncu -u --target=patch
+ncu -u --target=minor
+
 ncu -u
-npm install
-npm update --save
 ```

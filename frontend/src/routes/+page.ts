@@ -69,11 +69,11 @@ function styleArc(arc: GlobeData): GlobeData {
 		arc.stroke = 0.35;
 		arc.color = [`rgba(0, 255, 0, 1)`, `rgba(255, 0, 0, 1)`];
 	} else if (arc.flightCount > 5) {
-		arc.stroke = 0.25;
-		arc.color = [`rgba(0, 255, 0, 0.7)`, `rgba(255, 0, 0, 0.8)`];
+		arc.stroke = 0.20;
+		arc.color = [`rgba(0, 255, 0, 1)`, `rgba(255, 0, 0, 1)`];
 	} else {
-		arc.stroke = 0.15;
-		arc.color = [`rgba(0, 255, 0, 0.35)`, `rgba(255, 0, 0, 0.4)`];
+		arc.stroke = 0.10;
+		arc.color = [`rgba(0, 255, 0, 1)`, `rgba(255, 0, 0, 1)`];
 	}
 
 	return arc;
@@ -82,16 +82,16 @@ function styleArc(arc: GlobeData): GlobeData {
 function styleLabel(label: LabelData): LabelData {
 	if (label.flightCount > 10) {
 		label.dotRadius = 0.35;
-		label.size = 0.5
+		label.size = 0.5;
 		label.color = 'rgba(255, 165, 0, 1)';
 	} else if (label.flightCount > 5) {
 		label.dotRadius = 0.25;
-		label.size = 0.4
-		label.color = 'rgba(255, 165, 0, 0.85)';
+		label.size = 0.4;
+		label.color = 'rgba(255, 165, 0, 1)';
 	} else {
 		label.dotRadius = 0.15;
-		label.size = 0.3
-		label.color = 'rgba(255, 165, 0, 0.65)';
+		label.size = 0.3;
+		label.color = 'rgba(255, 165, 0, 1)';
 	}
 
 	return label;

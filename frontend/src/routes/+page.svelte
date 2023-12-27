@@ -20,7 +20,6 @@
 		const instance: GlobeInstance = Globe.default()
 			.globeImageUrl('earth-night.jpg')
 			.backgroundImageUrl('night-sky.png')
-			.bumpImageUrl('earth-topology.png')
 			.pointOfView(MAP_CENTER, 0.1)
 			.arcsData(globeData)
 			.arcStroke((d) => d.stroke)

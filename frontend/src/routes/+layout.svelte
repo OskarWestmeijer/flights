@@ -3,7 +3,7 @@
 </script>
 
 <div class="navbar text-base-100">
-	<div class="navbar-start"/>
+	<div class="navbar-start" />
 	<div class="navbar-center">
 		<ul class="menu menu-horizontal rounded-box bg-secondary">
 			<li>
@@ -88,7 +88,7 @@
 </div>
 
 <a href="https://oskar-westmeijer.com" id="copyright" class="text-white hover:text-accent">
-	Oskar Westmeijer • 2023
+	Oskar Westmeijer &#127757; 2023
 </a>
 
 <slot />
