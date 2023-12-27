@@ -4,7 +4,7 @@
 [![codecov](https://codecov.io/gh/OskarWestmeijer/maps/graph/badge.svg?token=EHEHAUD5DM)](https://codecov.io/gh/OskarWestmeijer/maps)
 [![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/vmxk.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
 
-Displays Hamburg airport connections on a 3d globe. Backend provides a public Api.
+Displays Hamburg airport connections on a 3d globe. The backend provides a public Api.
 
 - [https://maps.oskar-westmeijer.com](https://maps.oskar-westmeijer.com) (Sveltekit frontend)
 - [https://api.maps.oskar-westmeijer.com](https://api.maps.oskar-westmeijer.com) (Ktor backend)
