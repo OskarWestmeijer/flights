@@ -1,5 +1,7 @@
 <script>
 	import '../app.css';
+
+	const currentYear = new Date().getFullYear();
 </script>
 
 <div class="navbar text-base-100">
@@ -88,7 +90,7 @@
 </div>
 
 <a href="https://oskar-westmeijer.com" id="copyright" class="text-white hover:text-accent">
-	Oskar Westmeijer &#127757; 2023
+	Oskar Westmeijer &#127757; {currentYear}
 </a>
 
 <slot />

@@ -8,6 +8,7 @@
 
 	const globeData: GlobeData[] = data.props.arcData;
 	const labelData: LabelData[] = data.props.labelData;
+	const connectionsCount = globeData.length;
 
 	onMount(async () => {
 		const Globe = await import('globe.gl');
@@ -51,3 +52,14 @@
 </script>
 
 <div id="helloWorld"></div>
+
+<div id="connectionsCount" class="text-white">HAM destinations count: {connectionsCount}</div>
+
+<style>
+	#connectionsCount {
+		position: absolute;
+		bottom: 1%;
+		left: 1%;
+		z-index: 9998;
+	}
+</style>
