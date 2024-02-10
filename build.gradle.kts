@@ -5,7 +5,7 @@ val apache_commons: String by project
 val json_assert: String by project
 
 plugins {
-    kotlin("jvm") version "1.9.21"
+    kotlin("jvm") version "1.9.22"
     id("io.ktor.plugin") version "2.3.6"
     kotlin("plugin.serialization") version "1.9.21"
     id("org.jetbrains.kotlinx.kover") version "0.7.5"
