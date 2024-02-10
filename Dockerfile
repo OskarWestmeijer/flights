@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17.0.9_9-jre-alpine
+FROM eclipse-temurin:21.0.2_13-jre-alpine
 
 COPY build/libs/app.jar /app.jar
 COPY src/main/resources/airports.csv /airports.csv
