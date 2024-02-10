@@ -20,3 +20,27 @@ jobs:
       - uses: ./.github/actions/frontend-build-and-test
         with:
           frontend-directory: frontend
+
+  dependabot-automerge:
+    needs: [ backend-build-and-test, frontend-build-and-test ]
+    runs-on: ubuntu-latest
+    environment: oskar-westmeijer-environment
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "event name is:" ${{ github.event_name }}
+      - run: echo "event type is:" ${{ github.event.action }}
+      - name: Dependabot metadata
+        uses: dependabot/fetch-metadata@v1
+        with:
+          github-token: "${{ secrets.MASTER_TOKEN }}"
+      - name: approve PR
+        run: gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.MASTER_TOKEN }}
+      - name: Enable auto-merge for Dependabot PRs
+        run: gh pr merge --squash "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.MASTER_TOKEN}}
