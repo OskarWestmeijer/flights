@@ -32,3 +32,23 @@ Execute these commands and refer to the `frontend/README.md` for further instruc
 docker compose up -d
 ./gradlew run
 ```
+
+## Caching with Redis
+
+To get insights into the running Redis cache use these commands. The commands focus on working with string types.
+
+```
+docker exec -it <docker-redis-cache-id> sh
+
+# get list of cached keys, only show 10
+redis-cli --scan | head -10
+
+# get value for key
+redis-cli GET test-key:2
+
+# set value for key
+redis-cli SET test-key:2 "yeeeah buddy"
+
+# delete a key
+redis-cli DEL test-key:2
+```

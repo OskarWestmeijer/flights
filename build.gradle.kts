@@ -3,6 +3,7 @@ val kotlin_version: String by project
 val logback_version: String by project
 val apache_commons: String by project
 val json_assert: String by project
+val lettuce_core: String by project
 
 plugins {
     kotlin("jvm") version "1.9.22"
@@ -52,6 +53,8 @@ dependencies {
 
     implementation("org.apache.commons:commons-csv:$apache_commons")
     implementation("ch.qos.logback:logback-classic:$logback_version")
+
+    implementation("io.lettuce:lettuce-core:$lettuce_core")
 
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
