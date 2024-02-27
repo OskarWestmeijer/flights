@@ -9,7 +9,7 @@ import java.nio.ByteBuffer
 import java.nio.charset.Charset
 
 
-internal class FlightRoutesCodec : RedisCodec<String, List<FlightRoute>> {
+internal class FlightRoutesCacheCodec : RedisCodec<String, List<FlightRoute>> {
     private val charset: Charset = Charset.forName("UTF-8")
 
     override fun decodeKey(bytes: ByteBuffer): String {

@@ -8,4 +8,4 @@ api:
   url: "$HAM_API_URL:http://localhost:9000"
   key: "$HAM_API_KEY:secret1234"
 redis:
-  url: "$REDIS_URL:localhost:6379"
+  url: "$REDIS_URL:localhost"

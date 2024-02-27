@@ -7,7 +7,8 @@ import io.ktor.server.plugins.cors.routing.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import westmeijer.oskar.redis.Redis
+import westmeijer.oskar.redis.Cache
+import westmeijer.oskar.redis.PubSubListener
 import westmeijer.oskar.routes.registerAirports
 import westmeijer.oskar.routes.registerFlightRoutes
 import westmeijer.oskar.routes.registerOpenapi
@@ -37,8 +38,9 @@ fun Application.module() {
     // init airport csv
     AirportService.getAirport("HEL")
 
-    // init redis cache + pubsub
-    Redis
+    // init redis cache and pubsub
+    Cache
+    PubSubListener
 
     // init flight-routes
     val scope = CoroutineScope(Dispatchers.Default)

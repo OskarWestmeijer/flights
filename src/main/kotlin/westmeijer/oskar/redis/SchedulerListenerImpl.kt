@@ -7,14 +7,14 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import westmeijer.oskar.services.FlightRoutesService
 
-class SchedulerPubSubListener : RedisPubSubListener<String, String> {
+class SchedulerListenerImpl : RedisPubSubListener<String, String> {
 
     private val log = KtorSimpleLogger("westmeijer.oskar.cache.SchedulerPubSubListener")
 
     override fun message(channel: String?, message: String?) {
         log.info("Received from: $channel, msg: $message")
 
-        if (Redis.SCHEDULER_CHANNEL == channel && Redis.EXPECTED_MSG == message) {
+        if (PubSubListener.SCHEDULER_CHANNEL == channel && PubSubListener.EXPECTED_MSG == message) {
             val scope = CoroutineScope(Dispatchers.Default)
             scope.launch {
                 FlightRoutesService.refreshFlightRoutes()

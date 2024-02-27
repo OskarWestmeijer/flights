@@ -1,7 +1,7 @@
 package westmeijer.oskar.services
 
 import io.ktor.util.logging.*
-import westmeijer.oskar.redis.Redis
+import westmeijer.oskar.redis.Cache
 import westmeijer.oskar.models.AirportCode
 import westmeijer.oskar.models.DepartingFlight
 import westmeijer.oskar.models.FlightRoute
@@ -17,7 +17,7 @@ object FlightRoutesService {
             log.info("Flight routes is empty.")
             refreshFlightRoutes()
         }
-        return Redis.getCache(Redis.FLIGHT_ROUTES_KEY)
+        return Cache.getCache(Cache.FLIGHT_ROUTES_KEY)
     }
 
     suspend fun refreshFlightRoutes() {
@@ -26,7 +26,7 @@ object FlightRoutesService {
         val flights: Map<AirportCode, Int> = aggregateFlights(departingFlights)
         hamburgFlightRoutes = map(flights)
 
-        Redis.setCache(Redis.FLIGHT_ROUTES_KEY, hamburgFlightRoutes)
+        Cache.setCache(Cache.FLIGHT_ROUTES_KEY, hamburgFlightRoutes)
 
         log.info("Departing flights count: ${departingFlights.size}, mapped flight routes count: ${hamburgFlightRoutes.size}")
         log.info("Finish refreshing flight routes")
