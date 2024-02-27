@@ -7,14 +7,12 @@ import io.ktor.server.plugins.cors.routing.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.time.delay
+import westmeijer.oskar.redis.Redis
 import westmeijer.oskar.routes.registerAirports
 import westmeijer.oskar.routes.registerFlightRoutes
 import westmeijer.oskar.routes.registerOpenapi
 import westmeijer.oskar.services.AirportService
 import westmeijer.oskar.services.FlightRoutesService
-import java.time.Duration
-import java.time.temporal.ChronoUnit
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
@@ -22,6 +20,7 @@ fun Application.module() {
 
     Secrets.apiKey = environment.config.property("api.key").getString()
     Secrets.baseUrl = environment.config.property("api.url").getString()
+    Secrets.redisUrl = environment.config.property("redis.url").getString()
 
     configureServerSerialization()
 
@@ -30,20 +29,20 @@ fun Application.module() {
         allowHeader(HttpHeaders.ContentType)
     }
 
+    // register api endpoints
     registerFlightRoutes()
     registerAirports()
     registerOpenapi()
 
-    // init with csv after startup
+    // init airport csv
     AirportService.getAirport("HEL")
 
-    // refresh flight-routes job
+    // init redis cache + pubsub
+    Redis
+
+    // init flight-routes
     val scope = CoroutineScope(Dispatchers.Default)
     scope.launch {
-        while (true) {
-            FlightRoutesService.refreshFlightRoutes()
-            delay(Duration.of(1, ChronoUnit.HOURS))
-        }
+        FlightRoutesService.refreshFlightRoutes()
     }
-
 }

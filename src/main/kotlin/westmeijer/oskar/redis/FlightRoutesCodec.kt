@@ -1,4 +1,4 @@
-package westmeijer.oskar.cache
+package westmeijer.oskar.redis
 
 import io.lettuce.core.codec.RedisCodec
 import kotlinx.serialization.builtins.ListSerializer
