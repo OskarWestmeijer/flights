@@ -41,16 +41,14 @@ fun Application.module() {
     // init redis cache
     Cache
 
-    if(Secrets.redisUrl.equals("maps-redis")) {
-        // init flight-routes
-        val scope = CoroutineScope(Dispatchers.Default)
-        scope.launch {
-            FlightRoutesService.refreshFlightRoutes()
-        }
+    // init flight-routes
+    val scope = CoroutineScope(Dispatchers.Default)
+    scope.launch {
+        FlightRoutesService.refreshFlightRoutes()
+    }
 
-        // start listening for scheduler
-        scope.launch {
-            SchedulerListener.startListening()
-        }
+    // start listening for scheduler
+    scope.launch {
+        SchedulerListener.startListening()
     }
 }

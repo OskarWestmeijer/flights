@@ -19,7 +19,7 @@ runs:
         docker compose down
         docker compose up -d
         ./gradlew --version
-        ./gradlew :clean :check --no-parallel --info
+        ./gradlew :clean :check --no-parallel
         ./gradlew :scheduler:clean :scheduler:check --no-parallel
         ./gradlew buildFatJar
 
