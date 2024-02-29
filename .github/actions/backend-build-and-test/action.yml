@@ -18,7 +18,8 @@ runs:
         chmod +x gradlew
         docker compose up -d
         ./gradlew --version
-        ./gradlew clean check
+        ./gradlew :clean :check --no-parallel --info
+        ./gradlew :scheduler:clean :scheduler:check --no-parallel
         ./gradlew buildFatJar
 
     - name: Upload Api Jar
