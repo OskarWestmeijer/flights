@@ -25,7 +25,7 @@ object Scheduler {
     const val SCHEDULER_SET = "refresh_routes"
     const val EXPECTED_MSG = "Refresh them routes."
 
-    private val shutdownSignal = CompletableDeferred<Unit>()
+    val shutdownSignal = CompletableDeferred<Unit>()
 
     init {
         val config = ConfigFactory.parseResources("scheduler.conf").resolve()
@@ -44,7 +44,7 @@ object Scheduler {
             while (!shutdownSignal.isCompleted) {
                 log.info("Adding to set: $SCHEDULER_SET, msg: $EXPECTED_MSG")
                 redisCommands.sadd(SCHEDULER_SET, EXPECTED_MSG)
-                delay(Duration.of(20, ChronoUnit.SECONDS).toMillis())
+                delay(Duration.of(10, ChronoUnit.MINUTES).toMillis())
             }
         }
 

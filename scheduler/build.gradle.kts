@@ -15,6 +15,7 @@ dependencies {
     implementation("com.typesafe:config:1.4.3")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 }
 
 tasks.test {
