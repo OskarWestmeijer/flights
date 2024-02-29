@@ -1,10 +1,10 @@
-package westmeijer.oskar.redis
-
 import io.ktor.util.logging.*
 import io.lettuce.core.api.sync.RedisCommands
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
+import westmeijer.oskar.redis.RedisClient
 import westmeijer.oskar.services.FlightRoutesService
 
 object SchedulerListener {
@@ -19,13 +19,19 @@ object SchedulerListener {
         redisCommands = RedisClient.client.connect().sync()
     }
 
-    fun startListening() {
-        while (true) {
-            val message = redisCommands.spop(SCHEDULER_SET)
-            if (message != null) {
-                CoroutineScope(Dispatchers.Default).launch {
-                    handleReceivedMessage(message)
+    fun startListening(coroutineScope: CoroutineScope) {
+        coroutineScope.launch {
+            try {
+                while (isActive) {
+                    val message = redisCommands.spop(SCHEDULER_SET)
+                    if (message != null) {
+                        handleReceivedMessage(message)
+                    } else {
+                        delay(1000)
+                    }
                 }
+            } catch (e: Exception) {
+                log.error("Error handling redis message scheduler listener: ${e.message}")
             }
         }
     }
@@ -39,5 +45,4 @@ object SchedulerListener {
             log.info("Unexpected message. Do nothing.")
         }
     }
-
 }

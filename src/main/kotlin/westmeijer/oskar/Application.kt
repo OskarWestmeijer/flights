@@ -1,14 +1,15 @@
 package westmeijer.oskar
 
+import SchedulerListener
 import configureServerSerialization
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.plugins.cors.routing.*
+import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import westmeijer.oskar.redis.Cache
-import westmeijer.oskar.redis.SchedulerListener
 import westmeijer.oskar.routes.registerAirports
 import westmeijer.oskar.routes.registerFlightRoutes
 import westmeijer.oskar.routes.registerOpenapi
@@ -41,14 +42,21 @@ fun Application.module() {
     // init redis cache
     Cache
 
-    // init flight-routes
-    val scope = CoroutineScope(Dispatchers.Default)
+    val scope = CoroutineScope(Dispatchers.Default + CoroutineName("MapsApiMainCoroutine"))
     scope.launch {
-        FlightRoutesService.refreshFlightRoutes()
+        try {
+            FlightRoutesService.refreshFlightRoutes()
+        } catch (e: Exception) {
+            log.error("Error refreshing flight routes: ${e.message}")
+        }
     }
 
     // start listening for scheduler
     scope.launch {
-        SchedulerListener.startListening()
+        try {
+            SchedulerListener.startListening(this)
+        } catch (e: Exception) {
+            log.error("Error starting scheduler listener: ${e.message}")
+        }
     }
 }
