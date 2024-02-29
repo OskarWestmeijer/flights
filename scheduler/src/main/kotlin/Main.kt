@@ -7,6 +7,4 @@ fun main() {
         // Keep the main function running indefinitely
         Thread.sleep(Long.MAX_VALUE)
     }
-
-    println("Stopping application")
 }
