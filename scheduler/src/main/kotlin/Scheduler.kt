@@ -1,5 +1,6 @@
 package westmeijer.oskar
 
+import com.typesafe.config.ConfigFactory
 import io.lettuce.core.RedisClient
 import io.lettuce.core.RedisURI
 import io.lettuce.core.api.sync.RedisCommands
@@ -27,7 +28,13 @@ object Scheduler {
     private val shutdownSignal = CompletableDeferred<Unit>()
 
     init {
-        val redisUri = RedisURI.Builder.redis("localhost").build()
+        val config = ConfigFactory.parseResources("scheduler.conf").resolve()
+
+        // Access configuration properties
+        val redisUrl = config.getString("redis")
+        log.info("Redis url: $redisUrl")
+
+        val redisUri = RedisURI.Builder.redis(redisUrl).build()
         client = RedisClient.create(redisUri)
         redisCommands = client.connect().sync()
 

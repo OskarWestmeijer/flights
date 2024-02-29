@@ -11,8 +11,24 @@ services:
           memory: 50m
         reservations:
           memory: 50m
+  maps-scheduler:
+    image: oskarwestmeijer/maps-scheduler:latest
+    depends_on:
+      - maps-api
+    container_name: maps-scheduler
+    deploy:
+      resources:
+        limits:
+          memory: 20m
+        reservations:
+          memory: 20m
+    restart: always
+    environment:
+      - REDIS_URL=${REDIS_URL}
   maps-api:
     image: oskarwestmeijer/maps-api:latest
+    depends_on:
+      - maps-redis
     container_name: maps-api
     deploy:
       resources:
@@ -29,6 +45,8 @@ services:
       - REDIS_URL=${REDIS_URL}
   maps-ui:
     image: oskarwestmeijer/maps-ui:latest
+    depends_on:
+      - maps-api
     container_name: maps-ui
     deploy:
       resources:
