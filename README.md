@@ -52,9 +52,9 @@ redis-cli SET test-key:2 "yeeeah buddy"
 # delete a key
 redis-cli DEL test-key:2
 
-# list channels
-redis-cli PUBSUB CHANNELS
+# output content of set
+redis-cli SMEMBERS refresh_routes
 
-# publish to channel with message
-redis-cli PUBLISH update_routes "Refresh flight routes"
+# pop random element from set
+redis-cli SPOP refresh_routes
 ```

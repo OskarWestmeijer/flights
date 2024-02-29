@@ -21,7 +21,7 @@ object Scheduler {
     val client: RedisClient
 
     private val redisCommands: RedisCommands<String, String>
-    const val SCHEDULER_LIST = "refresh_routes"
+    const val SCHEDULER_SET = "refresh_routes"
     const val EXPECTED_MSG = "Refresh them routes."
 
     private val shutdownSignal = CompletableDeferred<Unit>()
@@ -35,8 +35,8 @@ object Scheduler {
         val scope = CoroutineScope(Dispatchers.Default)
         scope.launch {
             while (!shutdownSignal.isCompleted) {
-                log.info("Adding to set: $SCHEDULER_LIST, msg: $EXPECTED_MSG")
-                redisCommands.sadd(SCHEDULER_LIST, EXPECTED_MSG)
+                log.info("Adding to set: $SCHEDULER_SET, msg: $EXPECTED_MSG")
+                redisCommands.sadd(SCHEDULER_SET, EXPECTED_MSG)
                 delay(Duration.of(20, ChronoUnit.SECONDS).toMillis())
             }
         }

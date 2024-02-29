@@ -12,7 +12,7 @@ object SchedulerListener {
     private val log = KtorSimpleLogger("westmeijer.oskar.redis.SchedulerListener")
 
     private val redisCommands: RedisCommands<String, String>
-    const val SCHEDULER_CHANNEL = "refresh_routes"
+    const val SCHEDULER_SET = "refresh_routes"
     const val EXPECTED_MSG = "Refresh them routes."
 
     init {
@@ -20,9 +20,8 @@ object SchedulerListener {
     }
 
     fun startListening() {
-        // Start listening for messages in a blocking manner
         while (true) {
-            val message = redisCommands.spop(SCHEDULER_CHANNEL)  // Blocking call
+            val message = redisCommands.spop(SCHEDULER_SET)
             if (message != null) {
                 CoroutineScope(Dispatchers.Default).launch {
                     handleReceivedMessage(message)
