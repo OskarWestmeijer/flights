@@ -1,22 +1,16 @@
 package westmeijer.oskar.services
 
 import io.ktor.util.logging.*
-import westmeijer.oskar.redis.Cache
 import westmeijer.oskar.models.AirportCode
 import westmeijer.oskar.models.DepartingFlight
 import westmeijer.oskar.models.FlightRoute
+import westmeijer.oskar.redis.Cache
 
 object FlightRoutesService {
 
     private val log = KtorSimpleLogger("westmeijer.oskar.services.FlightRoutesService")
 
-    private var hamburgFlightRoutes: List<FlightRoute> = emptyList()
-
-    suspend fun getFlightRoutes(): List<FlightRoute> {
-        if (hamburgFlightRoutes.isEmpty()) {
-            log.info("Flight routes is empty.")
-            refreshFlightRoutes()
-        }
+    fun getFlightRoutes(): List<FlightRoute> {
         return Cache.getCache(Cache.FLIGHT_ROUTES_KEY)
     }
 
@@ -24,7 +18,7 @@ object FlightRoutesService {
         log.info("Start refreshing flight routes")
         val departingFlights: List<DepartingFlight> = HamAirportClient.getDepartingFlights()
         val flights: Map<AirportCode, Int> = aggregateFlights(departingFlights)
-        hamburgFlightRoutes = map(flights)
+        val hamburgFlightRoutes = map(flights)
 
         Cache.setCache(Cache.FLIGHT_ROUTES_KEY, hamburgFlightRoutes)
 
