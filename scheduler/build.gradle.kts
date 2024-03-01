@@ -10,11 +10,11 @@ repositories {
 }
 
 dependencies {
-    implementation("io.lettuce:lettuce-core:6.3.1.RELEASE")
+    implementation("redis.clients:jedis:5.1.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
 
-    implementation("org.slf4j:slf4j-api:1.7.32")
-    implementation("ch.qos.logback:logback-classic:1.2.6")
+    implementation("org.slf4j:slf4j-api:2.0.12")
+    implementation("ch.qos.logback:logback-classic:1.5.1")
     implementation("com.typesafe:config:1.4.3")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
