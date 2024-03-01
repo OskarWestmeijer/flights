@@ -4,7 +4,6 @@ import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
 import io.ktor.server.testing.*
-import kotlinx.coroutines.test.runBlockingTest
 import kotlinx.coroutines.test.runTest
 import org.skyscreamer.jsonassert.JSONAssert
 import kotlin.test.Test
@@ -15,6 +14,8 @@ class FlightRoutesTest {
     @Test
     fun testFlightRoutes() = testApplication {
         runTest {
+
+            Thread.sleep(2000)
             val response = client.get("/flight-routes")
 
             val filePath = "expected_flight_routes.json"
