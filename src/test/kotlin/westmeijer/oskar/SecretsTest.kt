@@ -10,12 +10,15 @@ class SecretsTest {
     fun testSecrets() {
         val expectedKey = "12345"
         val expectedBaseUrl = "http://test.com"
+        val expectedRedisUrl = "redis"
 
         Secrets.apiKey = expectedKey
         Secrets.baseUrl = expectedBaseUrl
+        Secrets.redisUrl = expectedRedisUrl
 
         assertEquals(expectedKey, Secrets.apiKey)
         assertEquals(expectedBaseUrl, Secrets.baseUrl)
+        assertEquals(expectedRedisUrl, Secrets.redisUrl)
     }
 
     @Test
@@ -27,6 +30,11 @@ class SecretsTest {
 
         assertFailsWith<UninitializedPropertyAccessException>("lateinit property baseUrl has not been initialized") {
             Secrets.baseUrl
+        }
+
+
+        assertFailsWith<UninitializedPropertyAccessException>("lateinit property baseUrl has not been initialized") {
+            Secrets.redisUrl
         }
     }
 

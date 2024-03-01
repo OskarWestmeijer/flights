@@ -1,23 +1,52 @@
 version: '3.8'
 
 services:
+  maps-redis:
+    image: redis:7.2.4-alpine3.19
+    expose:
+      - "6379"
+    deploy:
+      resources:
+        limits:
+          memory: 50m
+        reservations:
+          memory: 50m
+  maps-scheduler:
+    image: oskarwestmeijer/maps-scheduler:latest
+    depends_on:
+      - maps-api
+    container_name: maps-scheduler
+    deploy:
+      resources:
+        limits:
+          memory: 20m
+        reservations:
+          memory: 20m
+    restart: always
+    environment:
+      - REDIS_URL=${REDIS_URL}
   maps-api:
     image: oskarwestmeijer/maps-api:latest
+    depends_on:
+      - maps-redis
     container_name: maps-api
     deploy:
       resources:
         limits:
-          memory: 300m
+          memory: 200m
         reservations:
-          memory: 300m
+          memory: 200m
     expose:
       - "8080"
     restart: always
     environment:
       - HAM_API_URL=${HAM_API_URL}
       - HAM_API_KEY=${HAM_API_KEY}
+      - REDIS_URL=${REDIS_URL}
   maps-ui:
     image: oskarwestmeijer/maps-ui:latest
+    depends_on:
+      - maps-api
     container_name: maps-ui
     deploy:
       resources:

@@ -15,16 +15,26 @@ runs:
 
     - shell: bash
       run: |
-        chmod +x gradlew 
+        chmod +x gradlew
+        docker compose down
         docker compose up -d
-        ./gradlew clean check
+        ./gradlew --version
+        ./gradlew :clean :check --no-parallel
+        ./gradlew :scheduler:clean :scheduler:check --no-parallel
         ./gradlew buildFatJar
 
-    - name: Upload Jar
+    - name: Upload Api Jar
       uses: actions/upload-artifact@v4
       with:
         name: app
         path: build/libs/app.jar
+        retention-days: 1
+
+    - name: Upload Scheduler Jar
+      uses: actions/upload-artifact@v4
+      with:
+        name: maps-scheduler
+        path: build/libs/maps-scheduler.jar
         retention-days: 1
 
     - name: Upload coverage reports to Codecov

@@ -34,8 +34,6 @@ object AirportService {
     }
 
     private fun readCsv(): Map<String, Airport> {
-        log.info("Reading airports.csv")
-
         val inStream = ClassLoader.getSystemResourceAsStream("airports.csv")
 
         return CSVFormat.Builder.create(CSVFormat.DEFAULT).apply {
