@@ -21,8 +21,8 @@ runs:
         ./gradlew --version
         ./gradlew :clean :check --no-parallel
         ./gradlew :scheduler:clean :scheduler:check --no-parallel
-        ./gradlew clean buildFatJar
-        ./gradlew :scheduler:clean :scheduler:build
+        ./gradlew buildFatJar
+        ./gradlew :scheduler:build
 
     - name: Upload Api Jar
       uses: actions/upload-artifact@v4
