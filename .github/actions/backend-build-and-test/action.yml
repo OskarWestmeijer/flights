@@ -21,7 +21,8 @@ runs:
         ./gradlew --version
         ./gradlew :clean :check --no-parallel
         ./gradlew :scheduler:clean :scheduler:check --no-parallel
-        ./gradlew buildFatJar
+        ./gradlew clean buildFatJar
+        ./gradlew :scheduler:clean :scheduler:build
 
     - name: Upload Api Jar
       uses: actions/upload-artifact@v4
@@ -34,7 +35,7 @@ runs:
       uses: actions/upload-artifact@v4
       with:
         name: maps-scheduler
-        path: build/libs/maps-scheduler.jar
+        path: scheduler/build/libs/maps-scheduler.jar
         retention-days: 1
 
     - name: Upload coverage reports to Codecov
