@@ -3,14 +3,15 @@ version: '3.8'
 services:
   maps-redis:
     image: redis:7.2.4-alpine3.19
+    container_name: maps-redis
     expose:
       - "6379"
     deploy:
       resources:
         limits:
-          memory: 50m
+          memory: 25m
         reservations:
-          memory: 50m
+          memory: 25m
   maps-scheduler:
     image: oskarwestmeijer/maps-scheduler:latest
     depends_on:
@@ -19,9 +20,9 @@ services:
     deploy:
       resources:
         limits:
-          memory: 20m
+          memory: 75m
         reservations:
-          memory: 20m
+          memory: 75m
     restart: always
     environment:
       - REDIS_URL=${REDIS_URL}
@@ -33,9 +34,9 @@ services:
     deploy:
       resources:
         limits:
-          memory: 200m
+          memory: 300m
         reservations:
-          memory: 200m
+          memory: 300m
     expose:
       - "8080"
     restart: always
