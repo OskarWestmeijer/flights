@@ -41,11 +41,16 @@ object Scheduler {
         log.info("Launching scheduler with SADD.")
         val scope = CoroutineScope(Dispatchers.Default)
         scope.launch {
-            while (!shutdownSignal.isCompleted) {
-                log.info("Adding to set: $SCHEDULER_SET, msg: $EXPECTED_MSG")
-                redisCommands.sadd(SCHEDULER_SET, EXPECTED_MSG)
-                delay(Duration.of(10, ChronoUnit.MINUTES).toMillis())
+            try {
+                while (!shutdownSignal.isCompleted) {
+                    log.info("Adding to set: $SCHEDULER_SET, msg: $EXPECTED_MSG")
+                    redisCommands.sadd(SCHEDULER_SET, EXPECTED_MSG)
+                    delay(Duration.of(10, ChronoUnit.MINUTES).toMillis())
+                }
+            } catch (e: Exception) {
+                log.error("Error while scheduling: ${e.message}")
             }
+
         }
 
         Runtime.getRuntime().addShutdownHook(Thread {

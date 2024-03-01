@@ -29,7 +29,7 @@ tasks.jar {
     archiveBaseName.set("maps-scheduler")
     manifest {
         attributes(
-            "Main-Class" to "Main.kt" // Replace with your actual main class
+            "Main-Class" to "Main.kt"
         )
     }
 }
