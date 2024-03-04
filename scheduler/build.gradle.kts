@@ -14,7 +14,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
 
     implementation("org.slf4j:slf4j-api:2.0.12")
-    implementation("ch.qos.logback:logback-classic:1.5.1")
+    implementation("ch.qos.logback:logback-classic:1.5.2")
     implementation("com.typesafe:config:1.4.3")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
