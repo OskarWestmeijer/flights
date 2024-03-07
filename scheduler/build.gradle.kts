@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation("redis.clients:jedis:5.1.1")
+    implementation("redis.clients:jedis:5.1.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
 
     implementation("org.slf4j:slf4j-api:2.0.12")
