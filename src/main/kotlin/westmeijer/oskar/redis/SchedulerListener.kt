@@ -31,7 +31,9 @@ object SchedulerListener {
                     }
                 }
             } catch (e: Exception) {
-                log.error("Error handling redis message scheduler listener: ${e.message}")
+                log.error("Error handling redis message scheduler listener: ${e.message}", e)
+            } finally {
+                log.error("Finally of scheduler listener coroutine.  isActive: $isActive")
             }
         }
     }

@@ -47,7 +47,7 @@ fun Application.module() {
         try {
             FlightRoutesService.refreshFlightRoutes()
         } catch (e: Exception) {
-            log.error("Error refreshing flight routes: ${e.message}")
+            log.error("Error refreshing flight routes: ${e.message}", e)
         }
     }
 
@@ -56,7 +56,9 @@ fun Application.module() {
         try {
             SchedulerListener.startListening(this)
         } catch (e: Exception) {
-            log.error("Error starting scheduler listener: ${e.message}")
+            log.error("Error starting scheduler listener: ${e.message}", e)
+        } finally {
+            log.error("Finally of scheduler listener coroutine launcher.")
         }
     }
 }
