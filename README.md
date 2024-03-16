@@ -13,6 +13,7 @@ Displays Hamburg airport connections on a 3d globe. The backend provides a publi
 
 ```
 - Kotlin & Ktor
+- Redis
 - Typescript & Sveltekit
 - GlobeJs, Tailwindcss & DaisyUI
 ```
@@ -32,6 +33,10 @@ Execute these commands and refer to the `frontend/README.md` for further instruc
 docker compose up -d
 ./gradlew run
 ```
+
+## Architecture
+
+![maps_c4_diagram.svg](docs/maps_c4_diagram.svg)
 
 ## Caching with Redis
 
