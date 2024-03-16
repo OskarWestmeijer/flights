@@ -46,7 +46,7 @@ object Scheduler {
                 while (shutdownSignal.isActive) {
                     log.info("Adding to set: $SCHEDULER_SET, msg: $EXPECTED_MSG")
                     jedis.sadd(SCHEDULER_SET, EXPECTED_MSG)
-                    delay(Duration.of(10, ChronoUnit.SECONDS).toMillis())
+                    delay(Duration.of(10, ChronoUnit.MINUTES).toMillis())
                 }
             } catch (e: Exception) {
                 log.error("Error while scheduling.", e)

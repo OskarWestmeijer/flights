@@ -1,7 +1,6 @@
 import io.ktor.util.logging.*
 import io.lettuce.core.api.sync.RedisCommands
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
@@ -30,11 +29,11 @@ object SchedulerListener {
                         if (message != null) {
                             handleReceivedMessage(message)
                         } else {
-                            delay(1000)
+                            delay(10000)
                         }
                     } catch (e: Exception) {
                         log.error("Error inside scheduler loop. isActive: $isActive", e)
-                        delay(1000)
+                        delay(10000)
                     }
                 }
             } catch (e: Exception) {
