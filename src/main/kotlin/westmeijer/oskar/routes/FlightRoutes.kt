@@ -15,7 +15,7 @@ fun Application.registerFlightRoutes() {
 fun Route.getFlightRoutes() {
     get("/flight-routes") {
         val flightRoutes = FlightRoutesService.getFlightRoutes()
-        val flightRouteResponse = FlightRouteResponse(flightRoutes)
+        val flightRouteResponse = FlightRouteResponse(flightRoutes, flightRoutes.first().importedAt)
         call.respond(flightRouteResponse)
     }
 }

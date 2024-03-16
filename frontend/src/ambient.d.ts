@@ -13,6 +13,7 @@ declare global {
 
 	interface FlightRoutesResponse {
 		flightRoutes: FlightRoute[];
+		importedAt: string;
 	}
 
 	interface ArcData {
@@ -34,7 +35,7 @@ declare global {
 		size: number;
 		dotRadius: number;
 		color: string;
-		resolution: number
+		resolution: number;
 		flightCount: number;
 		distance: number;
 	}

@@ -4,6 +4,8 @@ import westmeijer.oskar.models.Airport
 import westmeijer.oskar.models.FlightRoute
 import westmeijer.oskar.redis.FlightRoutesCacheCodec
 import java.nio.ByteBuffer
+import java.time.Instant
+import java.time.temporal.ChronoUnit
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
@@ -23,7 +25,7 @@ internal class FlightRoutesCacheCodecTest {
     @Test
     fun testDecodeValueWithValidJson() {
         val airport = Airport("HEL", "60.3172", "24.9633")
-        val flightRoutes = listOf(FlightRoute(airport, airport, 5))
+        val flightRoutes = listOf(FlightRoute(airport, airport, 5, Instant.now().truncatedTo(ChronoUnit.SECONDS).toString()))
 
         val encodedValue = codec.encodeValue(flightRoutes)
         val decodedValue = codec.decodeValue(encodedValue!!)
@@ -52,7 +54,7 @@ internal class FlightRoutesCacheCodecTest {
     @Test
     fun testEncodeValue() {
         val airport = Airport("HEL", "60.3172", "24.9633")
-        val flightRoutes = listOf(FlightRoute(airport, airport, 5))
+        val flightRoutes = listOf(FlightRoute(airport, airport, 5, Instant.now().truncatedTo(ChronoUnit.SECONDS).toString()))
 
         val encodedValue = codec.encodeValue(flightRoutes)
         val jsonString = Json.encodeToString(ListSerializer(FlightRoute.serializer()), flightRoutes)

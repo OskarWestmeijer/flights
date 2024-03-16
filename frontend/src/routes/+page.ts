@@ -14,6 +14,8 @@ export const load: PageLoad = async ({ fetch }) => {
 	const res = await fetch(apiUrl);
 	const response: FlightRoutesResponse = await res.json();
 
+	const importedAt = response.importedAt
+
 	const arcData: GlobeData[] = response.flightRoutes.map((route: FlightRoute) => {
 		const from: GeolibInputCoordinates = {
 			latitude: route.hamAirport.latitude,
@@ -59,7 +61,8 @@ export const load: PageLoad = async ({ fetch }) => {
 	return {
 		props: {
 			arcData: arcData,
-			labelData: labelData
+			labelData: labelData,
+			importedAt: importedAt
 		}
 	};
 };

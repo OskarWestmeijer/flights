@@ -23,7 +23,7 @@ class FlightRoutesTest {
             val expected = inStream!!.bufferedReader().use { it.readText() }.trimIndent()
 
             assertEquals(HttpStatusCode.OK, response.status)
-            JSONAssert.assertEquals(expected, response.bodyAsText(), true)
+            JSONAssert.assertEquals(expected, response.bodyAsText(), false)
         }
     }
 

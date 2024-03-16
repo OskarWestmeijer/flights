@@ -6,6 +6,7 @@
 
 	export let data: PageData;
 
+	const importedAt: string = data.props.importedAt;
 	const globeData: GlobeData[] = data.props.arcData;
 	const labelData: LabelData[] = data.props.labelData;
 	const connectionsCount = globeData.length;
@@ -53,7 +54,10 @@
 
 <div id="helloWorld"></div>
 
-<div id="connectionsCount" class="text-white">HAM destinations count: {connectionsCount}</div>
+<div id="connectionsCount" class="text-white">
+	<p>HAM destinations count: {connectionsCount}</p>
+	<p>Imported at: {importedAt}</p>
+</div>
 
 <style>
 	#connectionsCount {
