@@ -14,6 +14,7 @@ import redis.clients.jedis.JedisPool
 import redis.clients.jedis.JedisPoolConfig
 import java.time.Duration
 import java.time.temporal.ChronoUnit
+import kotlin.system.exitProcess
 
 object Scheduler {
 
@@ -42,13 +43,17 @@ object Scheduler {
         val scope = CoroutineScope(Dispatchers.Default)
         scope.launch {
             try {
-                while (!shutdownSignal.isCompleted) {
+                while (shutdownSignal.isActive) {
                     log.info("Adding to set: $SCHEDULER_SET, msg: $EXPECTED_MSG")
                     jedis.sadd(SCHEDULER_SET, EXPECTED_MSG)
-                    delay(Duration.of(10, ChronoUnit.MINUTES).toMillis())
+                    delay(Duration.of(10, ChronoUnit.SECONDS).toMillis())
                 }
             } catch (e: Exception) {
-                log.error("Error while scheduling: ${e.message}")
+                log.error("Error while scheduling.", e)
+            } finally {
+                log.info("Shutdown application. isActive: ${shutdownSignal.isActive}")
+                scope.cancel()
+                exitProcess(0)
             }
 
         }

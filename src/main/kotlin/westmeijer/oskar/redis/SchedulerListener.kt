@@ -1,6 +1,7 @@
 import io.ktor.util.logging.*
 import io.lettuce.core.api.sync.RedisCommands
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
@@ -19,21 +20,27 @@ object SchedulerListener {
         redisCommands = RedisClient.client.connect().sync()
     }
 
-    fun startListening(coroutineScope: CoroutineScope) {
-        coroutineScope.launch {
+    fun startListening(scope: CoroutineScope) {
+        scope.launch {
             try {
+                log.info("Starting scheduler loop.")
                 while (isActive) {
-                    val message = redisCommands.spop(SCHEDULER_SET)
-                    if (message != null) {
-                        handleReceivedMessage(message)
-                    } else {
+                    try {
+                        val message = redisCommands.spop(SCHEDULER_SET)
+                        if (message != null) {
+                            handleReceivedMessage(message)
+                        } else {
+                            delay(1000)
+                        }
+                    } catch (e: Exception) {
+                        log.error("Error inside scheduler loop. isActive: $isActive", e)
                         delay(1000)
                     }
                 }
             } catch (e: Exception) {
-                log.error("Error handling redis message scheduler listener: ${e.message}", e)
+                log.error("Error outside scheduler loop.", e)
             } finally {
-                log.error("Finally of scheduler listener coroutine.  isActive: $isActive")
+                log.info("Finally of scheduler listener coroutine.  isActive: $isActive")
             }
         }
     }

@@ -7,6 +7,7 @@ import io.ktor.server.application.*
 import io.ktor.server.plugins.cors.routing.*
 import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import westmeijer.oskar.redis.Cache
@@ -18,6 +19,7 @@ import westmeijer.oskar.services.FlightRoutesService
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
+@OptIn(DelicateCoroutinesApi::class)
 fun Application.module() {
 
     Secrets.apiKey = environment.config.property("api.key").getString()
@@ -47,18 +49,14 @@ fun Application.module() {
         try {
             FlightRoutesService.refreshFlightRoutes()
         } catch (e: Exception) {
-            log.error("Error refreshing flight routes: ${e.message}", e)
+            log.error("Error refreshing flight routes.", e)
         }
     }
 
     // start listening for scheduler
-    scope.launch {
-        try {
-            SchedulerListener.startListening(this)
-        } catch (e: Exception) {
-            log.error("Error starting scheduler listener: ${e.message}", e)
-        } finally {
-            log.error("Finally of scheduler listener coroutine launcher.")
-        }
+    try {
+        SchedulerListener.startListening(scope)
+    } catch (e: Exception) {
+        log.error("Error starting scheduler listener.", e)
     }
 }
