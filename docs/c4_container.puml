@@ -6,23 +6,23 @@ title C4Model Container diagram for Maps
 
 Person(user, "User")
 
-System_Boundary(weatherSystem, "Weather-Api System") {
-    Container(nginx_proxy, "Proxy", "Nginx", $descr="Routes requests")
-    Container(maps_api, "Maps-Api", "Kotlin & Ktor", $descr="REST Api for HAM airport connections")
-    Container(maps_scheduler, "Maps-Scheduler", "Kotlin", $descr="Schedules import-event")
+System_Boundary(weatherSystem, "Maps") {
+    Container(nginx_proxy, "Proxy", "Nginx")
+    Container(maps_api, "API", "Kotlin & Ktor")
+    Container(maps_scheduler, "Import-Scheduler", "Kotlin")
     Container(maps_cache, "Cache", "Redis", $descr="Api-data & import-event")
-    Container(maps_ui, "Maps-Ui", "Node & Sveltekit (SSR)", $descr="Display HAM airport connections")
+    Container(maps_ui, "UI", "Node & Sveltekit (SSR)")
 }
-System_Ext(ham_api, "HAM airport Api", "External Api for airport connections")
+System_Ext(ham_api, "HAM airport Api", "API for current airport connections")
 
 
-Rel(user, nginx_proxy, "View weather", "https")
+Rel(user, nginx_proxy, "View airport connections", "https")
 Rel_R(nginx_proxy, maps_ui, "Route to UI", "https")
 Rel_D(nginx_proxy, maps_api, "Route to API", "https")
 Rel(maps_ui, maps_api, "Request data for SSR", "https")
-Rel(maps_api, maps_cache, "Poll import-event & cache Api response")
-Rel(maps_scheduler, maps_cache, "Schedule import-event")
-Rel_R(maps_api, ham_api, "Harvest airport connections", "https")
+Rel(maps_api, maps_cache, "Poll Refresh-Event & Cache Maps-Api response")
+Rel(maps_scheduler, maps_cache, "Schedule Refresh-Event every 10min")
+Rel_R(maps_api, ham_api, "Refresh airport connections", "https")
 
 LAYOUT_TOP_DOWN()
 @enduml
