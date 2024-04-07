@@ -61,7 +61,7 @@
 
 <style>
 	#connectionsCount {
-		position: absolute;
+		position: fixed;
 		bottom: 1%;
 		left: 1%;
 		z-index: 9998;
