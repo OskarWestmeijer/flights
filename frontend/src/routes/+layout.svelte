@@ -67,7 +67,7 @@
 							stroke-linejoin="round"
 						/>
 					</svg>
-					Map
+					Table
 				</a>
 			</li>
 		</ul>
@@ -109,7 +109,7 @@
 	}
 
 	#copyright {
-		position: absolute;
+		position: fixed;
 		bottom: 1%;
 		right: 1%;
 		z-index: 9998;
