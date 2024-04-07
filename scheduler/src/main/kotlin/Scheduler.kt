@@ -38,7 +38,7 @@ object Scheduler {
             try {
                 log.info("Adding to set: $SCHEDULER_SET, msg: $EXPECTED_MSG")
                 jedis.sadd(SCHEDULER_SET, EXPECTED_MSG)
-                Thread.sleep(Duration.of(10, ChronoUnit.SECONDS).toMillis())
+                Thread.sleep(Duration.of(10, ChronoUnit.MINUTES).toMillis())
             } catch (e: Exception) {
                 // jedis is not able to recover a lost connection to redis. therefore restart the service
                 log.error("Error while scheduling. Shutdown after 10 seconds.", e)
