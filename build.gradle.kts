@@ -7,7 +7,7 @@ val lettuce_core: String by project
 
 plugins {
     kotlin("jvm") version "1.9.23"
-    id("io.ktor.plugin") version "2.3.9"
+    id("io.ktor.plugin") version "2.3.10"
     kotlin("plugin.serialization") version "1.9.23"
     id("org.jetbrains.kotlinx.kover") version "0.7.6"
 }
