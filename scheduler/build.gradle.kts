@@ -13,7 +13,7 @@ dependencies {
     implementation("redis.clients:jedis:5.1.2")
 
     implementation("org.slf4j:slf4j-api:2.0.12")
-    implementation("ch.qos.logback:logback-classic:1.5.3")
+    implementation("ch.qos.logback:logback-classic:1.5.4")
     implementation("com.typesafe:config:1.4.3")
 }
 
