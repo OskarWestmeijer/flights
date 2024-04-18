@@ -52,7 +52,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="/map" class="normal-case text-sm hover:text-accent">
+				<a href="/table" class="normal-case text-sm hover:text-accent">
 					<svg
 						viewBox="0 0 24 24"
 						class="h-5 w-5 stroke-accent"

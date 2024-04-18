@@ -27,10 +27,10 @@
 			</tbody>
 		</table>
 	</div>
-</div>
-<div id="connectionsCount" class="text-white">
-	<p>HAM destinations count: {routes.length}</p>
-	<p>Imported at: {importedAt}</p>
+	<div id="connectionsCount" class="text-white">
+		<p>HAM destinations count: {routes.length}</p>
+		<p>Imported at: {importedAt}</p>
+	</div>
 </div>
 
 <style>
@@ -38,6 +38,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin: auto;
+		width: 100%;
 	}
 
 	#connectionsCount {
