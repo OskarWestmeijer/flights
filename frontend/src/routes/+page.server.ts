@@ -3,20 +3,44 @@ import type { GeolibInputCoordinates } from 'geolib/es/types';
 import { getDistance, convertDistance } from 'geolib';
 import type { FlightRoute, FlightRoutesResponse } from './global';
 
+let importedAt;
+let arcData: GlobeData[];
+let labelData: LabelData[];
+
 export const load: PageLoad = async ({ fetch }) => {
-	let apiUrl;
-	if (process.env.NODE_ENV === 'production') {
-		apiUrl = 'https://api.maps.oskar-westmeijer.com/flight-routes';
+	const tenMinsAgoTs = new Date().getTime() - 10 * 60 * 1000;
+	const importedAtTs = new Date(importedAt).getTime();
+	console.log(tenMinsAgoTs);
+	console.log(importedAtTs);
+	if (arcData == null || labelData == null || importedAt == null || importedAtTs < tenMinsAgoTs) {
+		console.log('importing');
+		let apiUrl;
+		if (process.env.NODE_ENV === 'production') {
+			apiUrl = 'https://api.maps.oskar-westmeijer.com/flight-routes';
+		} else {
+			apiUrl = 'http://localhost:8080/flight-routes';
+		}
+
+		const res = await fetch(apiUrl);
+		const response: FlightRoutesResponse = await res.json();
+		arcData = computeArcData(response);
+		labelData = computeLabelData(arcData);
+		importedAt = response.importedAt;
 	} else {
-		apiUrl = 'http://localhost:8080/flight-routes';
+		console.log('not importing');
 	}
 
-	const res = await fetch(apiUrl);
-	const response: FlightRoutesResponse = await res.json();
+	return {
+		props: {
+			arcData: arcData,
+			labelData: labelData,
+			importedAt: importedAt
+		}
+	};
+};
 
-	const importedAt = response.importedAt
-
-	const arcData: GlobeData[] = response.flightRoutes.map((route: FlightRoute) => {
+function computeArcData(response: FlightRoutesResponse): GlobeData[] {
+	return response.flightRoutes.map((route: FlightRoute) => {
 		const from: GeolibInputCoordinates = {
 			latitude: route.hamAirport.latitude,
 			longitude: route.hamAirport.longitude
@@ -42,8 +66,10 @@ export const load: PageLoad = async ({ fetch }) => {
 
 		return styleArc(tmpGlobeData);
 	});
+}
 
-	const labelData: LabelData[] = arcData.map((d) => {
+function computeLabelData(arcData: GlobeData[]): LabelData[] {
+	return arcData.map((d) => {
 		const tmpLabelData: LabelData = {
 			lat: d.endLat,
 			lng: d.endLng,
@@ -57,25 +83,17 @@ export const load: PageLoad = async ({ fetch }) => {
 		};
 		return styleLabel(tmpLabelData);
 	});
-
-	return {
-		props: {
-			arcData: arcData,
-			labelData: labelData,
-			importedAt: importedAt
-		}
-	};
-};
+}
 
 function styleArc(arc: GlobeData): GlobeData {
 	if (arc.flightCount > 10) {
 		arc.stroke = 0.35;
 		arc.color = [`rgba(0, 255, 0, 1)`, `rgba(255, 0, 0, 1)`];
 	} else if (arc.flightCount > 5) {
-		arc.stroke = 0.20;
+		arc.stroke = 0.2;
 		arc.color = [`rgba(0, 255, 0, 1)`, `rgba(255, 0, 0, 1)`];
 	} else {
-		arc.stroke = 0.10;
+		arc.stroke = 0.1;
 		arc.color = [`rgba(0, 255, 0, 1)`, `rgba(255, 0, 0, 1)`];
 	}
 

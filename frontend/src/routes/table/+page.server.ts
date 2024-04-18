@@ -11,8 +11,6 @@ export const load: PageLoad = async ({ fetch }) => {
 
 	const res = await fetch(apiUrl);
 	const response: FlightRoutesResponse = await res.json();
-	//console.log(response);
-	console.log('done');
 
 	const responseData = response;
 	return {
