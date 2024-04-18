@@ -12,6 +12,7 @@ services:
           memory: 25m
         reservations:
           memory: 25m
+    restart: always
   maps-scheduler:
     image: oskarwestmeijer/maps-scheduler:latest
     depends_on:
