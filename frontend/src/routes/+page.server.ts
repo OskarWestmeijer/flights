@@ -13,10 +13,9 @@ export const load: PageLoad = async ({ fetch }) => {
 	console.log(tenMinsAgoTs);
 	console.log(importedAtTs);
 	if (arcData == null || labelData == null || importedAt == null || importedAtTs < tenMinsAgoTs) {
-		console.log('importing');
 		let apiUrl;
 		if (process.env.NODE_ENV === 'production') {
-			apiUrl = 'https://api.maps.oskar-westmeijer.com/flight-routes';
+			apiUrl = 'https://maps-api:8080/flight-routes';
 		} else {
 			apiUrl = 'http://localhost:8080/flight-routes';
 		}
@@ -27,7 +26,7 @@ export const load: PageLoad = async ({ fetch }) => {
 		labelData = computeLabelData(arcData);
 		importedAt = response.importedAt;
 	} else {
-		console.log('not importing');
+		// not updating data
 	}
 
 	return {

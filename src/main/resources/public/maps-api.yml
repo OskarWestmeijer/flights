@@ -68,7 +68,7 @@ components:
 
     FlightRouteResponse:
       type: object
-      description: Container for multiple flightRoute elements.
+      description: Container for multiple flightRoute elements
       required:
         - flightRoutes
       properties:
@@ -79,7 +79,7 @@ components:
 
     FlightRoute:
       type: object
-      description: Container for multiple flightRoute elements.
+      description: Container for multiple flightRoute elements
       required:
         - flightCount
       properties:
@@ -94,7 +94,7 @@ components:
 
     Airport:
       type: object
-      description: Details about an airport.
+      description: Details about an airport
       required:
         - airportCode
         - latitude
@@ -102,13 +102,20 @@ components:
       properties:
         airportCode:
           type: string
-          description: Airport code.
+          description: Airport code
           example: HEL
+        airportName:
+          type: string
+          description: Airport name
+          example: Hamburg Airport
+        countryCode:
+          type: string
+          description: ISO 3166 ALPHA-2 country code
         latitude:
           type: string
-          description: Latitude of the airport.
+          description: Latitude of the airport
           example: 60.3172
         longitude:
           type: string
-          description: Longitude of the airport.
+          description: Longitude of the airport
           example: 24.9633

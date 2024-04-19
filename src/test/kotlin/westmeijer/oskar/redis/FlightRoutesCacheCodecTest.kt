@@ -1,7 +1,7 @@
 import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json
-import westmeijer.oskar.models.Airport
-import westmeijer.oskar.models.FlightRoute
+import westmeijer.oskar.models.server.Airport
+import westmeijer.oskar.models.server.FlightRoute
 import westmeijer.oskar.redis.FlightRoutesCacheCodec
 import java.nio.ByteBuffer
 import java.time.Instant
@@ -24,7 +24,7 @@ internal class FlightRoutesCacheCodecTest {
 
     @Test
     fun testDecodeValueWithValidJson() {
-        val airport = Airport("HEL", "60.3172", "24.9633")
+        val airport = Airport("HEL", "Hamburg Airport", "DE", "60.3172", "24.9633")
         val flightRoutes = listOf(FlightRoute(airport, airport, 5, Instant.now().truncatedTo(ChronoUnit.SECONDS).toString()))
 
         val encodedValue = codec.encodeValue(flightRoutes)
@@ -53,7 +53,7 @@ internal class FlightRoutesCacheCodecTest {
 
     @Test
     fun testEncodeValue() {
-        val airport = Airport("HEL", "60.3172", "24.9633")
+        val airport = Airport("HEL", "Hamburg Airport", "DE", "60.3172", "24.9633")
         val flightRoutes = listOf(FlightRoute(airport, airport, 5, Instant.now().truncatedTo(ChronoUnit.SECONDS).toString()))
 
         val encodedValue = codec.encodeValue(flightRoutes)

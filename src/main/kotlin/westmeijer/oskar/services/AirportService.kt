@@ -2,7 +2,7 @@ package westmeijer.oskar.services
 
 import io.ktor.util.logging.*
 import org.apache.commons.csv.CSVFormat
-import westmeijer.oskar.models.Airport
+import westmeijer.oskar.models.server.Airport
 
 
 object AirportService {
@@ -13,7 +13,7 @@ object AirportService {
 
     val unmappedAirports: MutableSet<String> = mutableSetOf()
 
-    val HAM_AIRPORT = Airport("HAM", "53.6304", "9.98823")
+    val HAM_AIRPORT = Airport("HAM", "Hamburg Airport", "DE", "53.6304", "9.98823")
 
     init {
         airportMap = readCsv()
@@ -41,8 +41,10 @@ object AirportService {
         }.build().parse(inStream.reader()).drop(1).map {
             Airport(
                 airportCode = it[2],
+                airportName = it[4],
+                countryCode = it[0],
                 latitude = it[5],
-                longitude = it[6],
+                longitude = it[6]
             )
         }.associateBy({ it.airportCode }, { it })
     }

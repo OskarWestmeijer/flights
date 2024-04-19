@@ -1,9 +1,9 @@
 package westmeijer.oskar.services
 
 import io.ktor.util.logging.*
-import westmeijer.oskar.models.AirportCode
-import westmeijer.oskar.models.DepartingFlight
-import westmeijer.oskar.models.FlightRoute
+import westmeijer.oskar.models.server.AirportCode
+import westmeijer.oskar.models.client.DepartingFlight
+import westmeijer.oskar.models.server.FlightRoute
 import westmeijer.oskar.redis.Cache
 import java.time.Instant
 import java.time.temporal.ChronoUnit

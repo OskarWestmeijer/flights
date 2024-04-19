@@ -1,4 +1,4 @@
-package westmeijer.oskar.models
+package westmeijer.oskar.models.server
 
 import kotlinx.serialization.Serializable
 

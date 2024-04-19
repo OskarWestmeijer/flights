@@ -1,6 +1,6 @@
 package westmeijer.oskar.services
 
-import westmeijer.oskar.models.Airport
+import westmeijer.oskar.models.server.Airport
 import kotlin.test.BeforeTest
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -16,7 +16,7 @@ class AirportServiceTest {
 
     @Test
     fun testGetAirport() {
-        val expected = Airport("HEL", "60.3172", "24.9633")
+        val expected = Airport("HEL", "Helsinki Airport (Helsinki-Vantaa Airport)", "FI", "60.3172", "24.9633")
         val actual = AirportService.getAirport("HEL")
         assertEquals(expected, actual)
         assertEquals(mutableSetOf(), AirportService.unmappedAirports)
@@ -24,7 +24,7 @@ class AirportServiceTest {
 
     @Test
     fun testHamAirport() {
-        assertEquals(Airport("HAM", "53.6304", "9.98823"), AirportService.HAM_AIRPORT)
+        assertEquals(Airport("HAM", "Hamburg Airport", "DE", "53.6304", "9.98823"), AirportService.HAM_AIRPORT)
     }
 
     @Test

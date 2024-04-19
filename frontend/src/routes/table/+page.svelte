@@ -8,19 +8,23 @@
 	console.log(importedAt);
 </script>
 
-<div class="container pt-20 bg-primary">
+<div class="container pt-20 bg-primary pb-8">
 	<div class="overflow-x-auto">
-		<table class="table-xs text-white">
+		<table class="table text-white">
 			<thead class="text-white">
 				<tr>
-					<th>Destination</th>
+					<th>Airport name</th>
+					<th>Airport code</th>
+					<th>Country Code</th>
 					<th>Departures today</th>
 				</tr>
 			</thead>
 			<tbody>
 				{#each routes as route}
 					<tr>
+						<td>{route.connectionAirport.airportName}</td>
 						<td>{route.connectionAirport.airportCode}</td>
+						<td>{route.connectionAirport.countryCode}</td>
 						<td>{route.flightCount}</td>
 					</tr>
 				{/each}

@@ -1,6 +1,8 @@
 declare global {
 	interface Airport {
 		airportCode: string;
+		airportName: string;
+		countryCode: string;
 		latitude: string;
 		longitude: string;
 	}

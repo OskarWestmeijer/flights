@@ -3,7 +3,7 @@ package westmeijer.oskar.redis
 import io.ktor.util.logging.*
 import io.lettuce.core.api.StatefulRedisConnection
 import io.lettuce.core.api.sync.RedisCommands
-import westmeijer.oskar.models.FlightRoute
+import westmeijer.oskar.models.server.FlightRoute
 
 
 object Cache {

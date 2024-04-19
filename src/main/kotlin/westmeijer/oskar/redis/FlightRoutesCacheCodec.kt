@@ -3,7 +3,7 @@ package westmeijer.oskar.redis
 import io.lettuce.core.codec.RedisCodec
 import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json
-import westmeijer.oskar.models.FlightRoute
+import westmeijer.oskar.models.server.FlightRoute
 import java.io.IOException
 import java.nio.ByteBuffer
 import java.nio.charset.Charset

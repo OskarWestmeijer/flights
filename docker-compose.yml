@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   ham-api:
     image: wiremock/wiremock:3.3.1

@@ -10,7 +10,7 @@ import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import kotlinx.serialization.json.Json
 import westmeijer.oskar.Secrets
-import westmeijer.oskar.models.DepartingFlight
+import westmeijer.oskar.models.client.DepartingFlight
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 

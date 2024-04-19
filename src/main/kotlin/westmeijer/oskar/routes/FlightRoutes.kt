@@ -3,7 +3,7 @@ package westmeijer.oskar.routes
 import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
-import westmeijer.oskar.models.FlightRouteResponse
+import westmeijer.oskar.models.server.FlightRouteResponse
 import westmeijer.oskar.services.FlightRoutesService
 
 fun Application.registerFlightRoutes() {
