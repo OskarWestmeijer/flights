@@ -15,7 +15,7 @@ export const load: PageLoad = async ({ fetch }) => {
 	if (arcData == null || labelData == null || importedAt == null || importedAtTs < tenMinsAgoTs) {
 		let apiUrl;
 		if (process.env.NODE_ENV === 'production') {
-			apiUrl = 'https://maps-api:8080/flight-routes';
+			apiUrl = 'http://maps-api:8080/flight-routes';
 		} else {
 			apiUrl = 'http://localhost:8080/flight-routes';
 		}
