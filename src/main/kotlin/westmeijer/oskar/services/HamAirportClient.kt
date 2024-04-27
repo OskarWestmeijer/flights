@@ -41,15 +41,13 @@ object HamAirportClient {
         val today = Instant.now().truncatedTo(ChronoUnit.DAYS)
         val tomorrow = Instant.now().plus(1, ChronoUnit.DAYS).truncatedTo(ChronoUnit.DAYS)
 
-        val response: HttpResponse =
-            client
-                .get("${Secrets.baseUrl}/v2/flights/departures?from=${today}&to=${tomorrow}") {
-                    headers {
-                        append("Ocp-Apim-Subscription-Key", Secrets.apiKey)
-                        append("Content-Type", "application/json")
-                        append("Accept", "application/json")
-                    }
-                }
+        val response: HttpResponse = client.get("${Secrets.baseUrl}/v2/flights/departures?from=${today}&to=${tomorrow}") {
+            headers {
+                append("Ocp-Apim-Subscription-Key", Secrets.apiKey)
+                append("Content-Type", "application/json")
+                append("Accept", "application/json")
+            }
+        }
 
         val destinationAsText = response.bodyAsText().trimIndent()
         return decoder.decodeFromString<List<DepartingFlight>>(destinationAsText)
