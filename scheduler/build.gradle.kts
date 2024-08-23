@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation("redis.clients:jedis:5.1.4")
+    implementation("redis.clients:jedis:5.1.5")
 
     implementation("org.slf4j:slf4j-api:2.0.16")
     implementation("ch.qos.logback:logback-classic:1.5.7")
