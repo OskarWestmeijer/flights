@@ -13,10 +13,12 @@
 		<table class="table text-white">
 			<thead class="text-white">
 				<tr>
-					<th>Airport name</th>
+					<th>Connection airport</th>
 					<th>Airport code</th>
 					<th>Country Code</th>
-					<th>Departures today</th>
+					<th>Departures</th>
+					<th>Arrivals</th>
+					<th>Total flights</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -25,14 +27,16 @@
 						<td>{route.connectionAirport.airportName}</td>
 						<td>{route.connectionAirport.airportCode}</td>
 						<td>{route.connectionAirport.countryCode}</td>
-						<td>{route.flightCount}</td>
+						<td>{route.departureFlightCount}</td>
+						<td>{route.arrivalFlightCount}</td>
+						<td>{route.totalFlightCount}</td>
 					</tr>
 				{/each}
 			</tbody>
 		</table>
 	</div>
 	<div id="connectionsCount" class="text-white">
-		<p>HAM destinations count: {routes.length}</p>
+		<p>HAM connections today: {routes.length}</p>
 		<p>Imported at: {importedAt}</p>
 	</div>
 </div>

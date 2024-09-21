@@ -31,7 +31,7 @@
 			.arcColor((d) => d.color)
 			.arcsTransitionDuration(0)
 			.arcDashAnimateTime(4000)
-			.arcLabel((arc) => `${arc.startName} - ${arc.endName} ${arc.distance} ` + ' km')
+			.arcLabel((arc) => `${arc.startName} - ${arc.endName}<br>flights: ${arc.flightCount}<br>distance: ${arc.distance} km`)
 
 			// city labels
 			.labelsData(labelData)
@@ -55,7 +55,7 @@
 <div id="helloWorld"></div>
 
 <div id="connectionsCount" class="text-white">
-	<p>HAM destinations count: {connectionsCount}</p>
+	<p>HAM connections today: {connectionsCount}</p>
 	<p>Imported at: {importedAt}</p>
 </div>
 

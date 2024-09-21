@@ -6,6 +6,7 @@ export const load: PageLoad = async ({ fetch }) => {
 	if (process.env.NODE_ENV === 'production') {
 		apiUrl = 'http://maps-api:8080/flight-routes';
 	} else {
+		console.log("Development run. Requesting localhost.")
 		apiUrl = 'http://localhost:8080/flight-routes';
 	}
 

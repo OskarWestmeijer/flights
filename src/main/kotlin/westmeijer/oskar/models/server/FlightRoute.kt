@@ -6,6 +6,8 @@ import kotlinx.serialization.Serializable
 data class FlightRoute(
     val hamAirport: Airport,
     val connectionAirport: Airport,
-    val flightCount: Int,
+    val departureFlightCount: Int,
+    val arrivalFlightCount: Int,
+    val totalFlightCount: Int,
     val importedAt: String
 )
