@@ -10,7 +10,9 @@ declare global {
 	interface FlightRoute {
 		hamAirport: Airport;
 		connectionAirport: Airport;
-		flightCount: number;
+		departureFlightCount: number;
+		arrivalFlightCount: number;
+		totalFlightCount: number;
 	}
 
 	interface FlightRoutesResponse {

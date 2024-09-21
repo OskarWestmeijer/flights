@@ -25,7 +25,7 @@ internal class FlightRoutesCacheCodecTest {
     @Test
     fun testDecodeValueWithValidJson() {
         val airport = Airport("HEL", "Hamburg Airport", "DE", "60.3172", "24.9633")
-        val flightRoutes = listOf(FlightRoute(airport, airport, 5, Instant.now().truncatedTo(ChronoUnit.SECONDS).toString()))
+        val flightRoutes = listOf(FlightRoute(airport, airport, 1, 2, 3, Instant.now().truncatedTo(ChronoUnit.SECONDS).toString()))
 
         val encodedValue = codec.encodeValue(flightRoutes)
         val decodedValue = codec.decodeValue(encodedValue!!)
@@ -54,7 +54,7 @@ internal class FlightRoutesCacheCodecTest {
     @Test
     fun testEncodeValue() {
         val airport = Airport("HEL", "Hamburg Airport", "DE", "60.3172", "24.9633")
-        val flightRoutes = listOf(FlightRoute(airport, airport, 5, Instant.now().truncatedTo(ChronoUnit.SECONDS).toString()))
+        val flightRoutes = listOf(FlightRoute(airport, airport, 1, 2, 3, Instant.now().truncatedTo(ChronoUnit.SECONDS).toString()))
 
         val encodedValue = codec.encodeValue(flightRoutes)
         val jsonString = Json.encodeToString(ListSerializer(FlightRoute.serializer()), flightRoutes)

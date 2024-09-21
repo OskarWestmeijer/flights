@@ -87,10 +87,18 @@ components:
           $ref: "#/components/schemas/Airport"
         connectionAirport:
           $ref: "#/components/schemas/Airport"
-        flightCount:
+        departureFlightCount":
           type: integer
-          description: Number of flights between hamburg and the connection airport
-          example: 4
+          description: Count of todays departures from HAM
+          example: 2
+        arrivalFlightCount:
+          type: integer
+          description: Count of todays arrivals to HAM
+          example: 1
+        totalFlightCount:
+          type: integer
+          description: Sum of todays departure and arrival flights between hamburg and the connection airport
+          example: 3
         importedAt:
           type: date
           description: UTC date
@@ -106,8 +114,8 @@ components:
       properties:
         airportCode:
           type: string
-          description: Airport code
-          example: HEL
+          description: 3 letter IATA airport code code
+          example: HAM
         airportName:
           type: string
           description: Airport name
@@ -115,6 +123,7 @@ components:
         countryCode:
           type: string
           description: ISO 3166 ALPHA-2 country code
+          example: DE
         latitude:
           type: string
           description: Latitude of the airport

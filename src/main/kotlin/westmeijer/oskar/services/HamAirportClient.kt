@@ -10,6 +10,7 @@ import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import kotlinx.serialization.json.Json
 import westmeijer.oskar.Secrets
+import westmeijer.oskar.models.client.ArrivingFlight
 import westmeijer.oskar.models.client.DepartingFlight
 import java.time.Instant
 import java.time.temporal.ChronoUnit
@@ -51,6 +52,22 @@ object HamAirportClient {
 
         val destinationAsText = response.bodyAsText().trimIndent()
         return decoder.decodeFromString<List<DepartingFlight>>(destinationAsText)
+    }
+
+    suspend fun getArrivingFlights(): List<ArrivingFlight> {
+        val today = Instant.now().truncatedTo(ChronoUnit.DAYS)
+        val tomorrow = Instant.now().plus(1, ChronoUnit.DAYS).truncatedTo(ChronoUnit.DAYS)
+
+        val response: HttpResponse = client.get("${Secrets.baseUrl}/v2/flights/arrivals?from=${today}&to=${tomorrow}") {
+            headers {
+                append("Ocp-Apim-Subscription-Key", Secrets.apiKey)
+                append("Content-Type", "application/json")
+                append("Accept", "application/json")
+            }
+        }
+
+        val destinationAsText = response.bodyAsText().trimIndent()
+        return decoder.decodeFromString<List<ArrivingFlight>>(destinationAsText)
     }
 
 }

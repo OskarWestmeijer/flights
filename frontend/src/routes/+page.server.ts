@@ -10,13 +10,16 @@ let labelData: LabelData[];
 export const load: PageLoad = async ({ fetch }) => {
 	const tenMinsAgoTs = new Date().getTime() - 10 * 60 * 1000;
 	const importedAtTs = new Date(importedAt).getTime();
+
 	console.log(tenMinsAgoTs);
 	console.log(importedAtTs);
+	
 	if (arcData == null || labelData == null || importedAt == null || importedAtTs < tenMinsAgoTs) {
 		let apiUrl;
 		if (process.env.NODE_ENV === 'production') {
 			apiUrl = 'http://maps-api:8080/flight-routes';
 		} else {
+			console.log("Development run. Requesting localhost.")
 			apiUrl = 'http://localhost:8080/flight-routes';
 		}
 
@@ -25,8 +28,6 @@ export const load: PageLoad = async ({ fetch }) => {
 		arcData = computeArcData(response);
 		labelData = computeLabelData(arcData);
 		importedAt = response.importedAt;
-	} else {
-		// not updating data
 	}
 
 	return {
@@ -58,7 +59,7 @@ function computeArcData(response: FlightRoutesResponse): GlobeData[] {
 			endLat: route.connectionAirport.latitude,
 			endLng: route.connectionAirport.longitude,
 			color: [`rgba(0, 255, 0, 0.35)`, `rgba(255, 0, 0, 0.4)`],
-			flightCount: route.flightCount,
+			flightCount: route.totalFlightCount,
 			stroke: 0,
 			distance: distKm
 		};

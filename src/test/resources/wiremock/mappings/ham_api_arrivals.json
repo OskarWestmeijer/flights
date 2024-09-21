@@ -1,0 +1,23 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/v2/flights/arrivals",
+    "headers": {
+      "Ocp-Apim-Subscription-Key": {
+        "equalTo": "secret1234"
+      }
+    },
+    "queryParameters": {
+      "from": {
+        "matches": "^\\d{4}-\\d{2}-\\d{2}.*$"
+      },
+      "to": {
+        "matches": "^\\d{4}-\\d{2}-\\d{2}.*$"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "arrivals_response.json"
+  }
+}
