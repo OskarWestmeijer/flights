@@ -91,6 +91,10 @@ components:
           type: integer
           description: Number of flights between hamburg and the connection airport
           example: 4
+        importedAt:
+          type: date
+          description: UTC date
+          example: 2024-09-21T10:11:44Z
 
     Airport:
       type: object
