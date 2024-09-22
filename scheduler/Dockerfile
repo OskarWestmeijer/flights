@@ -1,6 +1,6 @@
 FROM eclipse-temurin:21.0.2_13-jre-alpine
 
-COPY build/libs/maps-scheduler.jar /maps-scheduler.jar
+COPY build/libs/flights-scheduler.jar /flights-scheduler.jar
 
 ENV JAVA_OPTS="-Xms60m -Xmx60m"
 
