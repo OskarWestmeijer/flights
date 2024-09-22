@@ -27,7 +27,7 @@ kotlin {
 tasks.jar {
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
 
-    archiveBaseName.set("maps-scheduler")
+    archiveBaseName.set("flights-scheduler")
     manifest {
         attributes(
             "Main-Class" to "westmeijer.oskar.MainKt"

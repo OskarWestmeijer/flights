@@ -4,4 +4,4 @@ COPY build/libs/maps-scheduler.jar /maps-scheduler.jar
 
 ENV JAVA_OPTS="-Xms60m -Xmx60m"
 
-ENTRYPOINT ["sh", "-c", "java ${JAVA_OPTS} -jar /maps-scheduler.jar"]
+ENTRYPOINT ["sh", "-c", "java ${JAVA_OPTS} -jar /flights-scheduler.jar"]

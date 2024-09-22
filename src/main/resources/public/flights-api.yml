@@ -10,7 +10,7 @@ info:
     - [ https://flights.oskar-westmeijer.com ](https://flights.oskar-westmeijer.com) (Sveltekit frontend)
     - [ https://api.flights.oskar-westmeijer.com ](https://api.flights.oskar-westmeijer.com) (Redoc OpenApi spec)
   version: 1.0.0
-  title: Maps-Api
+  title: Flights-Api
 externalDocs:
   description: https://github.com/OskarWestmeijer/flights
   url: 'https://github.com/OskarWestmeijer/flights'

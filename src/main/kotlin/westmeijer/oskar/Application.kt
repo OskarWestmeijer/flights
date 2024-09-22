@@ -42,7 +42,7 @@ fun Application.module() {
     // init redis cache
     Cache
 
-    val scope = CoroutineScope(Dispatchers.Default + CoroutineName("MapsApiMainCoroutine"))
+    val scope = CoroutineScope(Dispatchers.Default + CoroutineName("FlightsApiMainCoroutine"))
     scope.launch {
         try {
             ConnectionsService.refreshConnections()

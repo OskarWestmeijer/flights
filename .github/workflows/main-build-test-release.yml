@@ -42,7 +42,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ secrets.DOCKER_USERNAME }}/maps-api
+          images: ${{ secrets.DOCKER_USERNAME }}/flights-api
           tags: |
             # set latest tag for master branch
             type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'main') }}
@@ -68,13 +68,13 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - uses: actions/download-artifact@v4
         with:
-          name: maps-scheduler
+          name: flights-scheduler
           path: scheduler/build/libs
       - name: image tagging
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ secrets.DOCKER_USERNAME }}/maps-scheduler
+          images: ${{ secrets.DOCKER_USERNAME }}/flights-scheduler
           tags: |
             # set latest tag for master branch
             type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'main') }}
@@ -102,7 +102,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ secrets.DOCKER_USERNAME }}/maps-ui
+          images: ${{ secrets.DOCKER_USERNAME }}/flights-ui
           tags: |
             # set latest tag for master branch
             type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'main') }}

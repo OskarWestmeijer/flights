@@ -2,27 +2,27 @@
 
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 
-title C4Model Container diagram for Maps
+title C4Model Container diagram for Flights
 
 Person(user, "User")
 
-System_Boundary(weatherSystem, "Maps") {
+System_Boundary(flightsSystem, "Flights") {
     Container(nginx_proxy, "Proxy", "Nginx", $descr="Routes either to UI or API")
-    Container(maps_api, "API", "Kotlin & Ktor")
-    Container(maps_scheduler, "Scheduler", "Kotlin", $descr="Every 10min")
-    Container(maps_cache, "Cache", "Redis", $descr="Caches api response & import-event")
-    Container(maps_ui, "UI", "Node & Sveltekit (SSR)")
+    Container(flights_api, "API", "Kotlin & Ktor")
+    Container(flights_scheduler, "Scheduler", "Kotlin", $descr="Every 10min")
+    Container(flights_cache, "Cache", "Redis", $descr="Caches api response & import-event")
+    Container(flights_ui, "UI", "Node & Sveltekit (SSR)")
 }
 System_Ext(ham_api, "HAM airport Api", "API for current airport connections")
 
 
 Rel(user, nginx_proxy, "Request airport connections", "https")
-Rel_R(nginx_proxy, maps_ui, "Route to UI", "https")
-Rel_D(nginx_proxy, maps_api, "Route to API", "https")
-Rel(maps_ui, maps_api, "Request for SSR", "https")
-Rel_L(maps_api, maps_cache, "Poll refresh-event & cache api response")
-Rel_D(maps_scheduler, maps_cache, "Publish refresh-event")
-Rel_R(maps_api, ham_api, "Request airport connections (refresh-event)", "https")
+Rel_R(nginx_proxy, flights_ui, "Route to UI", "https")
+Rel_D(nginx_proxy, flights_api, "Route to API", "https")
+Rel(flights_ui, flights_api, "Request for SSR", "https")
+Rel_L(flights_api, flights_cache, "Poll refresh-event & cache api response")
+Rel_D(flights_scheduler, flights_cache, "Publish refresh-event")
+Rel_R(flights_api, ham_api, "Request airport connections (refresh-event)", "https")
 
 LAYOUT_TOP_DOWN()
 @enduml
