@@ -1,4 +1,4 @@
-# maps-ui
+# Flights-ui
 
 ## build and test
 

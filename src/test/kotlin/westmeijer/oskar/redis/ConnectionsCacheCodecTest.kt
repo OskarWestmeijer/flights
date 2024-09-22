@@ -1,8 +1,8 @@
 import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json
 import westmeijer.oskar.models.server.Airport
-import westmeijer.oskar.models.server.FlightRoute
-import westmeijer.oskar.redis.FlightRoutesCacheCodec
+import westmeijer.oskar.models.server.Connection
+import westmeijer.oskar.redis.ConnectionsCacheCodec
 import java.nio.ByteBuffer
 import java.time.Instant
 import java.time.temporal.ChronoUnit
@@ -10,9 +10,9 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
 
-internal class FlightRoutesCacheCodecTest {
+internal class ConnectionsCacheCodecTest {
 
-    private val codec = FlightRoutesCacheCodec()
+    private val codec = ConnectionsCacheCodec()
 
     @Test
     fun testDecodeKey() {
@@ -25,12 +25,12 @@ internal class FlightRoutesCacheCodecTest {
     @Test
     fun testDecodeValueWithValidJson() {
         val airport = Airport("HEL", "Hamburg Airport", "DE", "60.3172", "24.9633")
-        val flightRoutes = listOf(FlightRoute(airport, airport, 1, 2, 3, Instant.now().truncatedTo(ChronoUnit.SECONDS).toString()))
+        val connections = listOf(Connection(airport, airport, 1, 2, 3, Instant.now().truncatedTo(ChronoUnit.SECONDS).toString()))
 
-        val encodedValue = codec.encodeValue(flightRoutes)
+        val encodedValue = codec.encodeValue(connections)
         val decodedValue = codec.decodeValue(encodedValue!!)
 
-        assertEquals(flightRoutes, decodedValue)
+        assertEquals(connections, decodedValue)
     }
 
     @Test
@@ -54,10 +54,10 @@ internal class FlightRoutesCacheCodecTest {
     @Test
     fun testEncodeValue() {
         val airport = Airport("HEL", "Hamburg Airport", "DE", "60.3172", "24.9633")
-        val flightRoutes = listOf(FlightRoute(airport, airport, 1, 2, 3, Instant.now().truncatedTo(ChronoUnit.SECONDS).toString()))
+        val connections = listOf(Connection(airport, airport, 1, 2, 3, Instant.now().truncatedTo(ChronoUnit.SECONDS).toString()))
 
-        val encodedValue = codec.encodeValue(flightRoutes)
-        val jsonString = Json.encodeToString(ListSerializer(FlightRoute.serializer()), flightRoutes)
+        val encodedValue = codec.encodeValue(connections)
+        val jsonString = Json.encodeToString(ListSerializer(Connection.serializer()), connections)
 
         assertEquals(jsonString, encodedValue?.let { String(it.array()) })
     }

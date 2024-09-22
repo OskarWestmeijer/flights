@@ -1,87 +1,96 @@
 openapi: "3.0.3"
 servers:
-  - url: https://api.maps.oskar-westmeijer.com
+  - url: https://api.flights.oskar-westmeijer.com
     description: url of production environment
 info:
   description: |
     # Introduction
     Provides Hamburg airport flight connections.
     
-    - [ https://maps.oskar-westmeijer.com ](https://maps.oskar-westmeijer.com) (Sveltekit frontend)
-    - [ https://api.maps.oskar-westmeijer.com ](https://api.maps.oskar-westmeijer.com) (Redoc OpenApi spec)
+    - [ https://flights.oskar-westmeijer.com ](https://flights.oskar-westmeijer.com) (Sveltekit frontend)
+    - [ https://api.flights.oskar-westmeijer.com ](https://api.flights.oskar-westmeijer.com) (Redoc OpenApi spec)
   version: 1.0.0
-  title: Maps-Api
+  title: Flights-Api
 externalDocs:
-  description: https://github.com/OskarWestmeijer/maps
-  url: 'https://github.com/OskarWestmeijer/maps'
+  description: https://github.com/OskarWestmeijer/flights
+  url: 'https://github.com/OskarWestmeijer/flights'
+
+x-tagGroups:
+  - name: Resources
+    tags:
+      - connections_resource_tag
+  - name: Response Model
+    tags:
+      - connections_response_tag
+  - name: Response element
+    tags:
+      - connection_element_tag
+      - airport_tag
+
 tags:
-  - name: flight_routes_resource
-    x-displayName: flight-routes
-    description: Available flight-routes
+  - name: connections_resource_tag
+    x-displayName: Connections
+    description: Available connections from HAM airport
 
-  - name: flight_route
-    x-displayName: FlightRoute
+  - name: connections_response_tag
+    x-displayName: ConnectionsResponse
     description: |
-      Element of FlightRouteResponse
-      <SchemaDefinition schemaRef="#/components/schemas/FlightRoute" />
+      Container for multiple connection elements
+      <SchemaDefinition schemaRef="#/components/schemas/ConnectionsResponse" />
 
-  - name: airport
+  - name: connection_element_tag
+    x-displayName: Connection
+    description: |
+      Element of ConnectionsResponse
+      <SchemaDefinition schemaRef="#/components/schemas/Connection" />
+
+  - name: airport_tag
     x-displayName: Airport
     description: |
       Airport
       <SchemaDefinition schemaRef="#/components/schemas/Airport" />
 
-  - name: flight_route_response
-    x-displayName: FlightRouteResponse
-    description: |
-      Container for multiple FlightRoute elements
-      <SchemaDefinition schemaRef="#/components/schemas/FlightRouteResponse" />
 
-x-tagGroups:
-  - name: Resources
-    tags:
-      - flight_routes_resource
-  - name: Response Model
-    tags:
-      - flight_route_response
-  - name: Response element
-    tags:
-      - flight_route
-      - airport
+
 paths:
-  /flight-routes:
+  /connections:
     get:
-      summary: Get all flight routes
-      operationId: getFlightRoutes
+      summary: Get all HAM airport connections
+      operationId: getConnections
       tags:
-        - flight_routes_resource
+        - connections_resource_tag
       responses:
         '200':
-          description: Request flight routes
+          description: Request HAM airport connections
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/FlightRouteResponse"
+                $ref: "#/components/schemas/ConnectionsResponse"
 
 components:
   schemas:
 
-    FlightRouteResponse:
+    ConnectionsResponse:
       type: object
-      description: Container for multiple flightRoute elements
+      description: Container for multiple connection elements
       required:
-        - flightRoutes
+        - connections
       properties:
-        flightRoutes:
+        connections:
           type: array
           items:
-            $ref: "#/components/schemas/FlightRoute"
+            $ref: "#/components/schemas/Connection"
 
-    FlightRoute:
+    Connection:
       type: object
-      description: Container for multiple flightRoute elements
+      description: Connection with HAM airport
       required:
-        - flightCount
+        - hamAirport
+        - connectionAirport
+        - departureFlightCount
+        - arrivalFlightCount
+        - totalFlightCount
+        - importedAt
       properties:
         hamAirport:
           $ref: "#/components/schemas/Airport"
@@ -109,6 +118,8 @@ components:
       description: Details about an airport
       required:
         - airportCode
+        - airportName
+        - countryCode
         - latitude
         - longitude
       properties:

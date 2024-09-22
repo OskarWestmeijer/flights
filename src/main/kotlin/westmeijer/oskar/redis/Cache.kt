@@ -3,28 +3,28 @@ package westmeijer.oskar.redis
 import io.ktor.util.logging.*
 import io.lettuce.core.api.StatefulRedisConnection
 import io.lettuce.core.api.sync.RedisCommands
-import westmeijer.oskar.models.server.FlightRoute
+import westmeijer.oskar.models.server.Connection
 
 
 object Cache {
 
     private val log = KtorSimpleLogger("westmeijer.oskar.cache.RedisCache")
 
-    private val cacheConnection: StatefulRedisConnection<String, List<FlightRoute>>
-    private val cacheCommands: RedisCommands<String, List<FlightRoute>>
-    const val FLIGHT_ROUTES_KEY = "routes:1"
+    private val cacheConnection: StatefulRedisConnection<String, List<Connection>>
+    private val cacheCommands: RedisCommands<String, List<Connection>>
+    const val CONNECTIONS_KEY = "connections:1"
 
     init {
-        cacheConnection = RedisClient.client.connect(FlightRoutesCacheCodec())
+        cacheConnection = RedisClient.client.connect(ConnectionsCacheCodec())
         cacheCommands = cacheConnection.sync()
     }
 
-    fun setCache(key: String, value: List<FlightRoute>) {
+    fun setCache(key: String, value: List<Connection>) {
         val result = cacheCommands.set(key, value)
         log.info("Set cache operation. key: {}, result: {}", key, result)
     }
 
-    fun getCache(key: String): List<FlightRoute> {
+    fun getCache(key: String): List<Connection> {
         return cacheCommands.get(key)
     }
 

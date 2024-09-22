@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import type { FlightRoute } from './global';
+	import type { Connection } from './global';
 
 	export let data: PageData;
 	const importedAt: string = data.props.responseData.importedAt;
-	const routes: FlightRoute[] = data.props.responseData.flightRoutes;
+	const routes: Connection[] = data.props.responseData.connections;
 	console.log(importedAt);
 </script>
 

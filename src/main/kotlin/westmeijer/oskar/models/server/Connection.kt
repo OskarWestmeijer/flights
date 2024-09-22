@@ -3,7 +3,7 @@ package westmeijer.oskar.models.server
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class FlightRoute(
+data class Connection(
     val hamAirport: Airport,
     val connectionAirport: Airport,
     val departureFlightCount: Int,

@@ -1,5 +1,5 @@
 {
-  "flightRoutes": [
+  "connections": [
     {
       "hamAirport": {
         "airportCode": "HAM",

@@ -7,7 +7,7 @@ declare global {
 		longitude: string;
 	}
 
-	interface FlightRoute {
+	interface Connection {
 		hamAirport: Airport;
 		connectionAirport: Airport;
 		departureFlightCount: number;
@@ -15,8 +15,8 @@ declare global {
 		totalFlightCount: number;
 	}
 
-	interface FlightRoutesResponse {
-		flightRoutes: FlightRoute[];
+	interface ConnectionsResponse {
+		connections: Connection[];
 		importedAt: string;
 	}
 

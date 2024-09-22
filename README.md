@@ -1,14 +1,14 @@
-# maps
+# Flights
 
-![main branch](https://github.com/OskarWestmeijer/maps/actions/workflows/main-build-test-release.yml/badge.svg)
-[![codecov](https://codecov.io/gh/OskarWestmeijer/maps/graph/badge.svg?token=EHEHAUD5DM)](https://codecov.io/gh/OskarWestmeijer/maps)
+![main branch](https://github.com/OskarWestmeijer/flights/actions/workflows/main-build-test-release.yml/badge.svg)
+[![codecov](https://codecov.io/gh/OskarWestmeijer/flights/graph/badge.svg?token=EHEHAUD5DM)](https://codecov.io/gh/OskarWestmeijer/flights)
 [![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/vmxk.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
 
 Displays Hamburg airport connections on a 3d globe. The backend provides a public Api. The airport connections are refreshed every 10
 minutes.
 
-- [https://maps.oskar-westmeijer.com](https://maps.oskar-westmeijer.com) (Sveltekit frontend)
-- [https://api.maps.oskar-westmeijer.com](https://api.maps.oskar-westmeijer.com) (Ktor backend)
+- [https://flights.oskar-westmeijer.com](https://flights.oskar-westmeijer.com) (Sveltekit frontend)
+- [https://api.flights.oskar-westmeijer.com](https://api.flights.oskar-westmeijer.com) (Ktor backend)
 
 ## Technologies
 
@@ -37,7 +37,7 @@ docker compose up -d
 
 ## Architecture
 
-![maps_c4_diagram.svg](docs/maps_c4_diagram.svg)
+![flights_c4_diagram.svg](docs/flights_c4_diagram.svg)
 
 ## Caching with Redis
 

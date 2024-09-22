@@ -11,10 +11,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import westmeijer.oskar.redis.Cache
 import westmeijer.oskar.routes.registerAirports
-import westmeijer.oskar.routes.registerFlightRoutes
+import westmeijer.oskar.routes.registerConnections
 import westmeijer.oskar.routes.registerOpenapi
 import westmeijer.oskar.services.AirportService
-import westmeijer.oskar.services.FlightRoutesService
+import westmeijer.oskar.services.ConnectionsService
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
@@ -32,7 +32,7 @@ fun Application.module() {
     }
 
     // register api endpoints
-    registerFlightRoutes()
+    registerConnections()
     registerAirports()
     registerOpenapi()
 
@@ -42,10 +42,10 @@ fun Application.module() {
     // init redis cache
     Cache
 
-    val scope = CoroutineScope(Dispatchers.Default + CoroutineName("MapsApiMainCoroutine"))
+    val scope = CoroutineScope(Dispatchers.Default + CoroutineName("FlightsApiMainCoroutine"))
     scope.launch {
         try {
-            FlightRoutesService.refreshFlightRoutes()
+            ConnectionsService.refreshConnections()
         } catch (e: Exception) {
             log.error("Error initializing flight routes. Cache init depending on scheduled refresh.", e)
         }
