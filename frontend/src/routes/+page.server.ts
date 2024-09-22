@@ -1,7 +1,7 @@
 import type { PageLoad } from './$types';
 import type { GeolibInputCoordinates } from 'geolib/es/types';
 import { getDistance, convertDistance } from 'geolib';
-import type { FlightRoute, FlightRoutesResponse } from './global';
+import type { Connection, ConnectionsResponse } from './global';
 
 let importedAt;
 let arcData: GlobeData[];
@@ -17,14 +17,14 @@ export const load: PageLoad = async ({ fetch }) => {
 	if (arcData == null || labelData == null || importedAt == null || importedAtTs < tenMinsAgoTs) {
 		let apiUrl;
 		if (process.env.NODE_ENV === 'production') {
-			apiUrl = 'http://maps-api:8080/flight-routes';
+			apiUrl = 'http://flights-api:8080/connections';
 		} else {
 			console.log("Development run. Requesting localhost.")
-			apiUrl = 'http://localhost:8080/flight-routes';
+			apiUrl = 'http://localhost:8080/connections';
 		}
 
 		const res = await fetch(apiUrl);
-		const response: FlightRoutesResponse = await res.json();
+		const response: ConnectionsResponse = await res.json();
 		arcData = computeArcData(response);
 		labelData = computeLabelData(arcData);
 		importedAt = response.importedAt;
@@ -39,27 +39,27 @@ export const load: PageLoad = async ({ fetch }) => {
 	};
 };
 
-function computeArcData(response: FlightRoutesResponse): GlobeData[] {
-	return response.flightRoutes.map((route: FlightRoute) => {
+function computeArcData(response: ConnectionsResponse): GlobeData[] {
+	return response.connections.map((connection: Connection) => {
 		const from: GeolibInputCoordinates = {
-			latitude: route.hamAirport.latitude,
-			longitude: route.hamAirport.longitude
+			latitude: connection.hamAirport.latitude,
+			longitude: connection.hamAirport.longitude
 		};
 		const to: GeolibInputCoordinates = {
-			latitude: route.connectionAirport.latitude,
-			longitude: route.connectionAirport.longitude
+			latitude: connection.connectionAirport.latitude,
+			longitude: connection.connectionAirport.longitude
 		};
 
 		const distKm: number = Math.floor(convertDistance(getDistance(from, to), 'km'));
 		const tmpGlobeData: GlobeData = {
-			startName: route.hamAirport.airportCode,
-			startLat: route.hamAirport.latitude,
-			startLng: route.hamAirport.longitude,
-			endName: route.connectionAirport.airportCode,
-			endLat: route.connectionAirport.latitude,
-			endLng: route.connectionAirport.longitude,
+			startName: connection.hamAirport.airportCode,
+			startLat: connection.hamAirport.latitude,
+			startLng: connection.hamAirport.longitude,
+			endName: connection.connectionAirport.airportCode,
+			endLat: connection.connectionAirport.latitude,
+			endLng: connection.connectionAirport.longitude,
 			color: [`rgba(0, 255, 0, 0.35)`, `rgba(255, 0, 0, 0.4)`],
-			flightCount: route.totalFlightCount,
+			flightCount: connection.totalFlightCount,
 			stroke: 0,
 			distance: distKm
 		};

@@ -31,7 +31,7 @@
 			.arcColor((d) => d.color)
 			.arcsTransitionDuration(0)
 			.arcDashAnimateTime(4000)
-			.arcLabel((arc) => `${arc.startName} - ${arc.endName}<br>flights: ${arc.flightCount}<br>distance: ${arc.distance} km`)
+			.arcLabel((arc) => `${arc.startName} - ${arc.endName}<br>total flights: ${arc.flightCount}<br>distance: ${arc.distance} km`)
 
 			// city labels
 			.labelsData(labelData)

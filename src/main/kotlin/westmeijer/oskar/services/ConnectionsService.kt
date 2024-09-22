@@ -34,7 +34,7 @@ object ConnectionsService {
         log.info("Departing flights count: ${departingFlights.size}, departing connections count: ${departingFlightsMap.size}")
         log.info("Arriving flights count: ${arrivingFlights.size}, arriving connections count: ${arrivingFlightsMap.size}")
         log.info("Total connections count: ${hamburgConnections.size}, importedAt: $importedAt")
-        log.info("Finish refreshing flight routes")
+        log.info("Finish refreshing connections")
     }
 
     private fun map(
