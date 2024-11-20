@@ -73,7 +73,7 @@
 		</ul>
 	</div>
 	<div class="navbar-end">
-		<a href="https://github.com/OskarWestmeijer/flights">
+		<a href="https://github.com/OskarWestmeijer/flights" aria-label="Github repository link">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 496 512"
