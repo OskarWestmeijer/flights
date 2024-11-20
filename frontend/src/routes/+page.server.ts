@@ -11,21 +11,21 @@ export const load: PageLoad = async ({ fetch }) => {
 	const tenMinsAgoTs = new Date().getTime() - 10 * 60 * 1000;
 	const importedAtTs = new Date(importedAt).getTime();
 
-	console.log(tenMinsAgoTs);
-	console.log(importedAtTs);
-	
 	if (arcData == null || labelData == null || importedAt == null || importedAtTs < tenMinsAgoTs) {
 		let apiUrl;
 		if (process.env.NODE_ENV === 'production') {
 			apiUrl = 'http://flights-api:8080/connections';
 		} else {
-			console.log("Development run. Requesting localhost.")
+			console.log('Development run. Requesting localhost.');
 			apiUrl = 'http://localhost:8080/connections';
 		}
 
+		console.log('Request backend for new connections.');
 		const res = await fetch(apiUrl);
 		const response: ConnectionsResponse = await res.json();
+		console.log('Compute arc data.');
 		arcData = computeArcData(response);
+		console.log('Compute label data.');
 		labelData = computeLabelData(arcData);
 		importedAt = response.importedAt;
 	}
