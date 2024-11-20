@@ -5,7 +5,7 @@
 </script>
 
 <div class="navbar text-base-100">
-	<div class="navbar-start" />
+	<div class="navbar-start"></div>
 	<div class="navbar-center">
 		<ul class="menu menu-horizontal rounded-box bg-secondary">
 			<li>
