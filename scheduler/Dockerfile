@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21.0.2_13-jre-alpine
+FROM eclipse-temurin:21.0.5_11-jre-alpine
 
 COPY build/libs/flights-scheduler.jar /flights-scheduler.jar
 
