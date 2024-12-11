@@ -44,6 +44,6 @@
 	"type": "module",
 	"dependencies": {
 		"geolib": "^3.3.4",
-		"globe.gl": "^2.34.1"
+		"globe.gl": "^2.34.2"
 	}
 }
