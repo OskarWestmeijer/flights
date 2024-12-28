@@ -23,10 +23,10 @@ runs:
       working-directory: ${{ inputs.frontend-directory }}
       run: npm ci
 
-    - name: npm test:unit
+    - name: npm test
       shell: bash
       working-directory: ${{ inputs.frontend-directory }}
-      run: npm run test:unit
+      run: npm run test
 
     - name: npm run build
       shell: bash
