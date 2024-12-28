@@ -26,8 +26,17 @@ jobs:
           frontend-directory: frontend
           node: ${{ env.NODE_VERSION }}
 
+  frontend-e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/frontend-e2e
+        with:
+          frontend-directory: frontend
+          node: ${{ env.NODE_VERSION }}
+
   dependabot-automerge:
-    needs: [ backend-build-and-test, frontend-build-and-test ]
+    needs: [ backend-build-and-test, frontend-build-and-test, frontend-e2e ]
     runs-on: ubuntu-latest
     environment: oskar-westmeijer-environment
     if: ${{ github.actor == 'dependabot[bot]' }}

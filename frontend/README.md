@@ -7,7 +7,7 @@ npm install
 npm run build
 
 # will quit vitest once done
-npm run test:unit run
+npm run test
 ```
 
 ## local development
