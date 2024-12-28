@@ -1,15 +1,15 @@
 {
 	"name": "flights",
 	"version": "1.0.0",
-  "engines": {
-    "npm": ">=10.9.0 <11.0.0",
-    "node": ">=22.11.0 <23.0.0"
-  },
+	"engines": {
+		"npm": ">=10.9.0 <11.0.0",
+		"node": ">=22.11.0 <23.0.0"
+	},
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"preview": "vite preview",
+		"preview": "cross-env NODE_ENV=development vite preview",
 		"test": "npm run test:integration && npm run test:unit",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -43,6 +43,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"cross-env": "^7.0.3",
 		"geolib": "^3.3.4",
 		"globe.gl": "^2.34.2"
 	}
