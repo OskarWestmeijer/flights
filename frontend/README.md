@@ -40,3 +40,13 @@ ncu -u --target=minor
 # major updates
 ncu -u
 ```
+
+### Clear Node Modules and Cache
+
+Updating can run into issues. These commands clear the dependencies for a fresh installment.
+
+```bash
+rm -rf node_modules package-lock.json
+npm cache clean --force
+npm install
+```
