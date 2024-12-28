@@ -1,9 +1,5 @@
-val ktor_version: String by project
-val kotlin_version: String by project
-val logback_version: String by project
-val apache_commons: String by project
-val json_assert: String by project
-val lettuce_core: String by project
+val ktor = "2.3.12"
+val kotlin = "2.1.0"
 
 plugins {
     kotlin("jvm") version "2.1.0"
@@ -37,27 +33,27 @@ tasks.check {
 }
 
 dependencies {
-    implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-cors:$ktor_version")
-    implementation("io.ktor:ktor-server-config-yaml:$ktor_version")
+    implementation("io.ktor:ktor-server-core-jvm:$ktor")
+    implementation("io.ktor:ktor-server-netty-jvm:$ktor")
+    implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktor")
+    implementation("io.ktor:ktor-server-cors:$ktor")
+    implementation("io.ktor:ktor-server-config-yaml:$ktor")
 
-    implementation("io.ktor:ktor-serialization-kotlinx-json-jvm:$ktor_version")
-    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
+    implementation("io.ktor:ktor-serialization-kotlinx-json-jvm:$ktor")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor")
 
-    implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")
+    implementation("io.ktor:ktor-client-content-negotiation:$ktor")
 
-    implementation("io.ktor:ktor-client-core:$ktor_version")
-    implementation("io.ktor:ktor-client-cio:$ktor_version")
+    implementation("io.ktor:ktor-client-core:$ktor")
+    implementation("io.ktor:ktor-client-cio:$ktor")
 
-    implementation("org.apache.commons:commons-csv:$apache_commons")
-    implementation("ch.qos.logback:logback-classic:$logback_version")
+    implementation("org.apache.commons:commons-csv:1.12.0")
+    implementation("ch.qos.logback:logback-classic:1.5.15")
 
-    implementation("io.lettuce:lettuce-core:$lettuce_core")
+    implementation("io.lettuce:lettuce-core:6.5.1.RELEASE")
 
-    testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
-    testImplementation("org.skyscreamer:jsonassert:$json_assert")
+    testImplementation("io.ktor:ktor-server-tests-jvm:$ktor")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin")
+    testImplementation("org.skyscreamer:jsonassert:1.5.3")
     testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test")
 }
