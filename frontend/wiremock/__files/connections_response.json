@@ -1,0 +1,2045 @@
+{
+    "connections": [
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "MUC",
+                "airportName": "Munich Airport",
+                "countryCode": "DE",
+                "latitude": "48.3538",
+                "longitude": "11.7861"
+            },
+            "departureFlightCount": 14,
+            "arrivalFlightCount": 50,
+            "totalFlightCount": 64,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "FRA",
+                "airportName": "Frankfurt Airport",
+                "countryCode": "DE",
+                "latitude": "50.0333",
+                "longitude": "8.57056"
+            },
+            "departureFlightCount": 12,
+            "arrivalFlightCount": 43,
+            "totalFlightCount": 55,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "PMI",
+                "airportName": "Palma de Mallorca Airport",
+                "countryCode": "ES",
+                "latitude": "39.5517",
+                "longitude": "2.73881"
+            },
+            "departureFlightCount": 3,
+            "arrivalFlightCount": 37,
+            "totalFlightCount": 40,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "ZRH",
+                "airportName": "Zurich Airport",
+                "countryCode": "CH",
+                "latitude": "47.4647",
+                "longitude": "8.54917"
+            },
+            "departureFlightCount": 8,
+            "arrivalFlightCount": 24,
+            "totalFlightCount": 32,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "LHR",
+                "airportName": "Heathrow Airport",
+                "countryCode": "GB",
+                "latitude": "51.4775",
+                "longitude": "-0.461389"
+            },
+            "departureFlightCount": 8,
+            "arrivalFlightCount": 23,
+            "totalFlightCount": 31,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "VIE",
+                "airportName": "Vienna International Airport",
+                "countryCode": "AT",
+                "latitude": "48.1103",
+                "longitude": "16.5697"
+            },
+            "departureFlightCount": 7,
+            "arrivalFlightCount": 23,
+            "totalFlightCount": 30,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "CDG",
+                "airportName": "Paris Charles de Gaulle Airport",
+                "countryCode": "FR",
+                "latitude": "49.0097",
+                "longitude": "2.54778"
+            },
+            "departureFlightCount": 5,
+            "arrivalFlightCount": 18,
+            "totalFlightCount": 23,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "AMS",
+                "airportName": "Amsterdam Airport Schiphol",
+                "countryCode": "NL",
+                "latitude": "52.3086",
+                "longitude": "4.76389"
+            },
+            "departureFlightCount": 6,
+            "arrivalFlightCount": 16,
+            "totalFlightCount": 22,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "CPH",
+                "airportName": "Copenhagen Airport",
+                "countryCode": "DK",
+                "latitude": "55.6179",
+                "longitude": "12.656"
+            },
+            "departureFlightCount": 5,
+            "arrivalFlightCount": 15,
+            "totalFlightCount": 20,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "AYT",
+                "airportName": "Antalya Airport",
+                "countryCode": "TR",
+                "latitude": "36.8987",
+                "longitude": "30.8005"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 20,
+            "totalFlightCount": 20,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "STR",
+                "airportName": "Stuttgart Airport",
+                "countryCode": "DE",
+                "latitude": "48.6899",
+                "longitude": "9.22196"
+            },
+            "departureFlightCount": 4,
+            "arrivalFlightCount": 15,
+            "totalFlightCount": 19,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "IST",
+                "airportName": "Istanbul Ataturk Airport",
+                "countryCode": "TR",
+                "latitude": "41.2753",
+                "longitude": "28.7519"
+            },
+            "departureFlightCount": 3,
+            "arrivalFlightCount": 16,
+            "totalFlightCount": 19,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "BCN",
+                "airportName": "Barcelona El Prat Airport",
+                "countryCode": "ES",
+                "latitude": "41.2971",
+                "longitude": "2.07846"
+            },
+            "departureFlightCount": 2,
+            "arrivalFlightCount": 13,
+            "totalFlightCount": 15,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "MAD",
+                "airportName": "Adolfo Suarez Madrid-Barajas Airport",
+                "countryCode": "ES",
+                "latitude": "40.4719",
+                "longitude": "-3.56264"
+            },
+            "departureFlightCount": 2,
+            "arrivalFlightCount": 12,
+            "totalFlightCount": 14,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "LIS",
+                "airportName": "Lisbon Portela Airport",
+                "countryCode": "PT",
+                "latitude": "38.7813",
+                "longitude": "-9.13592"
+            },
+            "departureFlightCount": 2,
+            "arrivalFlightCount": 10,
+            "totalFlightCount": 12,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "SAW",
+                "airportName": "Sabiha Gokcen International Airport",
+                "countryCode": "TR",
+                "latitude": "40.8986",
+                "longitude": "29.3092"
+            },
+            "departureFlightCount": 3,
+            "arrivalFlightCount": 9,
+            "totalFlightCount": 12,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "BRU",
+                "airportName": "Brussels Airport (Zaventem Airport)",
+                "countryCode": "BE",
+                "latitude": "50.9014",
+                "longitude": "4.48444"
+            },
+            "departureFlightCount": 3,
+            "arrivalFlightCount": 8,
+            "totalFlightCount": 11,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "HEL",
+                "airportName": "Helsinki Airport (Helsinki-Vantaa Airport)",
+                "countryCode": "FI",
+                "latitude": "60.3172",
+                "longitude": "24.9633"
+            },
+            "departureFlightCount": 2,
+            "arrivalFlightCount": 9,
+            "totalFlightCount": 11,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "WAW",
+                "airportName": "Warsaw Chopin Airport",
+                "countryCode": "PL",
+                "latitude": "52.1657",
+                "longitude": "20.9671"
+            },
+            "departureFlightCount": 3,
+            "arrivalFlightCount": 6,
+            "totalFlightCount": 9,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "DUS",
+                "airportName": "Dusseldorf Airport",
+                "countryCode": "DE",
+                "latitude": "51.2895",
+                "longitude": "6.76678"
+            },
+            "departureFlightCount": 2,
+            "arrivalFlightCount": 7,
+            "totalFlightCount": 9,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "ARN",
+                "airportName": "Stockholm Arlanda Airport",
+                "countryCode": "SE",
+                "latitude": "59.6519",
+                "longitude": "17.9186"
+            },
+            "departureFlightCount": 2,
+            "arrivalFlightCount": 7,
+            "totalFlightCount": 9,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "DXB",
+                "airportName": "Dubai International Airport",
+                "countryCode": "AE",
+                "latitude": "25.2528",
+                "longitude": "55.3644"
+            },
+            "departureFlightCount": 2,
+            "arrivalFlightCount": 7,
+            "totalFlightCount": 9,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "HER",
+                "airportName": "Heraklion International Airport (Nikos Kazantzakis Airport)",
+                "countryCode": "GR",
+                "latitude": "35.3397",
+                "longitude": "25.1803"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 9,
+            "totalFlightCount": 9,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "DUB",
+                "airportName": "Dublin Airport",
+                "countryCode": "IE",
+                "latitude": "53.4213",
+                "longitude": "-6.27007"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 7,
+            "totalFlightCount": 8,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "GDN",
+                "airportName": "Gdansk Lech Walesa Airport",
+                "countryCode": "PL",
+                "latitude": "54.3776",
+                "longitude": "18.4662"
+            },
+            "departureFlightCount": 2,
+            "arrivalFlightCount": 6,
+            "totalFlightCount": 8,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "FCO",
+                "airportName": "Rome–Fiumicino International Airport",
+                "countryCode": "IT",
+                "latitude": "41.8003",
+                "longitude": "12.2389"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 7,
+            "totalFlightCount": 8,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "AGP",
+                "airportName": "Malaga Airport",
+                "countryCode": "ES",
+                "latitude": "36.6749",
+                "longitude": "-4.49911"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 8,
+            "totalFlightCount": 8,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "HRG",
+                "airportName": "Hurghada International Airport",
+                "countryCode": "EG",
+                "latitude": "27.1783",
+                "longitude": "33.7994"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 6,
+            "totalFlightCount": 7,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "STN",
+                "airportName": "London Stansted Airport",
+                "countryCode": "GB",
+                "latitude": "51.885",
+                "longitude": "0.235"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 6,
+            "totalFlightCount": 7,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "FUE",
+                "airportName": "Fuerteventura Airport",
+                "countryCode": "ES",
+                "latitude": "28.4527",
+                "longitude": "-13.8638"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 6,
+            "totalFlightCount": 7,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "BSL",
+                "airportName": "Euroairport Basel Mulhouse Freiburg",
+                "countryCode": "CH",
+                "latitude": "47.6",
+                "longitude": "7.533"
+            },
+            "departureFlightCount": 2,
+            "arrivalFlightCount": 5,
+            "totalFlightCount": 7,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "OSL",
+                "airportName": "Oslo Airport",
+                "countryCode": "NO",
+                "latitude": "60.1939",
+                "longitude": "11.1004"
+            },
+            "departureFlightCount": 2,
+            "arrivalFlightCount": 4,
+            "totalFlightCount": 6,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "CGN",
+                "airportName": "Cologne Bonn Airport",
+                "countryCode": "DE",
+                "latitude": "50.8659",
+                "longitude": "7.14274"
+            },
+            "departureFlightCount": 2,
+            "arrivalFlightCount": 4,
+            "totalFlightCount": 6,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "ADB",
+                "airportName": "Adnan Menderes",
+                "countryCode": "TR",
+                "latitude": "38.293",
+                "longitude": "27.157"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 5,
+            "totalFlightCount": 6,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "MXP",
+                "airportName": "Milan-Malpensa Airport",
+                "countryCode": "IT",
+                "latitude": "45.6306",
+                "longitude": "8.72811"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 5,
+            "totalFlightCount": 6,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "FAO",
+                "airportName": "Faro Airport",
+                "countryCode": "PT",
+                "latitude": "37.0144",
+                "longitude": "-7.96591"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 6,
+            "totalFlightCount": 6,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "SZG",
+                "airportName": "Salzburg Airport",
+                "countryCode": "AT",
+                "latitude": "47.7933",
+                "longitude": "13.0043"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 4,
+            "totalFlightCount": 5,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "LGW",
+                "airportName": "Gatwick Airport",
+                "countryCode": "GB",
+                "latitude": "51.1481",
+                "longitude": "-0.190278"
+            },
+            "departureFlightCount": 2,
+            "arrivalFlightCount": 3,
+            "totalFlightCount": 5,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "LUX",
+                "airportName": "Luxembourg Findel Airport",
+                "countryCode": "LU",
+                "latitude": "49.6233",
+                "longitude": "6.20444"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 4,
+            "totalFlightCount": 5,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "MAN",
+                "airportName": "Manchester Airport",
+                "countryCode": "GB",
+                "latitude": "53.3537",
+                "longitude": "-2.27495"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 4,
+            "totalFlightCount": 5,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "KGS",
+                "airportName": "Kos Island International Airport",
+                "countryCode": "GR",
+                "latitude": "36.7933",
+                "longitude": "27.0917"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 5,
+            "totalFlightCount": 5,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "BEG",
+                "airportName": "Belgrade Nikola Tesla Airport",
+                "countryCode": "RS",
+                "latitude": "44.8184",
+                "longitude": "20.3091"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 3,
+            "totalFlightCount": 4,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "LPA",
+                "airportName": "Gran Canaria Airport",
+                "countryCode": "ES",
+                "latitude": "27.9319",
+                "longitude": "-15.3866"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 3,
+            "totalFlightCount": 4,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "OPO",
+                "airportName": "Francisco Sá Carneiro Airport",
+                "countryCode": "PT",
+                "latitude": "41.2356",
+                "longitude": "-8.67806"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 3,
+            "totalFlightCount": 4,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "GRZ",
+                "airportName": "Graz Airport",
+                "countryCode": "AT",
+                "latitude": "46.9911",
+                "longitude": "15.4396"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 3,
+            "totalFlightCount": 4,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "ATH",
+                "airportName": "Athens International Airport (Eleftherios Venizelos Airport)",
+                "countryCode": "GR",
+                "latitude": "37.9364",
+                "longitude": "23.9445"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 3,
+            "totalFlightCount": 4,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "BUD",
+                "airportName": "Budapest Ferenc Liszt International Airport",
+                "countryCode": "HU",
+                "latitude": "47.4298",
+                "longitude": "19.2611"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 3,
+            "totalFlightCount": 4,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "RHO",
+                "airportName": "Rhodes International Airport",
+                "countryCode": "GR",
+                "latitude": "36.4054",
+                "longitude": "28.0862"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 4,
+            "totalFlightCount": 4,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "SKG",
+                "airportName": "Thessaloniki Airport",
+                "countryCode": "GR",
+                "latitude": "40.5197",
+                "longitude": "22.9709"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 4,
+            "totalFlightCount": 4,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "NCE",
+                "airportName": "Nice Cote d'Azur Airport",
+                "countryCode": "FR",
+                "latitude": "43.6584",
+                "longitude": "7.21587"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 4,
+            "totalFlightCount": 4,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "LIN",
+                "airportName": "Milan Linate Airport",
+                "countryCode": "IT",
+                "latitude": "45.4494",
+                "longitude": "9.2783"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 4,
+            "totalFlightCount": 4,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "TFS",
+                "airportName": "Sur Reina Sofia",
+                "countryCode": "ES",
+                "latitude": "28.044",
+                "longitude": "-16.573"
+            },
+            "departureFlightCount": 2,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 3,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "BGY",
+                "airportName": "Milan Bergamo Airport",
+                "countryCode": "IT",
+                "latitude": "45.674",
+                "longitude": "9.704"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 2,
+            "totalFlightCount": 3,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "OTP",
+                "airportName": "Bucharest Henri Coandă International Airport",
+                "countryCode": "RO",
+                "latitude": "44.5711",
+                "longitude": "26.085"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 2,
+            "totalFlightCount": 3,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "SCN",
+                "airportName": "Saarbrucken Airport",
+                "countryCode": "DE",
+                "latitude": "49.2146",
+                "longitude": "7.10951"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 2,
+            "totalFlightCount": 3,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "EDI",
+                "airportName": "Edinburgh Airport",
+                "countryCode": "GB",
+                "latitude": "55.95",
+                "longitude": "-3.3725"
+            },
+            "departureFlightCount": 2,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 3,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "GVA",
+                "airportName": "Geneva Airport",
+                "countryCode": "CH",
+                "latitude": "46.2381",
+                "longitude": "6.10895"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 2,
+            "totalFlightCount": 3,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "RIX",
+                "airportName": "Riga International Airport",
+                "countryCode": "LV",
+                "latitude": "56.9236",
+                "longitude": "23.9711"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 2,
+            "totalFlightCount": 3,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "SPU",
+                "airportName": "Split Airport",
+                "countryCode": "HR",
+                "latitude": "43.5389",
+                "longitude": "16.298"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 3,
+            "totalFlightCount": 3,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "CTA",
+                "airportName": "Catania-Fontanarossa Airport",
+                "countryCode": "IT",
+                "latitude": "37.4668",
+                "longitude": "15.0664"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 3,
+            "totalFlightCount": 3,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "IBZ",
+                "airportName": "Ibiza Airport",
+                "countryCode": "ES",
+                "latitude": "38.8729",
+                "longitude": "1.37312"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 3,
+            "totalFlightCount": 3,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "OLB",
+                "airportName": "Olbia Costa Smeralda Airport",
+                "countryCode": "IT",
+                "latitude": "40.8987",
+                "longitude": "9.51763"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 3,
+            "totalFlightCount": 3,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "PRN",
+                "airportName": "Pristina International Airport",
+                "countryCode": "XK",
+                "latitude": "42.5728",
+                "longitude": "21.0358"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 3,
+            "totalFlightCount": 3,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "VLC",
+                "airportName": "Valencia Airport",
+                "countryCode": "ES",
+                "latitude": "39.4893",
+                "longitude": "-0.481625"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 3,
+            "totalFlightCount": 3,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "ZAD",
+                "airportName": "Zadar Airport",
+                "countryCode": "HR",
+                "latitude": "44.1083",
+                "longitude": "15.3467"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 3,
+            "totalFlightCount": 3,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "BZO",
+                "airportName": "Bolzano Airport",
+                "countryCode": "IT",
+                "latitude": "46.4602",
+                "longitude": "11.3264"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 3,
+            "totalFlightCount": 3,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "ZTH",
+                "airportName": "Zakynthos International Airport (Dionysios SolomosAirport)",
+                "countryCode": "GR",
+                "latitude": "37.7509",
+                "longitude": "20.8843"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 3,
+            "totalFlightCount": 3,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "BGO",
+                "airportName": "Bergen Airport",
+                "countryCode": "NO",
+                "latitude": "60.2934",
+                "longitude": "5.21814"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 3,
+            "totalFlightCount": 3,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "TIA",
+                "airportName": "Tirana International Airport",
+                "countryCode": "IR",
+                "latitude": "41.4147",
+                "longitude": "19.7206"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 3,
+            "totalFlightCount": 3,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "ACE",
+                "airportName": "Lanzarote Airport",
+                "countryCode": "ES",
+                "latitude": "28.9455",
+                "longitude": "-13.6052"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 2,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "MIR",
+                "airportName": "Monastir Habib Bourguiba International Airport",
+                "countryCode": "TN",
+                "latitude": "35.7581",
+                "longitude": "10.7547"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 2,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "SKP",
+                "airportName": "Skopje Alexander the Great Airport",
+                "countryCode": "MK",
+                "latitude": "41.9616",
+                "longitude": "21.6214"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 2,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "VAR",
+                "airportName": "Varna Airport",
+                "countryCode": "BG",
+                "latitude": "43.2321",
+                "longitude": "27.8251"
+            },
+            "departureFlightCount": 1,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 2,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "RJK",
+                "airportName": "Rijeka Airport",
+                "countryCode": "HR",
+                "latitude": "45.2169",
+                "longitude": "14.5703"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 2,
+            "totalFlightCount": 2,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "NAP",
+                "airportName": "Naples International Airport",
+                "countryCode": "IT",
+                "latitude": "40.886",
+                "longitude": "14.2908"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 2,
+            "totalFlightCount": 2,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "GOT",
+                "airportName": "Goteborg Landvetter Airport",
+                "countryCode": "SE",
+                "latitude": "57.6628",
+                "longitude": "12.2798"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 2,
+            "totalFlightCount": 2,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "VCE",
+                "airportName": "Venice Marco Polo Airport",
+                "countryCode": "IT",
+                "latitude": "45.5053",
+                "longitude": "12.3519"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 2,
+            "totalFlightCount": 2,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "BIO",
+                "airportName": "Bilbao Airport",
+                "countryCode": "ES",
+                "latitude": "43.3011",
+                "longitude": "-2.91061"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 2,
+            "totalFlightCount": 2,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "CFU",
+                "airportName": "Corfu International Airport (Ioannis Kapodistrias Int'l Airport)",
+                "countryCode": "GR",
+                "latitude": "39.6019",
+                "longitude": "19.9117"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 2,
+            "totalFlightCount": 2,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "ALC",
+                "airportName": "Alicante-Elche Airport",
+                "countryCode": "ES",
+                "latitude": "38.2822",
+                "longitude": "-0.558156"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 2,
+            "totalFlightCount": 2,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "XRY",
+                "airportName": "Jerez Airport (La Parra Airport)",
+                "countryCode": "ES",
+                "latitude": "36.7446",
+                "longitude": "-6.06011"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 2,
+            "totalFlightCount": 2,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "CHQ",
+                "airportName": "Chania International Airport",
+                "countryCode": "GR",
+                "latitude": "35.5317",
+                "longitude": "24.1497"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 2,
+            "totalFlightCount": 2,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "VNO",
+                "airportName": "Vilnius Airport",
+                "countryCode": "LT",
+                "latitude": "54.6341",
+                "longitude": "25.2858"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 2,
+            "totalFlightCount": 2,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "DOH",
+                "airportName": "Hamad International Airport",
+                "countryCode": "QA",
+                "latitude": "25.2731",
+                "longitude": "51.6081"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 2,
+            "totalFlightCount": 2,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "VRN",
+                "airportName": "Verona Villafranca Airport",
+                "countryCode": "IT",
+                "latitude": "45.3957",
+                "longitude": "10.8885"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 1,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "PVK",
+                "airportName": "Aktion National Airport",
+                "countryCode": "GR",
+                "latitude": "38.9255",
+                "longitude": "20.7653"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 1,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "MLA",
+                "airportName": "Malta International Airport (Luqa Airport)",
+                "countryCode": "MT",
+                "latitude": "35.8575",
+                "longitude": "14.4775"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 1,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "FNC",
+                "airportName": "Madeira Airport",
+                "countryCode": "PT",
+                "latitude": "32.6979",
+                "longitude": "-16.7745"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 1,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "LYS",
+                "airportName": "Lyon-Saint-Exupery Airport",
+                "countryCode": "FR",
+                "latitude": "45.7256",
+                "longitude": "5.08111"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 1,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "BOD",
+                "airportName": "Bordeaux-Merignac Airport",
+                "countryCode": "FR",
+                "latitude": "44.8283",
+                "longitude": "-0.715556"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 1,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "DBV",
+                "airportName": "Dubrovnik Airport",
+                "countryCode": "HR",
+                "latitude": "42.5614",
+                "longitude": "18.2682"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 1,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "LCA",
+                "airportName": "Larnaca International Airport",
+                "countryCode": "CY",
+                "latitude": "34.8751",
+                "longitude": "33.6249"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 1,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "BRI",
+                "airportName": "Bari Karol Wojtyla Airport",
+                "countryCode": "IT",
+                "latitude": "41.1389",
+                "longitude": "16.7606"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 1,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "CAG",
+                "airportName": "Cagliari Elmas Airport",
+                "countryCode": "IT",
+                "latitude": "39.2515",
+                "longitude": "9.05428"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 1,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "TRS",
+                "airportName": "Trieste - Friuli Venezia Giulia Airport",
+                "countryCode": "IT",
+                "latitude": "45.8275",
+                "longitude": "13.4722"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 1,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "NTE",
+                "airportName": "Nantes Atlantique Airport",
+                "countryCode": "FR",
+                "latitude": "47.1532",
+                "longitude": "-1.61073"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 1,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "KEF",
+                "airportName": "Keflavík International Airport",
+                "countryCode": "IS",
+                "latitude": "63.985",
+                "longitude": "-22.6056"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 1,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "ESB",
+                "airportName": "Ankara Esenboğa Airport",
+                "countryCode": "TR",
+                "latitude": "40.1281",
+                "longitude": "32.995"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 1,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "FLR",
+                "airportName": "Florence Airport",
+                "countryCode": "IT",
+                "latitude": "43.81",
+                "longitude": "11.2051"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 1,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "DLM",
+                "airportName": "Dalaman Airport",
+                "countryCode": "TR",
+                "latitude": "36.7131",
+                "longitude": "28.7925"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 1,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "SOF",
+                "airportName": "Sofia Airport",
+                "countryCode": "BG",
+                "latitude": "42.6967",
+                "longitude": "23.4114"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 1,
+            "importedAt": "2024-12-28T11:13:26Z"
+        },
+        {
+            "hamAirport": {
+                "airportCode": "HAM",
+                "airportName": "Hamburg Airport",
+                "countryCode": "DE",
+                "latitude": "53.6304",
+                "longitude": "9.98823"
+            },
+            "connectionAirport": {
+                "airportCode": "RMO",
+                "airportName": "Chisinau International Airport",
+                "countryCode": "MD",
+                "latitude": "46.9277",
+                "longitude": "28.931"
+            },
+            "departureFlightCount": 0,
+            "arrivalFlightCount": 1,
+            "totalFlightCount": 1,
+            "importedAt": "2024-12-28T11:13:26Z"
+        }
+    ],
+    "importedAt": "2024-12-28T11:13:26Z"
+}

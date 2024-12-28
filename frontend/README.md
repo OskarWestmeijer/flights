@@ -12,20 +12,31 @@ npm run test:unit run
 
 ## local development
 
+### Wiremock Backend
 ```bash
-# ensure the backend is started
+docker compose up -d
 npm run dev
 ```
 
-## updating dependencies
+### Locally started Backend
 
 ```bash
-npm install -g npm-check-updates
+# start the backend applications as described in the projects root README
+npm run dev
+```
+
+## Update dependencies
+
+Ensure the tool `ncu` is installed `npm install -g npm-check-updates`.
+
+```bash
+# list possible updates
 ncu
 
 # granular updates
 ncu -u --target=patch
 ncu -u --target=minor
 
+# major updates
 ncu -u
 ```
