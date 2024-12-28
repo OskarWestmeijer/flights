@@ -1,9 +1,9 @@
-val ktor = "2.3.12"
+val ktor = "3.0.3"
 val kotlin = "2.1.0"
 
 plugins {
     kotlin("jvm") version "2.1.0"
-    id("io.ktor.plugin") version "2.3.12"
+    id("io.ktor.plugin") version "3.0.3"
     kotlin("plugin.serialization") version "2.1.0"
     id("org.jetbrains.kotlinx.kover") version "0.9.0"
 }
@@ -52,8 +52,8 @@ dependencies {
 
     implementation("io.lettuce:lettuce-core:6.5.1.RELEASE")
 
-    testImplementation("io.ktor:ktor-server-tests-jvm:$ktor")
+    testImplementation("io.ktor:ktor-server-tests-jvm:2.3.13")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin")
     testImplementation("org.skyscreamer:jsonassert:1.5.3")
-    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.1")
 }
