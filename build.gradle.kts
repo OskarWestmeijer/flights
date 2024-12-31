@@ -50,7 +50,7 @@ dependencies {
     implementation("org.apache.commons:commons-csv:1.12.0")
     implementation("ch.qos.logback:logback-classic:1.5.15")
 
-    implementation("io.lettuce:lettuce-core:6.5.1.RELEASE")
+    implementation("io.lettuce:lettuce-core:6.5.2.RELEASE")
 
     testImplementation("io.ktor:ktor-server-tests-jvm:2.3.13")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin")
