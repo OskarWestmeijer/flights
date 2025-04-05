@@ -31,6 +31,7 @@ runs:
           playwright-browsers-${{ runner.os }}-
 
     - name: Install Playwright Browsers
+      working-directory: ${{ inputs.frontend-directory }}
       run: npx playwright install --with-deps
       shell: bash
 
