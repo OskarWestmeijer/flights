@@ -2,7 +2,7 @@ val ktor = "3.1.2"
 val kotlin = "2.1.0"
 
 plugins {
-    kotlin("jvm") version "2.1.0"
+    kotlin("jvm") version "2.1.20"
     id("io.ktor.plugin") version "3.0.3"
     kotlin("plugin.serialization") version "2.1.20"
     id("org.jetbrains.kotlinx.kover") version "0.9.1"
