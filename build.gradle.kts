@@ -55,5 +55,5 @@ dependencies {
     testImplementation("io.ktor:ktor-server-tests-jvm:2.3.13")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin")
     testImplementation("org.skyscreamer:jsonassert:1.5.3")
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.1")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.2")
 }
