@@ -47,7 +47,7 @@ dependencies {
     implementation("io.ktor:ktor-client-core:$ktor")
     implementation("io.ktor:ktor-client-cio:$ktor")
 
-    implementation("org.apache.commons:commons-csv:1.13.0")
+    implementation("org.apache.commons:commons-csv:1.14.0")
     implementation("ch.qos.logback:logback-classic:1.5.18")
 
     implementation("io.lettuce:lettuce-core:6.5.5.RELEASE")
