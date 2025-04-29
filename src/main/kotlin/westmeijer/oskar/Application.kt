@@ -1,6 +1,6 @@
 package westmeijer.oskar
 
-import SchedulerListener
+import westmeijer.oskar.services.cache.SchedulerListener
 import configureServerSerialization
 import io.ktor.http.*
 import io.ktor.server.application.*
@@ -9,7 +9,7 @@ import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import westmeijer.oskar.redis.CacheService
+import westmeijer.oskar.services.cache.CacheService
 import westmeijer.oskar.routes.registerAirports
 import westmeijer.oskar.routes.registerConnections
 import westmeijer.oskar.routes.registerOpenapi

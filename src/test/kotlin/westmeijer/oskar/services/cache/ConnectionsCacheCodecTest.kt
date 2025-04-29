@@ -1,8 +1,8 @@
+package westmeijer.oskar.services.cache
 import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json
 import westmeijer.oskar.services.airport.model.Airport
 import westmeijer.oskar.services.connections.model.Connection
-import westmeijer.oskar.redis.ConnectionsCacheCodec
 import java.nio.ByteBuffer
 import java.time.Instant
 import java.time.temporal.ChronoUnit
@@ -10,7 +10,7 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
 
-internal class ConnectionsCacheServiceCodecTest {
+internal class ConnectionsCacheCodecTest {
 
     private val codec = ConnectionsCacheCodec()
 

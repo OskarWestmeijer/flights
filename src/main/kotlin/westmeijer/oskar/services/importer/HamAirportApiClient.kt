@@ -36,7 +36,7 @@ private val client = HttpClient(CIO) {
     }
 }
 
-internal object HamAirportClient {
+internal object HamAirportApiClient {
 
     suspend fun getDepartingFlights(): List<DepartingFlight> {
         val today = Instant.now().truncatedTo(ChronoUnit.DAYS)

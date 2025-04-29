@@ -1,4 +1,4 @@
-package westmeijer.oskar.redis
+package westmeijer.oskar.services.cache
 
 import io.ktor.util.logging.*
 import io.lettuce.core.api.StatefulRedisConnection

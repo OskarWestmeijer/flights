@@ -1,15 +1,16 @@
+package westmeijer.oskar.services.cache
+
 import io.ktor.util.logging.*
 import io.lettuce.core.api.sync.RedisCommands
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
-import westmeijer.oskar.redis.RedisClient
 import westmeijer.oskar.services.importer.FlightsImportService
 
 object SchedulerListener {
 
-    private val log = KtorSimpleLogger("westmeijer.oskar.redis.SchedulerListener")
+    private val log = KtorSimpleLogger("westmeijer.oskar.redis.westmeijer.oskar.services.cache.SchedulerListener")
 
     private val redisCommands: RedisCommands<String, String> = RedisClient.client.connect().sync()
     private const val SCHEDULER_SET = "refresh_routes"

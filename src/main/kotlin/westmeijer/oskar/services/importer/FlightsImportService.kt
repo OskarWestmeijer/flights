@@ -1,10 +1,10 @@
 package westmeijer.oskar.services.importer
 
 import io.ktor.util.logging.*
-import westmeijer.oskar.services.airport.model.AirportCode
-import westmeijer.oskar.services.connections.model.Connection
-import westmeijer.oskar.redis.CacheService
 import westmeijer.oskar.services.airport.AirportService
+import westmeijer.oskar.services.airport.model.AirportCode
+import westmeijer.oskar.services.cache.CacheService
+import westmeijer.oskar.services.connections.model.Connection
 import westmeijer.oskar.services.importer.model.ArrivingFlight
 import westmeijer.oskar.services.importer.model.DepartingFlight
 import java.time.Instant
@@ -18,8 +18,8 @@ internal object FlightsImportService {
         log.info("Start refreshing connections")
         val importedAt = Instant.now().truncatedTo(ChronoUnit.SECONDS).toString()
 
-        val departingFlights: List<DepartingFlight> = HamAirportClient.getDepartingFlights()
-        val arrivingFlights: List<ArrivingFlight> = HamAirportClient.getArrivingFlights()
+        val departingFlights: List<DepartingFlight> = HamAirportApiClient.getDepartingFlights()
+        val arrivingFlights: List<ArrivingFlight> = HamAirportApiClient.getArrivingFlights()
 
         val departingFlightsMap: Map<AirportCode, Int> = aggregateDepartingFlights(departingFlights)
         val arrivingFlightsMap: Map<AirportCode, Int> = aggregateArrivingFlights(arrivingFlights)

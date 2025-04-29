@@ -1,7 +1,7 @@
 package westmeijer.oskar.services.connections
 
 import io.ktor.util.logging.*
-import westmeijer.oskar.redis.CacheService
+import westmeijer.oskar.services.cache.CacheService
 import westmeijer.oskar.services.connections.model.Connection
 
 object ConnectionsService {
