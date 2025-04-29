@@ -1,6 +1,5 @@
 package westmeijer.oskar
 
-import westmeijer.oskar.service.cache.SchedulerListener
 import configureServerSerialization
 import io.ktor.http.*
 import io.ktor.server.application.*
@@ -9,11 +8,12 @@ import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import westmeijer.oskar.service.cache.CacheService
 import westmeijer.oskar.controller.registerAirports
 import westmeijer.oskar.controller.registerConnections
 import westmeijer.oskar.controller.registerOpenapi
 import westmeijer.oskar.service.airport.AirportService
+import westmeijer.oskar.service.cache.CacheService
+import westmeijer.oskar.service.importer.FlightsImportScheduler
 import westmeijer.oskar.service.importer.FlightsImportService
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
@@ -52,5 +52,5 @@ fun Application.module() {
     }
 
     // start listening for scheduler
-    SchedulerListener.startListening(scope)
+    FlightsImportScheduler.start(scope)
 }
