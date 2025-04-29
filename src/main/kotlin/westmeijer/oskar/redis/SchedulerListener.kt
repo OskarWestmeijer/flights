@@ -5,7 +5,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import westmeijer.oskar.redis.RedisClient
-import westmeijer.oskar.services.ConnectionsService
+import westmeijer.oskar.services.importer.FlightsImportService
 
 object SchedulerListener {
 
@@ -39,7 +39,7 @@ object SchedulerListener {
         log.info("Received msg: $message")
 
         if (EXPECTED_MSG == message) {
-            ConnectionsService.refreshConnections()
+            FlightsImportService.import()
         } else {
             log.info("Unexpected message. Do nothing.")
         }

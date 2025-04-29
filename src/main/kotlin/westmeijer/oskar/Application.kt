@@ -9,12 +9,12 @@ import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import westmeijer.oskar.redis.Cache
+import westmeijer.oskar.redis.CacheService
 import westmeijer.oskar.routes.registerAirports
 import westmeijer.oskar.routes.registerConnections
 import westmeijer.oskar.routes.registerOpenapi
-import westmeijer.oskar.services.AirportService
-import westmeijer.oskar.services.ConnectionsService
+import westmeijer.oskar.services.airport.AirportService
+import westmeijer.oskar.services.importer.FlightsImportService
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
@@ -40,12 +40,12 @@ fun Application.module() {
     AirportService.getAirport("HEL")
 
     // init redis cache
-    Cache
+    CacheService
 
     val scope = CoroutineScope(Dispatchers.Default + CoroutineName("FlightsApiMainCoroutine"))
     scope.launch {
         try {
-            ConnectionsService.refreshConnections()
+            FlightsImportService.import()
         } catch (e: Exception) {
             log.error("Error initializing flight routes. Cache init depending on scheduled refresh.", e)
         }

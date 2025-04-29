@@ -1,6 +1,7 @@
-package westmeijer.oskar.models.server
+package westmeijer.oskar.services.connections.model
 
 import kotlinx.serialization.Serializable
+import westmeijer.oskar.services.airport.model.Airport
 
 @Serializable
 data class Connection(

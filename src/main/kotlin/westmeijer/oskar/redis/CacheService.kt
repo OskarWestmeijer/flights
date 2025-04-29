@@ -3,21 +3,16 @@ package westmeijer.oskar.redis
 import io.ktor.util.logging.*
 import io.lettuce.core.api.StatefulRedisConnection
 import io.lettuce.core.api.sync.RedisCommands
-import westmeijer.oskar.models.server.Connection
+import westmeijer.oskar.services.connections.model.Connection
 
 
-object Cache {
+object CacheService {
 
     private val log = KtorSimpleLogger("westmeijer.oskar.cache.RedisCache")
 
-    private val cacheConnection: StatefulRedisConnection<String, List<Connection>>
-    private val cacheCommands: RedisCommands<String, List<Connection>>
+    private val cacheConnection: StatefulRedisConnection<String, List<Connection>> = RedisClient.client.connect(ConnectionsCacheCodec())
+    private val cacheCommands: RedisCommands<String, List<Connection>> = cacheConnection.sync()
     const val CONNECTIONS_KEY = "connections:1"
-
-    init {
-        cacheConnection = RedisClient.client.connect(ConnectionsCacheCodec())
-        cacheCommands = cacheConnection.sync()
-    }
 
     fun setCache(key: String, value: List<Connection>) {
         val result = cacheCommands.set(key, value)

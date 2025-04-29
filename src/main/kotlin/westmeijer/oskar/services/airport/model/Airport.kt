@@ -1,4 +1,4 @@
-package westmeijer.oskar.models.server
+package westmeijer.oskar.services.airport.model
 
 import kotlinx.serialization.Serializable
 

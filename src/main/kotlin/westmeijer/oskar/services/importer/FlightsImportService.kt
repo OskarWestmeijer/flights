@@ -1,23 +1,20 @@
-package westmeijer.oskar.services
+package westmeijer.oskar.services.importer
 
 import io.ktor.util.logging.*
-import westmeijer.oskar.models.client.ArrivingFlight
-import westmeijer.oskar.models.client.DepartingFlight
-import westmeijer.oskar.models.server.AirportCode
-import westmeijer.oskar.models.server.Connection
-import westmeijer.oskar.redis.Cache
+import westmeijer.oskar.services.airport.model.AirportCode
+import westmeijer.oskar.services.connections.model.Connection
+import westmeijer.oskar.redis.CacheService
+import westmeijer.oskar.services.airport.AirportService
+import westmeijer.oskar.services.importer.model.ArrivingFlight
+import westmeijer.oskar.services.importer.model.DepartingFlight
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 
-object ConnectionsService {
+internal object FlightsImportService {
 
-    private val log = KtorSimpleLogger("westmeijer.oskar.services.ConnectionsService")
+    private val log = KtorSimpleLogger("westmeijer.oskar.services.importer.ImportService")
 
-    fun getConnections(): List<Connection> {
-        return Cache.getCache(Cache.CONNECTIONS_KEY)
-    }
-
-    suspend fun refreshConnections() {
+    suspend fun import() {
         log.info("Start refreshing connections")
         val importedAt = Instant.now().truncatedTo(ChronoUnit.SECONDS).toString()
 
@@ -29,7 +26,7 @@ object ConnectionsService {
 
         val hamburgConnections: List<Connection> = map(arrivingFlightsMap, departingFlightsMap, importedAt)
 
-        Cache.setCache(Cache.CONNECTIONS_KEY, hamburgConnections)
+        CacheService.setCache(CacheService.CONNECTIONS_KEY, hamburgConnections)
 
         log.info("Departing flights count: ${departingFlights.size}, departing connections count: ${departingFlightsMap.size}")
         log.info("Arriving flights count: ${arrivingFlights.size}, arriving connections count: ${arrivingFlightsMap.size}")

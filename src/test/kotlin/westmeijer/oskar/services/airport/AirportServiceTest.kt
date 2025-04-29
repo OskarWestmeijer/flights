@@ -1,6 +1,6 @@
-package westmeijer.oskar.services
+package westmeijer.oskar.services.airport
 
-import westmeijer.oskar.models.server.Airport
+import westmeijer.oskar.services.airport.model.Airport
 import kotlin.test.BeforeTest
 import kotlin.test.Test
 import kotlin.test.assertEquals

@@ -1,4 +1,4 @@
-package westmeijer.oskar.services
+package westmeijer.oskar.services.importer
 
 import io.ktor.client.*
 import io.ktor.client.call.*
@@ -10,8 +10,8 @@ import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import kotlinx.serialization.json.Json
 import westmeijer.oskar.Secrets
-import westmeijer.oskar.models.client.ArrivingFlight
-import westmeijer.oskar.models.client.DepartingFlight
+import westmeijer.oskar.services.importer.model.ArrivingFlight
+import westmeijer.oskar.services.importer.model.DepartingFlight
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 
@@ -36,7 +36,7 @@ private val client = HttpClient(CIO) {
     }
 }
 
-object HamAirportClient {
+internal object HamAirportClient {
 
     suspend fun getDepartingFlights(): List<DepartingFlight> {
         val today = Instant.now().truncatedTo(ChronoUnit.DAYS)

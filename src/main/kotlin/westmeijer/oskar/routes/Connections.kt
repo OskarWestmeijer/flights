@@ -3,8 +3,8 @@ package westmeijer.oskar.routes
 import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
-import westmeijer.oskar.models.server.ConnectionsResponse
-import westmeijer.oskar.services.ConnectionsService
+import westmeijer.oskar.routes.model.ConnectionsResponse
+import westmeijer.oskar.services.connections.ConnectionsService
 
 fun Application.registerConnections() {
     routing {

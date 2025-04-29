@@ -1,13 +1,13 @@
-package westmeijer.oskar.services
+package westmeijer.oskar.services.airport
 
 import io.ktor.util.logging.*
 import org.apache.commons.csv.CSVFormat
-import westmeijer.oskar.models.server.Airport
+import westmeijer.oskar.services.airport.model.Airport
 
 
 object AirportService {
 
-    private val log = KtorSimpleLogger("westmeijer.oskar.services.AirportService")
+    private val log = KtorSimpleLogger("westmeijer.oskar.services.airport.AirportService")
 
     private val airportMap: Map<String, Airport>
 

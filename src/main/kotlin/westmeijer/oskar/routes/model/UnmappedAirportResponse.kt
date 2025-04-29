@@ -1,4 +1,4 @@
-package westmeijer.oskar.models.server
+package westmeijer.oskar.routes.model
 
 import kotlinx.serialization.Serializable
 
