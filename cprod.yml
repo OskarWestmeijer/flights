@@ -11,20 +11,6 @@ services:
         reservations:
           memory: 25m
     restart: always
-  flights-scheduler:
-    image: oskarwestmeijer/flights-scheduler:latest
-    depends_on:
-      - flights-api
-    container_name: flights-scheduler
-    deploy:
-      resources:
-        limits:
-          memory: 75m
-        reservations:
-          memory: 75m
-    restart: always
-    environment:
-      - REDIS_URL=${REDIS_URL}
   flights-api:
     image: oskarwestmeijer/flights-api:latest
     depends_on:
