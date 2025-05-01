@@ -23,11 +23,6 @@ runs:
         docker compose up -d
         ./gradlew clean check
 
-    - name: Build jar
-      shell: bash
-      run: |
-        ./gradlew clean buildFatJar
-
     - name: Upload Api Jar
       uses: actions/upload-artifact@v4
       with:
