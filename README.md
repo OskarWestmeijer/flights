@@ -32,7 +32,7 @@ Execute these commands and refer to the `frontend/README.md` for further instruc
 
 ``` bash
 docker compose up -d
-./gradlew run
+KTOR_DEVELOPMENT=true ./gradlew run
 ```
 
 ## Architecture
