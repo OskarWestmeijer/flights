@@ -7,22 +7,20 @@ title C4Model Container diagram for Flights
 Person(user, "User")
 
 System_Boundary(flightsSystem, "Flights") {
-    Container(nginx_proxy, "Proxy", "Nginx", $descr="Routes either to UI or API")
+    Container(nginx_proxy, "Reverse Proxy", "Nginx", $descr="Routes either to UI or API")
     Container(flights_api, "API", "Kotlin & Ktor")
-    Container(flights_scheduler, "Scheduler", "Kotlin", $descr="Every 10min")
-    Container(flights_cache, "Cache", "Redis", $descr="Caches api response & import-event")
+    Container(flights_cache, "Cache", "Redis")
     Container(flights_ui, "UI", "Node & Sveltekit (SSR)")
 }
-System_Ext(ham_api, "HAM airport Api", "API for current airport connections")
+System_Ext(ham_api, "HAM airport Api", "API for airport connections")
 
 
-Rel(user, nginx_proxy, "Request airport connections", "https")
+Rel(user, nginx_proxy, "Search for airport connections", "https")
 Rel_R(nginx_proxy, flights_ui, "Route to UI", "https")
 Rel_D(nginx_proxy, flights_api, "Route to API", "https")
-Rel(flights_ui, flights_api, "Request for SSR", "https")
-Rel_L(flights_api, flights_cache, "Poll refresh-event & cache api response")
-Rel_D(flights_scheduler, flights_cache, "Publish refresh-event")
-Rel_R(flights_api, ham_api, "Request airport connections (refresh-event)", "https")
+Rel(flights_ui, flights_api, "Fetch airport connections", "https")
+Rel_L(flights_api, flights_cache, "Store airport connections")
+Rel_R(flights_api, ham_api, "Request airport connections", "https")
 
 LAYOUT_TOP_DOWN()
 @enduml

@@ -20,36 +20,19 @@ runs:
     - name: Test backend
       shell: bash
       run: |
-        chmod +x gradlew
         docker compose up -d
-        ./gradlew :clean :check --no-parallel
-        ./gradlew :scheduler:clean :scheduler:check --no-parallel
+        ./gradlew clean check
 
-    - name: Test scheduler
+    - name: Build jar
       shell: bash
       run: |
-        chmod +x gradlew
-        ./gradlew :scheduler:clean :scheduler:check --no-parallel
-
-    - name: Build jars
-      shell: bash
-      run: |
-        chmod +x gradlew
-        ./gradlew buildFatJar
-        ./gradlew :scheduler:build
+        ./gradlew clean buildFatJar
 
     - name: Upload Api Jar
       uses: actions/upload-artifact@v4
       with:
         name: app
         path: build/libs/app.jar
-        retention-days: 1
-
-    - name: Upload Scheduler Jar
-      uses: actions/upload-artifact@v4
-      with:
-        name: flights-scheduler
-        path: scheduler/build/libs/flights-scheduler.jar
         retention-days: 1
 
     - name: Upload coverage reports to Codecov

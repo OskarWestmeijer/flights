@@ -1,6 +1,3 @@
-val ktor = "3.1.2"
-val kotlin = "2.1.20"
-
 plugins {
     kotlin("jvm") version "2.1.20"
     id("io.ktor.plugin") version "3.1.2"
@@ -18,34 +15,24 @@ application {
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
 }
 
-ktor {
-    fatJar {
-        archiveFileName.set("app.jar")
-    }
-}
-
 repositories {
     mavenCentral()
 }
 
-tasks.check {
-    finalizedBy(tasks.koverHtmlReport, tasks.koverXmlReport, tasks.koverLog)
-}
-
 dependencies {
-    implementation("io.ktor:ktor-server-core-jvm:$ktor")
-    implementation("io.ktor:ktor-server-netty-jvm:$ktor")
-    implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktor")
-    implementation("io.ktor:ktor-server-cors:$ktor")
-    implementation("io.ktor:ktor-server-config-yaml:$ktor")
+    implementation("io.ktor:ktor-server-core-jvm")
+    implementation("io.ktor:ktor-server-netty-jvm")
+    implementation("io.ktor:ktor-server-content-negotiation-jvm")
+    implementation("io.ktor:ktor-server-cors")
+    implementation("io.ktor:ktor-server-config-yaml")
 
-    implementation("io.ktor:ktor-serialization-kotlinx-json-jvm:$ktor")
-    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor")
+    implementation("io.ktor:ktor-serialization-kotlinx-json-jvm")
+    implementation("io.ktor:ktor-serialization-kotlinx-json")
 
-    implementation("io.ktor:ktor-client-content-negotiation:$ktor")
+    implementation("io.ktor:ktor-client-content-negotiation")
 
-    implementation("io.ktor:ktor-client-core:$ktor")
-    implementation("io.ktor:ktor-client-cio:$ktor")
+    implementation("io.ktor:ktor-client-core")
+    implementation("io.ktor:ktor-client-cio")
 
     implementation("org.apache.commons:commons-csv:1.14.0")
     implementation("ch.qos.logback:logback-classic:1.5.18")
@@ -53,7 +40,17 @@ dependencies {
     implementation("io.lettuce:lettuce-core:6.6.0.RELEASE")
 
     testImplementation("io.ktor:ktor-server-tests-jvm:2.3.13")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
     testImplementation("org.skyscreamer:jsonassert:1.5.3")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.2")
+}
+
+ktor {
+    fatJar {
+        archiveFileName.set("app.jar")
+    }
+}
+
+tasks.check {
+    finalizedBy(tasks.koverHtmlReport, tasks.koverXmlReport, tasks.koverLog)
 }
