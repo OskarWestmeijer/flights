@@ -8,13 +8,6 @@ plugins {
 group = "westmeijer.oskar"
 version = "1.0.0"
 
-application {
-    mainClass.set("westmeijer.oskar.ApplicationKt")
-
-    val isDevelopment: Boolean = project.ext.has("development")
-    applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
-}
-
 repositories {
     mavenCentral()
 }
@@ -45,6 +38,10 @@ dependencies {
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.2")
 }
 
+application {
+    mainClass.set("westmeijer.oskar.ApplicationKt")
+}
+
 ktor {
     fatJar {
         archiveFileName.set("app.jar")
@@ -53,4 +50,5 @@ ktor {
 
 tasks.check {
     finalizedBy(tasks.koverHtmlReport, tasks.koverXmlReport, tasks.koverLog)
+    finalizedBy(tasks.buildFatJar)
 }
