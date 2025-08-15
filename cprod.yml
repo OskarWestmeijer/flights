@@ -16,6 +16,11 @@ services:
     depends_on:
       - flights-redis
     container_name: flights-api
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "1"
     deploy:
       resources:
         limits:
