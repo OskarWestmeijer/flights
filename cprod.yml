@@ -11,6 +11,9 @@ services:
         reservations:
           memory: 25m
     restart: always
+    labels:
+      log_category: "infra"
+
   flights-api:
     image: oskarwestmeijer/flights-api:latest
     depends_on:
@@ -34,6 +37,9 @@ services:
       - HAM_API_URL=${HAM_API_URL}
       - HAM_API_KEY=${HAM_API_KEY}
       - REDIS_URL=${REDIS_URL}
+    labels:
+      log_category: "application"
+
   flights-ui:
     image: oskarwestmeijer/flights-ui:latest
     depends_on:
@@ -50,6 +56,9 @@ services:
     restart: always
     environment:
       - NODE_ENV=production
+    labels:
+      log_category: "application"
+
 networks:
   default:
     name: proxy
