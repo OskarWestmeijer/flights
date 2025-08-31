@@ -3,6 +3,7 @@ package westmeijer.oskar.service.importer
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.engine.cio.*
+import io.ktor.client.plugins.*
 import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
@@ -33,6 +34,12 @@ private val client = HttpClient(CIO) {
             isLenient = true
             ignoreUnknownKeys = true
         }, ContentType.Any)
+    }
+
+    install(HttpTimeout) {
+        requestTimeoutMillis = 30_000 // max total request time
+        connectTimeoutMillis = 10_000 // time to establish TCP connection
+        socketTimeoutMillis = 30_000  // time between packets (read/write)
     }
 }
 

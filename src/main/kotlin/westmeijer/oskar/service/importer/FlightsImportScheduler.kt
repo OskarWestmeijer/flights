@@ -18,7 +18,6 @@ object FlightsImportScheduler : ImportScheduler {
                 try {
                     FlightsImportService.import()
                     delay(600000)
-
                 } catch (e: Exception) {
                     log.error("Scheduled run threw exception.", e)
                 }
