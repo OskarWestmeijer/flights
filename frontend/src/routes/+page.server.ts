@@ -20,14 +20,15 @@ export const load: PageLoad = async ({ fetch }) => {
 			apiUrl = 'http://localhost:8080/connections';
 		}
 
-		console.log('Request backend for new connections.');
+		log('Map values not initalized, or need to be updated. Request backend for new connections.');
 		const res = await fetch(apiUrl);
 		const response: ConnectionsResponse = await res.json();
-		console.log('Compute arc data.');
+		log('Compute arc data.');
 		arcData = computeArcData(response);
-		console.log('Compute label data.');
+		log('Compute label data.');
 		labelData = computeLabelData(arcData);
 		importedAt = response.importedAt;
+		log('Done computing.')
 	}
 
 	return {
@@ -38,6 +39,10 @@ export const load: PageLoad = async ({ fetch }) => {
 		}
 	};
 };
+
+function log(msg :string) {
+  console.log(new Date().toISOString(), msg);
+}
 
 function computeArcData(response: ConnectionsResponse): GlobeData[] {
 	return response.connections.map((connection: Connection) => {
