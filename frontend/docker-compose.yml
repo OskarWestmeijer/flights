@@ -1,6 +1,6 @@
 services:
   wiremock:
-    image: wiremock/wiremock:3.3.1
+    image: wiremock/wiremock:3.13.1-alpine
     ports:
       - "8080:8080"
     volumes:

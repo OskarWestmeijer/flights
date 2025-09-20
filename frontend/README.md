@@ -6,8 +6,16 @@
 npm install
 npm run build
 
-# will quit vitest once done
+# unit-test (vitest)
 npm run test
+```
+
+### e2e test
+
+```bash
+npx playwright install --with-deps
+docker compose up -d
+npm run e2e
 ```
 
 ## local development
