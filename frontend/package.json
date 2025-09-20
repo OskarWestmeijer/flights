@@ -19,7 +19,7 @@
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.55.0",
-		"@sveltejs/adapter-auto": "^3.3.1",
+		"@sveltejs/adapter-auto": "^6.1.0",
 		"@sveltejs/adapter-node": "^5.3.2",
 		"@sveltejs/kit": "^2.42.2",
 		"@typescript-eslint/eslint-plugin": "^8.44.0",
@@ -27,8 +27,8 @@
 		"autoprefixer": "^10.4.21",
 		"daisyui": "^4.12.24",
 		"eslint": "^9.36.0",
-		"eslint-config-prettier": "^9.1.2",
-		"eslint-plugin-svelte": "^2.46.1",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-svelte": "^3.12.3",
 		"postcss": "^8.5.6",
 		"prettier": "^3.6.2",
 		"prettier-plugin-svelte": "^3.4.0",
@@ -37,8 +37,8 @@
 		"tailwindcss": "^3.4.17",
 		"tslib": "^2.8.1",
 		"typescript": "^5.9.2",
-		"vite": "^6.3.6",
-		"vitest": "^2.1.9"
+		"vite": "^7.1.6",
+		"vitest": "^3.2.4"
 	},
 	"type": "module",
 	"dependencies": {
