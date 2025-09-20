@@ -16,8 +16,8 @@ object FlightsImportScheduler : ImportScheduler {
             log.info("Starting scheduler loop.")
             while (isActive) {
                 try {
-                    FlightsImportService.import()
                     delay(600000)
+                    FlightsImportService.import()
                 } catch (e: Exception) {
                     log.error("Scheduled run threw exception.", e)
                 }
