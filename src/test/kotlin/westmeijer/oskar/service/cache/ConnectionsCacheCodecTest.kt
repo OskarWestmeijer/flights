@@ -25,7 +25,10 @@ internal class ConnectionsCacheCodecTest {
     @Test
     fun testDecodeValueWithValidJson() {
         val airport = Airport("HEL", "Hamburg Airport", "DE", "60.3172", "24.9633")
-        val connections = listOf(Connection(airport, airport, 1, 2, 3, Instant.now().truncatedTo(ChronoUnit.SECONDS).toString()))
+        val connections = listOf(Connection(
+            airport, airport, 1, 2, 3, Instant.now().truncatedTo(ChronoUnit.SECONDS).toString(),
+            listOf()
+        ))
 
         val encodedValue = codec.encodeValue(connections)
         val decodedValue = codec.decodeValue(encodedValue!!)
@@ -54,7 +57,8 @@ internal class ConnectionsCacheCodecTest {
     @Test
     fun testEncodeValue() {
         val airport = Airport("HEL", "Hamburg Airport", "DE", "60.3172", "24.9633")
-        val connections = listOf(Connection(airport, airport, 1, 2, 3, Instant.now().truncatedTo(ChronoUnit.SECONDS).toString()))
+        val connections = listOf(Connection(airport, airport, 1, 2,
+            3, Instant.now().truncatedTo(ChronoUnit.SECONDS).toString(), listOf()))
 
         val encodedValue = codec.encodeValue(connections)
         val jsonString = Json.encodeToString(ListSerializer(Connection.serializer()), connections)

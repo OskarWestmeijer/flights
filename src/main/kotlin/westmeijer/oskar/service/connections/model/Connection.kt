@@ -10,5 +10,6 @@ data class Connection(
     val departureFlightCount: Int,
     val arrivalFlightCount: Int,
     val totalFlightCount: Int,
-    val importedAt: String
+    val importedAt: String,
+    val flights: List<Flight>
 )

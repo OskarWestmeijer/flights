@@ -17,7 +17,393 @@
       },
       "departureFlightCount": 14,
       "arrivalFlightCount": 50,
-      "totalFlightCount": 64
+      "totalFlightCount": 64,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH 2085",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T06:15:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7170",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T07:10:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH 2089",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T07:50:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH 2051",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T08:45:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH 2059",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T10:55:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH 2055",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T09:50:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH 2063",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T13:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH 2061",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T12:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH 2067",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T15:15:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH 2071",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T17:15:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7176",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T18:55:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH 2073",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T18:15:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH 2077",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T19:15:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH 2079",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T20:15:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2060",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-19T14:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2064",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-19T17:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2076",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-19T21:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2062",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-19T16:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2078",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-19T22:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7175",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T18:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2068",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-19T18:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7177",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T21:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7179",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T17:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7171",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T09:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7177",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T22:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2050",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T08:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2078",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T22:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2058",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T12:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2060",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T14:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2062",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T16:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2056",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T11:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2076",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T21:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2072",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T19:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2054",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T10:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2050",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T08:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2060",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T14:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2050",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T08:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2054",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T10:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2066",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T15:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2056",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T11:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2078",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T22:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2058",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T12:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2070",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T20:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2080",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T09:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "VL 2062",
+          "airlineName": "City Airlines",
+          "plannedTime": "2024-09-22T16:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2070",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T20:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2070",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T20:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2070",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-19T20:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7175",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T18:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2058",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T12:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2068",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T18:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2080",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T09:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2080",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T09:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7171",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T10:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7177",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T22:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2054",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T10:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2078",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T22:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2076",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T21:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2060",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T14:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2068",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T18:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2068",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T18:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2066",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T19:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2106",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-19T23:33:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH 2062",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T16:30:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -36,7 +422,339 @@
       },
       "departureFlightCount": 12,
       "arrivalFlightCount": 43,
-      "totalFlightCount": 55
+      "totalFlightCount": 55,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH  001",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T06:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH  015",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T11:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH  017",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T12:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH  021",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T14:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH  023",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T15:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH  031",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T19:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH  029",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T18:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH  033",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T20:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH  007",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T07:30:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH  009",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T08:30:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH  011",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T09:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LH  013",
+          "airlineName": "Lufthansa (Deutsche Lufthansa AG)",
+          "plannedTime": "2023-12-08T10:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  024",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T18:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  008",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T10:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  028",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T19:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  002",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T07:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  020",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T16:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  004",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T08:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  016",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T14:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  030",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T20:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  010",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T11:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  020",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-19T16:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  024",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-19T18:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  014",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-19T13:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  028",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-19T19:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  030",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-19T20:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  036",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-19T21:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  034",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-19T22:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  016",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-19T14:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  014",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T13:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  034",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T22:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  036",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T21:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  022",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-20T17:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  002",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T07:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  024",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T18:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  002",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T07:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  008",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T10:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  016",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T14:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  010",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T11:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  022",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T17:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  036",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T21:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  034",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T22:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  008",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T10:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  036",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T21:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  020",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T16:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  010",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T11:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  022",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T17:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  030",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T20:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  034",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T22:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  006",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-21T09:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  020",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T16:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  024",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T18:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  028",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T19:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  006",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T09:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LH  016",
+          "airlineName": "Lufthansa",
+          "plannedTime": "2024-09-22T14:05:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -55,7 +773,249 @@
       },
       "departureFlightCount": 3,
       "arrivalFlightCount": 37,
-      "totalFlightCount": 40
+      "totalFlightCount": 40,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7580",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T06:15:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7588",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T07:50:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "FR 2049",
+          "airlineName": "Ryanair",
+          "plannedTime": "2023-12-08T12:50:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7591",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T14:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7581",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T22:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7593",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T21:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7587",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T17:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7591",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T12:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7583",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T12:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7593",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T13:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7581",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T22:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7585",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T22:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7587",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T19:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7581",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T22:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 7185",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-19T20:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7581",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T21:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1543",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-21T13:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 7185",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-21T17:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7593",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T21:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7591",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T22:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1521",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-20T10:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7587",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T12:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1697",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-21T21:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7589",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T12:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1697",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-20T22:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 2050",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-20T09:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7591",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T12:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1521",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-21T10:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1697",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-19T21:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 5433",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T21:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7585",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T12:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7593",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T21:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7589",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T17:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7587",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T19:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7585",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T13:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1543",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-20T12:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1543",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-22T13:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 2050",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-21T10:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1521",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-22T10:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1697",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-22T21:40:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -74,7 +1034,201 @@
       },
       "departureFlightCount": 8,
       "arrivalFlightCount": 24,
-      "totalFlightCount": 32
+      "totalFlightCount": 32,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7760",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T07:40:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LX 1053",
+          "airlineName": "Swiss International Air Lines",
+          "plannedTime": "2023-12-08T10:50:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LX 1051",
+          "airlineName": "Swiss International Air Lines",
+          "plannedTime": "2023-12-08T09:40:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7762",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T13:30:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LX 1057",
+          "airlineName": "Swiss International Air Lines",
+          "plannedTime": "2023-12-08T14:55:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LX 1059",
+          "airlineName": "Swiss International Air Lines",
+          "plannedTime": "2023-12-08T18:45:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7764",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T18:15:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LX 1055",
+          "airlineName": "Swiss International Air Lines",
+          "plannedTime": "2023-12-08T20:10:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7765",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T22:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7763",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T17:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1058",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-20T18:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1050",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-20T08:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1054",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-19T19:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1054",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-20T19:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1056",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-19T14:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1058",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-19T18:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7763",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T17:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7761",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T10:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7765",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T22:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7765",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T22:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1058",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-21T18:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1056",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-21T14:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1052",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-20T10:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7761",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T10:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1056",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-20T14:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1058",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-22T18:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7763",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T17:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1050",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-21T08:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1050",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-22T08:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1052",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-22T10:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1052",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-21T10:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1056",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-22T12:05:00.000Z[UTC]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -93,7 +1247,195 @@
       },
       "departureFlightCount": 8,
       "arrivalFlightCount": 23,
-      "totalFlightCount": 31
+      "totalFlightCount": 31,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "BA  963",
+          "airlineName": "British Airways",
+          "plannedTime": "2023-12-08T06:30:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7464",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T08:20:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "BA  965",
+          "airlineName": "British Airways",
+          "plannedTime": "2023-12-08T10:15:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7462",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T12:25:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "BA  969",
+          "airlineName": "British Airways",
+          "plannedTime": "2023-12-08T13:50:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "BA  975",
+          "airlineName": "British Airways",
+          "plannedTime": "2023-12-08T16:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7460",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T17:55:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "BA  967",
+          "airlineName": "British Airways",
+          "plannedTime": "2023-12-08T18:50:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7463",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T17:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7461",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T22:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7461",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T22:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7465",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T11:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7463",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T17:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BA  972",
+          "airlineName": "British Airways",
+          "plannedTime": "2024-09-19T21:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BA  972",
+          "airlineName": "British Airways",
+          "plannedTime": "2024-09-22T21:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BA  974",
+          "airlineName": "British Airways",
+          "plannedTime": "2024-09-19T15:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BA  962",
+          "airlineName": "British Airways",
+          "plannedTime": "2024-09-22T13:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7463",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T17:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BA  964",
+          "airlineName": "British Airways",
+          "plannedTime": "2024-09-20T10:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BA  974",
+          "airlineName": "British Airways",
+          "plannedTime": "2024-09-20T17:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7465",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T11:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7461",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T22:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BA  972",
+          "airlineName": "British Airways",
+          "plannedTime": "2024-09-20T21:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BA  962",
+          "airlineName": "British Airways",
+          "plannedTime": "2024-09-19T13:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BA  966",
+          "airlineName": "British Airways",
+          "plannedTime": "2024-09-19T20:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BA  962",
+          "airlineName": "British Airways",
+          "plannedTime": "2024-09-20T13:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7463",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T17:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BA  978",
+          "airlineName": "British Airways",
+          "plannedTime": "2024-09-19T23:43:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BA  974",
+          "airlineName": "British Airways",
+          "plannedTime": "2024-09-22T16:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BA  972",
+          "airlineName": "British Airways",
+          "plannedTime": "2024-09-21T21:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BA  962",
+          "airlineName": "British Airways",
+          "plannedTime": "2024-09-21T13:45:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -112,7 +1454,189 @@
       },
       "departureFlightCount": 7,
       "arrivalFlightCount": 23,
-      "totalFlightCount": 30
+      "totalFlightCount": 30,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7752",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T06:30:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "OS  168",
+          "airlineName": "Austrian Airlines",
+          "plannedTime": "2023-12-08T07:35:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "OS  176",
+          "airlineName": "Austrian Airlines",
+          "plannedTime": "2023-12-08T09:40:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7754",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T13:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "OS  174",
+          "airlineName": "Austrian Airlines",
+          "plannedTime": "2023-12-08T15:05:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7750",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T17:30:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "OS  172",
+          "airlineName": "Austrian Airlines",
+          "plannedTime": "2023-12-08T20:05:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7751",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T21:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7755",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T17:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "OS  173",
+          "airlineName": "Austrian",
+          "plannedTime": "2024-09-19T14:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "OS  175",
+          "airlineName": "Austrian",
+          "plannedTime": "2024-09-20T08:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "OS  167",
+          "airlineName": "Austrian",
+          "plannedTime": "2024-09-20T22:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "OS  171",
+          "airlineName": "Austrian",
+          "plannedTime": "2024-09-19T19:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "OS  171",
+          "airlineName": "Austrian",
+          "plannedTime": "2024-09-20T19:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "OS  167",
+          "airlineName": "Austrian",
+          "plannedTime": "2024-09-19T22:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "OS  173",
+          "airlineName": "Austrian",
+          "plannedTime": "2024-09-20T14:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7755",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T17:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7753",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T10:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7751",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T21:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "OS  173",
+          "airlineName": "Austrian",
+          "plannedTime": "2024-09-21T14:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "OS  171",
+          "airlineName": "Austrian",
+          "plannedTime": "2024-09-22T19:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "OS  167",
+          "airlineName": "Austrian",
+          "plannedTime": "2024-09-21T22:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "OS  175",
+          "airlineName": "Austrian",
+          "plannedTime": "2024-09-21T08:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7759",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T10:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "OS  173",
+          "airlineName": "Austrian",
+          "plannedTime": "2024-09-22T14:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7753",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T17:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "OS  171",
+          "airlineName": "Austrian",
+          "plannedTime": "2024-09-21T19:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7751",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T21:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "OS  167",
+          "airlineName": "Austrian",
+          "plannedTime": "2024-09-22T22:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "OS  175",
+          "airlineName": "Austrian",
+          "plannedTime": "2024-09-22T08:55:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -131,7 +1655,147 @@
       },
       "departureFlightCount": 5,
       "arrivalFlightCount": 18,
-      "totalFlightCount": 23
+      "totalFlightCount": 23,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "AF 1611",
+          "airlineName": "Air France",
+          "plannedTime": "2023-12-08T06:25:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "AF 1411",
+          "airlineName": "Air France",
+          "plannedTime": "2023-12-08T11:50:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "AF 1711",
+          "airlineName": "Air France",
+          "plannedTime": "2023-12-08T15:10:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7406",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T17:35:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "AF 1511",
+          "airlineName": "Air France",
+          "plannedTime": "2023-12-08T18:05:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7407",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T22:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7407",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T22:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7403",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T10:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AF 1510",
+          "airlineName": "Air France",
+          "plannedTime": "2024-09-21T17:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AF 1710",
+          "airlineName": "Air France",
+          "plannedTime": "2024-09-19T14:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AF 1410",
+          "airlineName": "Air France",
+          "plannedTime": "2024-09-20T11:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7407",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T22:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AF 1610",
+          "airlineName": "Air France",
+          "plannedTime": "2024-09-19T22:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AF 1610",
+          "airlineName": "Air France",
+          "plannedTime": "2024-09-22T22:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AF 1610",
+          "airlineName": "Air France",
+          "plannedTime": "2024-09-20T22:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AF 1510",
+          "airlineName": "Air France",
+          "plannedTime": "2024-09-20T17:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AF 1510",
+          "airlineName": "Air France",
+          "plannedTime": "2024-09-19T17:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AF 1710",
+          "airlineName": "Air France",
+          "plannedTime": "2024-09-20T14:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AF 1410",
+          "airlineName": "Air France",
+          "plannedTime": "2024-09-22T11:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AF 1710",
+          "airlineName": "Air France",
+          "plannedTime": "2024-09-22T14:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AF 1610",
+          "airlineName": "Air France",
+          "plannedTime": "2024-09-21T22:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AF 1410",
+          "airlineName": "Air France",
+          "plannedTime": "2024-09-21T11:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AF 1510",
+          "airlineName": "Air France",
+          "plannedTime": "2024-09-22T17:15:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -150,7 +1814,141 @@
       },
       "departureFlightCount": 6,
       "arrivalFlightCount": 16,
-      "totalFlightCount": 22
+      "totalFlightCount": 22,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "KL 1776",
+          "airlineName": "KLM Royal Dutch Airlines",
+          "plannedTime": "2023-12-08T06:10:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "KL 1778",
+          "airlineName": "KLM Royal Dutch Airlines",
+          "plannedTime": "2023-12-08T08:25:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "KL 1780",
+          "airlineName": "KLM Royal Dutch Airlines",
+          "plannedTime": "2023-12-08T11:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "KL 1782",
+          "airlineName": "KLM Royal Dutch Airlines",
+          "plannedTime": "2023-12-08T14:50:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "KL 1784",
+          "airlineName": "KLM Royal Dutch Airlines",
+          "plannedTime": "2023-12-08T18:45:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7184",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T17:45:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "KL 1757",
+          "airlineName": "KLM",
+          "plannedTime": "2024-09-21T17:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "KL 1755",
+          "airlineName": "KLM",
+          "plannedTime": "2024-09-20T14:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "KL 1759",
+          "airlineName": "KLM",
+          "plannedTime": "2024-09-20T21:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "KL 1757",
+          "airlineName": "KLM",
+          "plannedTime": "2024-09-20T17:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "KL 1751",
+          "airlineName": "KLM",
+          "plannedTime": "2024-09-20T07:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "KL 1757",
+          "airlineName": "KLM",
+          "plannedTime": "2024-09-19T17:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "KL 1759",
+          "airlineName": "KLM",
+          "plannedTime": "2024-09-22T21:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "KL 1755",
+          "airlineName": "KLM",
+          "plannedTime": "2024-09-21T14:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "KL 1753",
+          "airlineName": "KLM",
+          "plannedTime": "2024-09-20T11:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "KL 1759",
+          "airlineName": "KLM",
+          "plannedTime": "2024-09-19T21:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "KL 1755",
+          "airlineName": "KLM",
+          "plannedTime": "2024-09-22T14:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "KL 1757",
+          "airlineName": "KLM",
+          "plannedTime": "2024-09-22T17:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "KL 1753",
+          "airlineName": "KLM",
+          "plannedTime": "2024-09-22T11:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "KL 1753",
+          "airlineName": "KLM",
+          "plannedTime": "2024-09-21T11:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "KL 1751",
+          "airlineName": "KLM",
+          "plannedTime": "2024-09-21T07:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "KL 1759",
+          "airlineName": "KLM",
+          "plannedTime": "2024-09-21T21:45:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -169,7 +1967,129 @@
       },
       "departureFlightCount": 5,
       "arrivalFlightCount": 15,
-      "totalFlightCount": 20
+      "totalFlightCount": 20,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "SK  648",
+          "airlineName": "SAS Scandinavian Airlines",
+          "plannedTime": "2023-12-08T06:25:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "SK  646",
+          "airlineName": "SAS Scandinavian Airlines",
+          "plannedTime": "2023-12-08T09:40:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "SK 1648",
+          "airlineName": "SAS Scandinavian Airlines",
+          "plannedTime": "2023-12-08T12:35:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "SK  650",
+          "airlineName": "SAS Scandinavian Airlines",
+          "plannedTime": "2023-12-08T15:30:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "SK  652",
+          "airlineName": "SAS Scandinavian Airlines",
+          "plannedTime": "2023-12-08T19:25:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SK 1647",
+          "airlineName": "SAS",
+          "plannedTime": "2024-09-20T12:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SK 1641",
+          "airlineName": "SAS",
+          "plannedTime": "2024-09-20T09:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SK  647",
+          "airlineName": "SAS",
+          "plannedTime": "2024-09-20T21:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SK  647",
+          "airlineName": "SAS",
+          "plannedTime": "2024-09-22T21:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SK  651",
+          "airlineName": "SAS",
+          "plannedTime": "2024-09-22T18:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SK  651",
+          "airlineName": "SAS",
+          "plannedTime": "2024-09-20T18:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SK 1641",
+          "airlineName": "SAS",
+          "plannedTime": "2024-09-22T09:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SK  649",
+          "airlineName": "SAS",
+          "plannedTime": "2024-09-19T15:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SK  649",
+          "airlineName": "SAS",
+          "plannedTime": "2024-09-20T15:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SK 1641",
+          "airlineName": "SAS",
+          "plannedTime": "2024-09-21T09:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SK  651",
+          "airlineName": "SAS",
+          "plannedTime": "2024-09-19T18:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SK  647",
+          "airlineName": "SAS",
+          "plannedTime": "2024-09-19T21:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SK  649",
+          "airlineName": "SAS",
+          "plannedTime": "2024-09-21T16:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SK 1647",
+          "airlineName": "SAS",
+          "plannedTime": "2024-09-21T12:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1271",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-21T16:02:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -188,7 +2108,129 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 20,
-      "totalFlightCount": 20
+      "totalFlightCount": 20,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "PC 5041",
+          "airlineName": "Pegasus Airlines",
+          "plannedTime": "2024-09-20T18:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "4M  617",
+          "airlineName": "MGA",
+          "plannedTime": "2024-09-21T13:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "XQ  670",
+          "airlineName": "SunExpress",
+          "plannedTime": "2024-09-20T19:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE  155",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-20T13:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "XQ  170",
+          "airlineName": "SunExpress",
+          "plannedTime": "2024-09-20T09:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE  155",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-21T13:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "XQ  670",
+          "airlineName": "SunExpress",
+          "plannedTime": "2024-09-19T19:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "PC 5041",
+          "airlineName": "Pegasus Airlines",
+          "plannedTime": "2024-09-19T18:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE  155",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-19T13:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "XQ  172",
+          "airlineName": "SunExpress",
+          "plannedTime": "2024-09-21T12:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "XQ  172",
+          "airlineName": "SunExpress",
+          "plannedTime": "2024-09-20T12:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "XC 7535",
+          "airlineName": "Corendon",
+          "plannedTime": "2024-09-22T08:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "XQ  172",
+          "airlineName": "SunExpress",
+          "plannedTime": "2024-09-22T12:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE  155",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-22T13:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "XQ  670",
+          "airlineName": "SunExpress",
+          "plannedTime": "2024-09-22T19:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "PC 5041",
+          "airlineName": "Pegasus Airlines",
+          "plannedTime": "2024-09-22T18:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "PC 5041",
+          "airlineName": "Pegasus Airlines",
+          "plannedTime": "2024-09-21T18:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "XQ  670",
+          "airlineName": "SunExpress",
+          "plannedTime": "2024-09-21T19:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "XQ  170",
+          "airlineName": "SunExpress",
+          "plannedTime": "2024-09-21T09:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "XQ  170",
+          "airlineName": "SunExpress",
+          "plannedTime": "2024-09-22T09:55:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -207,7 +2249,123 @@
       },
       "departureFlightCount": 4,
       "arrivalFlightCount": 15,
-      "totalFlightCount": 19
+      "totalFlightCount": 19,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7046",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T06:45:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 2041",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T15:10:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7040",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T13:30:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7044",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T17:50:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 2044",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T07:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7043",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T17:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7043",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T18:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7043",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T20:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 2036",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T15:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 2048",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T17:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7049",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T22:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 2046",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T13:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 2046",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T12:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 2042",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T19:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 2040",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T13:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7049",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T21:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 2044",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T07:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 2090",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T16:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 2046",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T20:15:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -226,7 +2384,123 @@
       },
       "departureFlightCount": 3,
       "arrivalFlightCount": 16,
-      "totalFlightCount": 19
+      "totalFlightCount": 19,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "TK 1668",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2023-12-08T06:25:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "TK 1662",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2023-12-08T10:50:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "TK 1664",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2023-12-08T18:05:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TK 1667",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2024-09-22T21:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TK 1665",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2024-09-20T13:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TK 1667",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2024-09-19T21:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TK 1665",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2024-09-19T13:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TK 1667",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2024-09-20T21:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TK 1663",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2024-09-20T17:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TK 1661",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2024-09-20T09:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TK 1665",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2024-09-21T13:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TK 1663",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2024-09-19T17:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TK 1665",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2024-09-22T13:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TK 1663",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2024-09-22T17:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TK 1667",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2024-09-21T21:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TK 1661",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2024-09-21T09:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TK 1663",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2024-09-21T17:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TK 1667A",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2024-09-22T06:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TK 1661",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2024-09-22T09:10:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -245,7 +2519,99 @@
       },
       "departureFlightCount": 2,
       "arrivalFlightCount": 13,
-      "totalFlightCount": 15
+      "totalFlightCount": 15,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "VY 1821",
+          "airlineName": "Vueling Airlines",
+          "plannedTime": "2023-12-08T11:10:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7520",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T11:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7521",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T18:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7525",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T13:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7521",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T21:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "VY 1824",
+          "airlineName": "Vueling",
+          "plannedTime": "2024-09-19T17:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "VY 1822",
+          "airlineName": "Vueling",
+          "plannedTime": "2024-09-20T20:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "VY 1820",
+          "airlineName": "Vueling",
+          "plannedTime": "2024-09-21T09:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "VY 1822",
+          "airlineName": "Vueling",
+          "plannedTime": "2024-09-19T20:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "VY 1820",
+          "airlineName": "Vueling",
+          "plannedTime": "2024-09-20T10:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7521",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T21:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "VY 1824",
+          "airlineName": "Vueling",
+          "plannedTime": "2024-09-22T15:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "VY 1820",
+          "airlineName": "Vueling",
+          "plannedTime": "2024-09-22T10:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "VY 1822",
+          "airlineName": "Vueling",
+          "plannedTime": "2024-09-22T19:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "VY 1822",
+          "airlineName": "Vueling",
+          "plannedTime": "2024-09-21T19:55:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -264,7 +2630,93 @@
       },
       "departureFlightCount": 2,
       "arrivalFlightCount": 12,
-      "totalFlightCount": 14
+      "totalFlightCount": 14,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "IB 3273",
+          "airlineName": "Iberia Lineas Aereas de Espana",
+          "plannedTime": "2023-12-08T07:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "IB 3271",
+          "airlineName": "Iberia Lineas Aereas de Espana",
+          "plannedTime": "2023-12-08T15:50:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "IB 3266",
+          "airlineName": "Iberia",
+          "plannedTime": "2024-09-20T14:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "IB 3272",
+          "airlineName": "Iberia",
+          "plannedTime": "2024-09-20T22:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "IB 3272",
+          "airlineName": "Iberia",
+          "plannedTime": "2024-09-22T22:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "UX  885",
+          "airlineName": "Air Europa",
+          "plannedTime": "2024-09-20T11:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "IB 3266",
+          "airlineName": "Iberia",
+          "plannedTime": "2024-09-21T11:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "IB 3270",
+          "airlineName": "Iberia",
+          "plannedTime": "2024-09-19T14:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "UX  461",
+          "airlineName": "Air Europa",
+          "plannedTime": "2024-09-21T14:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "IB 3270",
+          "airlineName": "Iberia",
+          "plannedTime": "2024-09-20T14:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "IB 3272",
+          "airlineName": "Iberia",
+          "plannedTime": "2024-09-19T22:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "IB 3268",
+          "airlineName": "Iberia",
+          "plannedTime": "2024-09-21T19:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "IB 3266",
+          "airlineName": "Iberia",
+          "plannedTime": "2024-09-22T11:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "IB 3272",
+          "airlineName": "Iberia",
+          "plannedTime": "2024-09-21T22:40:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -283,7 +2735,81 @@
       },
       "departureFlightCount": 2,
       "arrivalFlightCount": 10,
-      "totalFlightCount": 12
+      "totalFlightCount": 12,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "TP  565",
+          "airlineName": "TAP Air Portugal",
+          "plannedTime": "2023-12-08T06:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "TP  563",
+          "airlineName": "TAP Air Portugal",
+          "plannedTime": "2023-12-08T17:10:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TP  564",
+          "airlineName": "TAP Air Portugal",
+          "plannedTime": "2024-09-19T22:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TP  560",
+          "airlineName": "TAP Air Portugal",
+          "plannedTime": "2024-09-20T12:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7603",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T21:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TP  562",
+          "airlineName": "TAP Air Portugal",
+          "plannedTime": "2024-09-19T16:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TP  560",
+          "airlineName": "TAP Air Portugal",
+          "plannedTime": "2024-09-19T13:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TP  560",
+          "airlineName": "TAP Air Portugal",
+          "plannedTime": "2024-09-21T12:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TP  562",
+          "airlineName": "TAP Air Portugal",
+          "plannedTime": "2024-09-21T16:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TP  564",
+          "airlineName": "TAP Air Portugal",
+          "plannedTime": "2024-09-20T22:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TP  560",
+          "airlineName": "TAP Air Portugal",
+          "plannedTime": "2024-09-22T12:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TP  564",
+          "airlineName": "TAP Air Portugal",
+          "plannedTime": "2024-09-21T22:10:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -302,7 +2828,81 @@
       },
       "departureFlightCount": 3,
       "arrivalFlightCount": 9,
-      "totalFlightCount": 12
+      "totalFlightCount": 12,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "PC 1044",
+          "airlineName": "Pegasus Airlines",
+          "plannedTime": "2023-12-08T11:20:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "TK 7883",
+          "airlineName": "Turkish Airlines",
+          "plannedTime": "2023-12-08T12:40:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "PC 1046",
+          "airlineName": "Pegasus Airlines",
+          "plannedTime": "2023-12-08T15:40:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "PC 1043",
+          "airlineName": "Pegasus Airlines",
+          "plannedTime": "2024-09-20T12:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "PC 1043",
+          "airlineName": "Pegasus Airlines",
+          "plannedTime": "2024-09-21T12:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "PC 1043",
+          "airlineName": "Pegasus Airlines",
+          "plannedTime": "2024-09-19T12:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "PC 1045",
+          "airlineName": "Pegasus Airlines",
+          "plannedTime": "2024-09-20T16:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "VF  077",
+          "airlineName": "AJet",
+          "plannedTime": "2024-09-20T11:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "PC 1043",
+          "airlineName": "Pegasus Airlines",
+          "plannedTime": "2024-09-22T12:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "PC 1045",
+          "airlineName": "Pegasus Airlines",
+          "plannedTime": "2024-09-22T16:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "PC 1045",
+          "airlineName": "Pegasus Airlines",
+          "plannedTime": "2024-09-21T16:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "VF  077",
+          "airlineName": "AJet",
+          "plannedTime": "2024-09-21T11:35:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -321,7 +2921,75 @@
       },
       "departureFlightCount": 3,
       "arrivalFlightCount": 8,
-      "totalFlightCount": 11
+      "totalFlightCount": 11,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "SN 2630",
+          "airlineName": "Brussels Airlines",
+          "plannedTime": "2023-12-08T07:15:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "SN 2624",
+          "airlineName": "Brussels Airlines",
+          "plannedTime": "2023-12-08T11:40:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "SN 2628",
+          "airlineName": "Brussels Airlines",
+          "plannedTime": "2023-12-08T19:05:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SN 2627",
+          "airlineName": "Brussels Airlines",
+          "plannedTime": "2024-09-20T18:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SN 2623",
+          "airlineName": "Brussels Airlines",
+          "plannedTime": "2024-09-20T12:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SN 2629",
+          "airlineName": "Brussels Airlines",
+          "plannedTime": "2024-09-20T22:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SN 2629",
+          "airlineName": "Brussels Airlines",
+          "plannedTime": "2024-09-19T22:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SN 2627",
+          "airlineName": "Brussels Airlines",
+          "plannedTime": "2024-09-19T18:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SN 2623",
+          "airlineName": "Brussels Airlines",
+          "plannedTime": "2024-09-21T13:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SN 2627",
+          "airlineName": "Brussels Airlines",
+          "plannedTime": "2024-09-22T18:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SN 2629",
+          "airlineName": "Brussels Airlines",
+          "plannedTime": "2024-09-22T22:20:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -340,7 +3008,75 @@
       },
       "departureFlightCount": 2,
       "arrivalFlightCount": 9,
-      "totalFlightCount": 11
+      "totalFlightCount": 11,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "AY 1424",
+          "airlineName": "Finnair",
+          "plannedTime": "2023-12-08T13:25:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "AY 1426",
+          "airlineName": "Finnair",
+          "plannedTime": "2023-12-08T18:55:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AY 1423",
+          "airlineName": "Finnair",
+          "plannedTime": "2024-09-20T11:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AY 1425",
+          "airlineName": "Finnair",
+          "plannedTime": "2024-09-20T17:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AY 1425",
+          "airlineName": "Finnair",
+          "plannedTime": "2024-09-19T17:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AY 1421",
+          "airlineName": "Finnair",
+          "plannedTime": "2024-09-20T07:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AY 1421",
+          "airlineName": "Finnair",
+          "plannedTime": "2024-09-22T07:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AY 1423",
+          "airlineName": "Finnair",
+          "plannedTime": "2024-09-22T11:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AY 1421",
+          "airlineName": "Finnair",
+          "plannedTime": "2024-09-21T07:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AY 1425",
+          "airlineName": "Finnair",
+          "plannedTime": "2024-09-21T17:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AY 1423",
+          "airlineName": "Finnair",
+          "plannedTime": "2024-09-21T11:40:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -359,7 +3095,63 @@
       },
       "departureFlightCount": 3,
       "arrivalFlightCount": 6,
-      "totalFlightCount": 9
+      "totalFlightCount": 9,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LO  402",
+          "airlineName": "LOT Polish Airlines",
+          "plannedTime": "2023-12-08T06:55:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LO  400",
+          "airlineName": "LOT Polish Airlines",
+          "plannedTime": "2023-12-08T11:30:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LO  394",
+          "airlineName": "LOT Polish Airlines",
+          "plannedTime": "2023-12-08T19:30:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LO  399",
+          "airlineName": "LOT",
+          "plannedTime": "2024-09-20T10:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LO  399",
+          "airlineName": "LOT",
+          "plannedTime": "2024-09-21T10:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LO  401",
+          "airlineName": "LOT",
+          "plannedTime": "2024-09-19T22:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LO  401",
+          "airlineName": "LOT",
+          "plannedTime": "2024-09-20T22:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LO  399",
+          "airlineName": "LOT",
+          "plannedTime": "2024-09-22T10:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LO  393",
+          "airlineName": "LOT",
+          "plannedTime": "2024-09-22T18:55:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -378,7 +3170,63 @@
       },
       "departureFlightCount": 2,
       "arrivalFlightCount": 7,
-      "totalFlightCount": 9
+      "totalFlightCount": 9,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 9031",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T08:30:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 9037",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T16:55:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 9032",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T19:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 9036",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T16:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7067",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T18:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7067",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T18:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 9038",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T16:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 9030",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T07:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7065",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T19:05:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -397,7 +3245,63 @@
       },
       "departureFlightCount": 2,
       "arrivalFlightCount": 7,
-      "totalFlightCount": 9
+      "totalFlightCount": 9,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "SK 2646",
+          "airlineName": "SAS Scandinavian Airlines",
+          "plannedTime": "2023-12-08T10:40:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7218",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T20:45:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SK 2647",
+          "airlineName": "SAS",
+          "plannedTime": "2024-09-19T18:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7219",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T22:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7219",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T22:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SK 2645",
+          "airlineName": "SAS",
+          "plannedTime": "2024-09-20T10:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SK 2647",
+          "airlineName": "SAS",
+          "plannedTime": "2024-09-21T13:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SK 2647",
+          "airlineName": "SAS",
+          "plannedTime": "2024-09-22T17:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7219",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T22:35:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -416,7 +3320,63 @@
       },
       "departureFlightCount": 2,
       "arrivalFlightCount": 7,
-      "totalFlightCount": 9
+      "totalFlightCount": 9,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EK  060",
+          "airlineName": "Emirates",
+          "plannedTime": "2023-12-08T14:40:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EK  062",
+          "airlineName": "Emirates",
+          "plannedTime": "2023-12-08T21:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EK  059",
+          "airlineName": "Emirates",
+          "plannedTime": "2024-09-19T13:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EK  061",
+          "airlineName": "Emirates",
+          "plannedTime": "2024-09-20T19:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EK  061",
+          "airlineName": "Emirates",
+          "plannedTime": "2024-09-19T19:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EK  059",
+          "airlineName": "Emirates",
+          "plannedTime": "2024-09-20T13:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EK  061",
+          "airlineName": "Emirates",
+          "plannedTime": "2024-09-22T19:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EK  061",
+          "airlineName": "Emirates",
+          "plannedTime": "2024-09-21T19:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EK  059",
+          "airlineName": "Emirates",
+          "plannedTime": "2024-09-21T13:35:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -435,7 +3395,63 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 9,
-      "totalFlightCount": 9
+      "totalFlightCount": 9,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7675",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T14:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 5369",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T20:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "XR  515",
+          "airlineName": "Corendon Europe",
+          "plannedTime": "2024-09-20T16:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7675",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T13:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 5369",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T14:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1687",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-20T13:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7675",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T13:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DI 6687",
+          "airlineName": "Marabu",
+          "plannedTime": "2024-09-22T17:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DI 6687",
+          "airlineName": "Marabu",
+          "plannedTime": "2024-09-21T08:30:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -454,7 +3470,57 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 7,
-      "totalFlightCount": 8
+      "totalFlightCount": 8,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EI  393",
+          "airlineName": "Aer Lingus",
+          "plannedTime": "2023-12-08T09:50:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 5125",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-22T15:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 5125",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-20T15:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EI  392",
+          "airlineName": "Aer Lingus",
+          "plannedTime": "2024-09-20T13:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EI  392",
+          "airlineName": "Aer Lingus",
+          "plannedTime": "2024-09-19T13:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EI  392",
+          "airlineName": "Aer Lingus",
+          "plannedTime": "2024-09-21T13:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EI  392",
+          "airlineName": "Aer Lingus",
+          "plannedTime": "2024-09-22T13:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 5125",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-21T16:00:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -473,7 +3539,57 @@
       },
       "departureFlightCount": 2,
       "arrivalFlightCount": 6,
-      "totalFlightCount": 8
+      "totalFlightCount": 8,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "FR 6120",
+          "airlineName": "Ryanair",
+          "plannedTime": "2023-12-08T12:55:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "W6 1676",
+          "airlineName": "Wizz Air",
+          "plannedTime": "2023-12-08T14:35:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 6119",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-19T13:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 6119",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-20T07:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "W6 1675",
+          "airlineName": "Wizz Air",
+          "plannedTime": "2024-09-19T17:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "W6 1675",
+          "airlineName": "Wizz Air",
+          "plannedTime": "2024-09-22T14:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "W6 1675",
+          "airlineName": "Wizz Air",
+          "plannedTime": "2024-09-21T12:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 6119",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-21T20:05:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -492,7 +3608,57 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 7,
-      "totalFlightCount": 8
+      "totalFlightCount": 8,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7886",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T11:35:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7887",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T16:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7887",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T17:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7887",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T18:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7887",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T11:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "NO 5486",
+          "airlineName": "Neos",
+          "plannedTime": "2024-09-20T12:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "W4 6205",
+          "airlineName": "Wizz Air",
+          "plannedTime": "2024-09-20T20:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AZ 9740",
+          "airlineName": "ITA Airways",
+          "plannedTime": "2024-09-20T13:30:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -511,7 +3677,57 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 8,
-      "totalFlightCount": 8
+      "totalFlightCount": 8,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7537",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T22:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7537",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T22:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 4057",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-20T21:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 4057",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-22T19:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DI 6037",
+          "airlineName": "Marabu",
+          "plannedTime": "2024-09-19T13:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7537",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T22:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7537",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T13:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DI 6037",
+          "airlineName": "Marabu",
+          "plannedTime": "2024-09-21T22:35:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -530,7 +3746,51 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 6,
-      "totalFlightCount": 7
+      "totalFlightCount": 7,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "DE  002",
+          "airlineName": "Condor Flugdienst",
+          "plannedTime": "2023-12-08T08:10:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DI 6003",
+          "airlineName": "Marabu",
+          "plannedTime": "2024-09-22T22:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DI 6003",
+          "airlineName": "Marabu",
+          "plannedTime": "2024-09-20T22:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DI 6003",
+          "airlineName": "Marabu",
+          "plannedTime": "2024-09-19T22:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SM 2970",
+          "airlineName": "Air Cairo",
+          "plannedTime": "2024-09-21T12:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "SEK7498",
+          "airlineName": "Star East",
+          "plannedTime": "2024-09-22T19:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DI 6003",
+          "airlineName": "Marabu",
+          "plannedTime": "2024-09-21T22:30:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -549,7 +3809,51 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 6,
-      "totalFlightCount": 7
+      "totalFlightCount": 7,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "FR 1517",
+          "airlineName": "Ryanair",
+          "plannedTime": "2023-12-08T08:55:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 1520",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-22T15:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "RK 1520",
+          "airlineName": "Ryanair UK",
+          "plannedTime": "2024-09-19T13:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 1518",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-20T16:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 1520",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-21T14:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 1518",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-21T08:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 1518",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-22T09:45:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -568,7 +3872,51 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 6,
-      "totalFlightCount": 7
+      "totalFlightCount": 7,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "DI 6440",
+          "airlineName": "Marabu Airlines",
+          "plannedTime": "2023-12-08T09:05:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7527",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T17:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1441",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-21T22:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1441",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-22T22:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7527",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T22:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1441",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-19T16:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 5381",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T17:30:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -587,7 +3935,51 @@
       },
       "departureFlightCount": 2,
       "arrivalFlightCount": 5,
-      "totalFlightCount": 7
+      "totalFlightCount": 7,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EZS1182",
+          "airlineName": "easyJet Switzerland",
+          "plannedTime": "2023-12-08T17:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EZS1184",
+          "airlineName": "easyJet Switzerland",
+          "plannedTime": "2023-12-08T21:30:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EZS1183",
+          "airlineName": "easyJet CH",
+          "plannedTime": "2024-09-19T20:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EZS1183",
+          "airlineName": "easyJet CH",
+          "plannedTime": "2024-09-20T21:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EZS1181",
+          "airlineName": "easyJet CH",
+          "plannedTime": "2024-09-21T07:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EZS1181",
+          "airlineName": "easyJet CH",
+          "plannedTime": "2024-09-20T07:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EZS1183",
+          "airlineName": "easyJet CH",
+          "plannedTime": "2024-09-22T20:40:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -606,7 +3998,45 @@
       },
       "departureFlightCount": 2,
       "arrivalFlightCount": 4,
-      "totalFlightCount": 6
+      "totalFlightCount": 6,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7198",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T11:15:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "DY 1127",
+          "airlineName": "Norwegian Air Shuttle",
+          "plannedTime": "2023-12-08T13:45:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7199",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T14:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DY 1126",
+          "airlineName": "Norwegian",
+          "plannedTime": "2024-09-19T14:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DY 1126",
+          "airlineName": "Norwegian",
+          "plannedTime": "2024-09-20T14:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7199",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T16:45:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -625,7 +4055,45 @@
       },
       "departureFlightCount": 2,
       "arrivalFlightCount": 4,
-      "totalFlightCount": 6
+      "totalFlightCount": 6,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7032",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T15:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW  035",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T16:40:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7037",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T20:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW  034",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T19:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7033",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T18:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW  032",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T16:25:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -644,7 +4112,45 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 5,
-      "totalFlightCount": 6
+      "totalFlightCount": 6,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "XQ  915",
+          "airlineName": "SunExpress",
+          "plannedTime": "2023-12-08T14:15:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "XC 3579",
+          "airlineName": "Corendon",
+          "plannedTime": "2024-09-22T09:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "XQ  914",
+          "airlineName": "SunExpress",
+          "plannedTime": "2024-09-21T13:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "XQ  914",
+          "airlineName": "SunExpress",
+          "plannedTime": "2024-09-20T13:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "XQ  914",
+          "airlineName": "SunExpress",
+          "plannedTime": "2024-09-19T13:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "XQ  914",
+          "airlineName": "SunExpress",
+          "plannedTime": "2024-09-22T13:55:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -663,7 +4169,45 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 5,
-      "totalFlightCount": 6
+      "totalFlightCount": 6,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7826",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T17:10:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7827",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T22:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7823",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T10:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7827",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T22:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7827",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T22:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "NO  564",
+          "airlineName": "Neos",
+          "plannedTime": "2024-09-20T12:10:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -682,7 +4226,45 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 6,
-      "totalFlightCount": 6
+      "totalFlightCount": 6,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7643",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T13:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7643",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T13:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7643",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T13:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DI 6305",
+          "airlineName": "Marabu",
+          "plannedTime": "2024-09-21T14:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7643",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T14:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DI 6305",
+          "airlineName": "Marabu",
+          "plannedTime": "2024-09-19T22:25:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -701,7 +4283,39 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 4,
-      "totalFlightCount": 5
+      "totalFlightCount": 5,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 4355",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T13:50:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 4344",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T14:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 4344",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T20:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 4344",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T09:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 4344",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T19:40:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -720,7 +4334,39 @@
       },
       "departureFlightCount": 2,
       "arrivalFlightCount": 3,
-      "totalFlightCount": 5
+      "totalFlightCount": 5,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EZY8634",
+          "airlineName": "easyJet Airline",
+          "plannedTime": "2023-12-08T17:10:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EZY8636",
+          "airlineName": "easyJet Airline",
+          "plannedTime": "2023-12-08T20:40:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EZY6485",
+          "airlineName": "easyJet",
+          "plannedTime": "2024-09-20T10:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EZY6545",
+          "airlineName": "easyJet",
+          "plannedTime": "2024-09-20T21:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EZY8635",
+          "airlineName": "easyJet",
+          "plannedTime": "2024-09-22T21:20:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -739,7 +4385,39 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 4,
-      "totalFlightCount": 5
+      "totalFlightCount": 5,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LG 9514",
+          "airlineName": "Luxair",
+          "plannedTime": "2023-12-08T17:50:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LG 9513",
+          "airlineName": "Luxair",
+          "plannedTime": "2024-09-19T16:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LG 9513",
+          "airlineName": "Luxair",
+          "plannedTime": "2024-09-22T20:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LG 9513",
+          "airlineName": "Luxair",
+          "plannedTime": "2024-09-20T20:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LG 9511",
+          "airlineName": "Luxair",
+          "plannedTime": "2024-09-21T13:20:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -758,7 +4436,39 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 4,
-      "totalFlightCount": 5
+      "totalFlightCount": 5,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EZY2196",
+          "airlineName": "easyJet Airline",
+          "plannedTime": "2023-12-08T21:55:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7769",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T18:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7769",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T17:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7769",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T17:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EZY2195",
+          "airlineName": "easyJet",
+          "plannedTime": "2024-09-20T21:00:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -777,7 +4487,39 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 5,
-      "totalFlightCount": 5
+      "totalFlightCount": 5,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7317",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T14:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7317",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T13:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 5317",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T20:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DI 6641",
+          "airlineName": "Marabu",
+          "plannedTime": "2024-09-22T22:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DI 6641",
+          "airlineName": "Marabu",
+          "plannedTime": "2024-09-20T22:35:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -796,7 +4538,33 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 3,
-      "totalFlightCount": 4
+      "totalFlightCount": 4,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "JU  391",
+          "airlineName": "Air Serbia",
+          "plannedTime": "2023-12-08T09:15:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "W6 4125",
+          "airlineName": "Wizz Air",
+          "plannedTime": "2024-09-19T15:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "JU  290",
+          "airlineName": "Air Serbia",
+          "plannedTime": "2024-09-20T08:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "W6 4125",
+          "airlineName": "Wizz Air",
+          "plannedTime": "2024-09-21T07:45:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -815,7 +4583,33 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 3,
-      "totalFlightCount": 4
+      "totalFlightCount": 4,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "DE 1518",
+          "airlineName": "Condor Flugdienst",
+          "plannedTime": "2023-12-08T08:10:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7267",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T22:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DI 6519",
+          "airlineName": "Marabu",
+          "plannedTime": "2024-09-20T20:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1519",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-22T22:35:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -834,7 +4628,33 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 3,
-      "totalFlightCount": 4
+      "totalFlightCount": 4,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "FR 9205",
+          "airlineName": "Ryanair",
+          "plannedTime": "2023-12-08T10:55:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7547",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T13:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 9204",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-20T20:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7547",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T22:20:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -853,7 +4673,33 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 3,
-      "totalFlightCount": 4
+      "totalFlightCount": 4,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 4501",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T13:00:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 4500",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T19:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 4500",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T22:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 4500",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T22:20:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -872,7 +4718,33 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 3,
-      "totalFlightCount": 4
+      "totalFlightCount": 4,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "A3  825",
+          "airlineName": "Aegean Airlines",
+          "plannedTime": "2023-12-08T11:55:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "A3  824",
+          "airlineName": "Aegean Airlines",
+          "plannedTime": "2024-09-21T10:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "A3  824",
+          "airlineName": "Aegean Airlines",
+          "plannedTime": "2024-09-20T10:20:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "A3  824",
+          "airlineName": "Aegean Airlines",
+          "plannedTime": "2024-09-22T10:20:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -891,7 +4763,33 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 3,
-      "totalFlightCount": 4
+      "totalFlightCount": 4,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7782",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T17:45:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7783",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T22:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7783",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T22:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7783",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T22:30:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -910,7 +4808,33 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 4,
-      "totalFlightCount": 4
+      "totalFlightCount": 4,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7645",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T14:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7645",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T22:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1645",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-19T14:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1645",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-22T13:50:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -929,7 +4853,33 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 4,
-      "totalFlightCount": 4
+      "totalFlightCount": 4,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7659",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T12:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7659",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T12:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7659",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T12:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "A3  508",
+          "airlineName": "Aegean Airlines",
+          "plannedTime": "2024-09-22T15:00:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -948,7 +4898,33 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 4,
-      "totalFlightCount": 4
+      "totalFlightCount": 4,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7429",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T16:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7429",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T16:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7429",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T17:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7429",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T16:05:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -967,7 +4943,33 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 4,
-      "totalFlightCount": 4
+      "totalFlightCount": 4,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AZ  426",
+          "airlineName": "ITA Airways",
+          "plannedTime": "2024-09-20T13:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AZ  426",
+          "airlineName": "ITA Airways",
+          "plannedTime": "2024-09-21T13:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AZ  426",
+          "airlineName": "ITA Airways",
+          "plannedTime": "2024-09-19T13:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "AZ  426",
+          "airlineName": "ITA Airways",
+          "plannedTime": "2024-09-22T13:40:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -986,7 +4988,27 @@
       },
       "departureFlightCount": 2,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 3
+      "totalFlightCount": 3,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EW 7532",
+          "airlineName": "Eurowings",
+          "plannedTime": "2023-12-08T07:15:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "DI 6448",
+          "airlineName": "Marabu Airlines",
+          "plannedTime": "2023-12-08T07:45:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1449",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-20T17:30:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1005,7 +5027,27 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 2,
-      "totalFlightCount": 3
+      "totalFlightCount": 3,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "FR 3550",
+          "airlineName": "Ryanair",
+          "plannedTime": "2023-12-08T09:15:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 3549",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-20T08:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 3549",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-21T07:50:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1024,7 +5066,27 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 2,
-      "totalFlightCount": 3
+      "totalFlightCount": 3,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "W4 3096",
+          "airlineName": "Wizz Air Malta",
+          "plannedTime": "2023-12-08T14:15:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "W4 3095",
+          "airlineName": "Wizz Air",
+          "plannedTime": "2024-09-19T16:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "W4 3095",
+          "airlineName": "Wizz Air",
+          "plannedTime": "2024-09-21T16:00:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1043,7 +5105,27 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 2,
-      "totalFlightCount": 3
+      "totalFlightCount": 3,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "DX  214",
+          "airlineName": "Danish Air Transport",
+          "plannedTime": "2023-12-08T15:30:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DX  211",
+          "airlineName": "DAT",
+          "plannedTime": "2024-09-19T14:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DX  211",
+          "airlineName": "DAT",
+          "plannedTime": "2024-09-20T14:55:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1062,7 +5144,27 @@
       },
       "departureFlightCount": 2,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 3
+      "totalFlightCount": 3,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "EZY3266",
+          "airlineName": "easyJet Airline",
+          "plannedTime": "2023-12-08T17:10:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "FR 1077",
+          "airlineName": "Ryanair",
+          "plannedTime": "2023-12-08T16:50:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 1078",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-21T21:10:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1081,7 +5183,27 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 2,
-      "totalFlightCount": 3
+      "totalFlightCount": 3,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "LX 1047",
+          "airlineName": "Swiss International Air Lines",
+          "plannedTime": "2023-12-08T16:25:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1046",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-20T15:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "LX 1046",
+          "airlineName": "Swiss",
+          "plannedTime": "2024-09-22T15:35:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1100,7 +5222,27 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 2,
-      "totalFlightCount": 3
+      "totalFlightCount": 3,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "BT  254",
+          "airlineName": "airBaltic",
+          "plannedTime": "2023-12-08T19:35:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BT  251",
+          "airlineName": "airBaltic",
+          "plannedTime": "2024-09-20T13:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BT  251",
+          "airlineName": "airBaltic",
+          "plannedTime": "2024-09-22T19:05:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1119,7 +5261,27 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 3,
-      "totalFlightCount": 3
+      "totalFlightCount": 3,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7985",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T15:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7985",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T21:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7985",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T22:00:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1138,7 +5300,27 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 3,
-      "totalFlightCount": 3
+      "totalFlightCount": 3,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7815",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T22:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "W4 6559",
+          "airlineName": "Wizz Air",
+          "plannedTime": "2024-09-20T09:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7815",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T21:35:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1157,7 +5339,27 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 3,
-      "totalFlightCount": 3
+      "totalFlightCount": 3,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7515",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T21:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7515",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T15:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7515",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T14:05:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1176,7 +5378,27 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 3,
-      "totalFlightCount": 3
+      "totalFlightCount": 3,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7845",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T13:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7845",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T12:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7845",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T12:25:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1195,7 +5417,27 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 3,
-      "totalFlightCount": 3
+      "totalFlightCount": 3,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "IV 6880",
+          "airlineName": "GP  Aviation",
+          "plannedTime": "2024-09-21T10:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 5705",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T12:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DI 6997",
+          "airlineName": "Marabu",
+          "plannedTime": "2024-09-21T21:50:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1214,7 +5456,27 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 3,
-      "totalFlightCount": 3
+      "totalFlightCount": 3,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "YW 2402",
+          "airlineName": "Air Nostrum",
+          "plannedTime": "2024-09-21T11:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7531",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T12:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 2218",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-21T19:15:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1233,7 +5495,27 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 3,
-      "totalFlightCount": 3
+      "totalFlightCount": 3,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7971",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T22:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 8461",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-19T18:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 8461",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-21T18:55:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1252,7 +5534,27 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 3,
-      "totalFlightCount": 3
+      "totalFlightCount": 3,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BQ 1954",
+          "airlineName": "Sky Alps",
+          "plannedTime": "2024-09-19T16:30:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BQ 1954",
+          "airlineName": "Sky Alps",
+          "plannedTime": "2024-09-22T19:05:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BQ 1954",
+          "airlineName": "Sky Alps",
+          "plannedTime": "2024-09-21T19:30:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1271,7 +5573,27 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 3,
-      "totalFlightCount": 3
+      "totalFlightCount": 3,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DI 6377",
+          "airlineName": "Marabu",
+          "plannedTime": "2024-09-19T20:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7621",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T12:55:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DI 6377",
+          "airlineName": "Marabu",
+          "plannedTime": "2024-09-22T12:55:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1290,7 +5612,27 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 3,
-      "totalFlightCount": 3
+      "totalFlightCount": 3,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "WF 1858",
+          "airlineName": "Wideroe",
+          "plannedTime": "2024-09-22T13:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "WF 1858",
+          "airlineName": "Wideroe",
+          "plannedTime": "2024-09-19T13:15:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "WF 1858",
+          "airlineName": "Wideroe",
+          "plannedTime": "2024-09-21T13:10:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1309,7 +5651,27 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 3,
-      "totalFlightCount": 3
+      "totalFlightCount": 3,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "W4 5107",
+          "airlineName": "Wizz Air",
+          "plannedTime": "2024-09-20T15:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "W4 5107",
+          "airlineName": "Wizz Air",
+          "plannedTime": "2024-09-22T16:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "W4 5107",
+          "airlineName": "Wizz Air",
+          "plannedTime": "2024-09-21T08:50:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1328,7 +5690,21 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 2
+      "totalFlightCount": 2,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "DE 1438",
+          "airlineName": "Condor Flugdienst",
+          "plannedTime": "2023-12-08T08:40:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1439",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-20T22:00:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1347,7 +5723,21 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 2
+      "totalFlightCount": 2,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "TU  895",
+          "airlineName": "Tunisair",
+          "plannedTime": "2023-12-08T10:55:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "TU  894",
+          "airlineName": "Tunisair",
+          "plannedTime": "2024-09-20T10:55:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1366,7 +5756,21 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 2
+      "totalFlightCount": 2,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "W6 7750",
+          "airlineName": "Wizz Air",
+          "plannedTime": "2023-12-08T15:45:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "W6 4749",
+          "airlineName": "Wizz Air",
+          "plannedTime": "2024-09-20T08:45:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1385,7 +5789,21 @@
       },
       "departureFlightCount": 1,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 2
+      "totalFlightCount": 2,
+      "flights": [
+        {
+          "flightType": "DEPARTURE_HAM",
+          "flightNumber": "W6 4520",
+          "airlineName": "Wizz Air",
+          "plannedTime": "2023-12-08T15:20:00.000+01:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "W6 4519",
+          "airlineName": "Wizz Air",
+          "plannedTime": "2024-09-21T14:30:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1404,7 +5822,21 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 2,
-      "totalFlightCount": 2
+      "totalFlightCount": 2,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7969",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T14:00:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7969",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T16:10:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1423,7 +5855,21 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 2,
-      "totalFlightCount": 2
+      "totalFlightCount": 2,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7865",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-19T16:45:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7865",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T13:10:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1442,7 +5888,21 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 2,
-      "totalFlightCount": 2
+      "totalFlightCount": 2,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7221",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T15:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7221",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T16:55:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1461,7 +5921,21 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 2,
-      "totalFlightCount": 2
+      "totalFlightCount": 2,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7813",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T14:40:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7813",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T22:25:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1480,7 +5954,21 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 2,
-      "totalFlightCount": 2
+      "totalFlightCount": 2,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7519",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T16:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "VY 3298",
+          "airlineName": "Vueling",
+          "plannedTime": "2024-09-20T19:05:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1499,7 +5987,21 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 2,
-      "totalFlightCount": 2
+      "totalFlightCount": 2,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1633",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-21T21:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7617",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T12:00:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1518,7 +6020,21 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 2,
-      "totalFlightCount": 2
+      "totalFlightCount": 2,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "FR 4025",
+          "airlineName": "Ryanair",
+          "plannedTime": "2024-09-20T17:35:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7541",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T12:55:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1537,7 +6053,21 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 2,
-      "totalFlightCount": 2
+      "totalFlightCount": 2,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DI 6565",
+          "airlineName": "Marabu",
+          "plannedTime": "2024-09-20T13:50:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7535",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T14:10:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1556,7 +6086,21 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 2,
-      "totalFlightCount": 2
+      "totalFlightCount": 2,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7619",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T21:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DI 6735",
+          "airlineName": "Marabu",
+          "plannedTime": "2024-09-21T13:50:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1575,7 +6119,21 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 2,
-      "totalFlightCount": 2
+      "totalFlightCount": 2,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BT  929",
+          "airlineName": "airBaltic",
+          "plannedTime": "2024-09-19T15:25:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "BT  929",
+          "airlineName": "airBaltic",
+          "plannedTime": "2024-09-22T08:05:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1594,7 +6152,21 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 2,
-      "totalFlightCount": 2
+      "totalFlightCount": 2,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "QR  089",
+          "airlineName": "Qatar Airways",
+          "plannedTime": "2024-09-20T14:10:00.000+02:00[Europe/Berlin]"
+        },
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "QR  091",
+          "airlineName": "Qatar Airways",
+          "plannedTime": "2024-09-21T07:50:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1613,7 +6185,15 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 1
+      "totalFlightCount": 1,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7883",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-20T14:35:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1632,7 +6212,15 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 1
+      "totalFlightCount": 1,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1299",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-21T12:35:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1651,7 +6239,15 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 1
+      "totalFlightCount": 1,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7991",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T13:15:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1670,7 +6266,15 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 1
+      "totalFlightCount": 1,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 1507",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-19T22:20:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1689,7 +6293,15 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 1
+      "totalFlightCount": 1,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "V7 2082",
+          "airlineName": "Volotea",
+          "plannedTime": "2024-09-20T13:00:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1708,7 +6320,15 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 1
+      "totalFlightCount": 1,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "V7 2924",
+          "airlineName": "Volotea",
+          "plannedTime": "2024-09-20T08:45:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1727,7 +6347,15 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 1
+      "totalFlightCount": 1,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7959",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-22T18:05:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1746,7 +6374,15 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 1
+      "totalFlightCount": 1,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7907",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T15:20:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1765,7 +6401,15 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 1
+      "totalFlightCount": 1,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7871",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T16:45:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1784,7 +6428,15 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 1
+      "totalFlightCount": 1,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "EW 7863",
+          "airlineName": "Eurowings",
+          "plannedTime": "2024-09-21T11:45:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1803,7 +6455,15 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 1
+      "totalFlightCount": 1,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "DE 3615",
+          "airlineName": "Condor",
+          "plannedTime": "2024-09-22T10:35:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1822,7 +6482,15 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 1
+      "totalFlightCount": 1,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "V7 2320",
+          "airlineName": "Volotea",
+          "plannedTime": "2024-09-21T13:00:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1841,7 +6509,15 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 1
+      "totalFlightCount": 1,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "OG  740",
+          "airlineName": "Play",
+          "plannedTime": "2024-09-21T11:40:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1860,7 +6536,15 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 1
+      "totalFlightCount": 1,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "PC 1641",
+          "airlineName": "Pegasus Airlines",
+          "plannedTime": "2024-09-22T12:25:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1879,7 +6563,15 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 1
+      "totalFlightCount": 1,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "V7 1460",
+          "airlineName": "Volotea",
+          "plannedTime": "2024-09-21T08:10:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1898,7 +6590,15 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 1
+      "totalFlightCount": 1,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "XQ  270",
+          "airlineName": "SunExpress",
+          "plannedTime": "2024-09-22T10:00:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1917,7 +6617,15 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 1
+      "totalFlightCount": 1,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "W6 4345",
+          "airlineName": "Wizz Air",
+          "plannedTime": "2024-09-21T20:55:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     },
     {
       "hamAirport": {
@@ -1936,7 +6644,15 @@
       },
       "departureFlightCount": 0,
       "arrivalFlightCount": 1,
-      "totalFlightCount": 1
+      "totalFlightCount": 1,
+      "flights": [
+        {
+          "flightType": "ARRIVAL_HAM",
+          "flightNumber": "H4  407",
+          "airlineName": "HiSKy",
+          "plannedTime": "2024-09-22T07:30:00.000+02:00[Europe/Berlin]"
+        }
+      ]
     }
   ]
 }

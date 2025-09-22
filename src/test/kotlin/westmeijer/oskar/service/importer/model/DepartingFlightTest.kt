@@ -8,66 +8,83 @@ import kotlin.test.assertFailsWith
 
 class DepartingFlightTest {
 
+    private val jsonFormat = Json { encodeDefaults = true }
+
     @Test
     fun `test serialization of DepartingFlight`() {
-        // Arrange
-        val departingFlight = DepartingFlight("JFK")
-        val expectedJson = """{"destinationAirport3LCode":"JFK"}"""
+        val departingFlight = DepartingFlight(
+            "JFK",
+            "flightNumber",
+            "airlineName",
+            "plannedDepartureTime"
+        )
 
-        // Act
-        val jsonResult = Json.encodeToString(departingFlight)
+        val expectedJson =
+            """{"destinationAirport3LCode":"JFK","flightnumber":"flightNumber","airlineName":"airlineName","plannedDepartureTime":"plannedDepartureTime"}"""
 
-        // Assert
+        val jsonResult = jsonFormat.encodeToString(departingFlight)
+
         assertEquals(expectedJson, jsonResult)
     }
 
     @Test
     fun `test deserialization of DepartingFlight`() {
-        // Arrange
-        val json = """{"destinationAirport3LCode":"JFK"}"""
-        val expectedDepartingFlight = DepartingFlight("JFK")
+        val json =
+            """{"destinationAirport3LCode":"JFK","flightnumber":"flightNumber","airlineName":"airlineName","plannedDepartureTime":"plannedDepartureTime"}"""
 
-        // Act
-        val departingFlight = Json.decodeFromString<DepartingFlight>(json)
+        val expectedDepartingFlight = DepartingFlight(
+            "JFK",
+            "flightNumber",
+            "airlineName",
+            "plannedDepartureTime"
+        )
 
-        // Assert
+        val departingFlight = jsonFormat.decodeFromString<DepartingFlight>(json)
+
         assertEquals(expectedDepartingFlight, departingFlight)
     }
 
     @Test
     fun `test deserialization of empty destinationAirport3LCode`() {
-        // Arrange
-        val json = """{"destinationAirport3LCode":""}"""
-        val expectedDepartingFlight = DepartingFlight("")
+        val json =
+            """{"destinationAirport3LCode":"","flightnumber":"flightNumber","airlineName":"airlineName","plannedDepartureTime":"plannedDepartureTime"}"""
 
-        // Act
-        val departingFlight = Json.decodeFromString<DepartingFlight>(json)
+        val expectedDepartingFlight = DepartingFlight(
+            "",
+            "flightNumber",
+            "airlineName",
+            "plannedDepartureTime"
+        )
 
-        // Assert
+        val departingFlight = jsonFormat.decodeFromString<DepartingFlight>(json)
+
         assertEquals(expectedDepartingFlight, departingFlight)
     }
 
     @Test
     fun `test serialization of empty destinationAirport3LCode`() {
-        // Arrange
-        val departingFlight = DepartingFlight("")
-        val expectedJson = """{"destinationAirport3LCode":""}"""
+        val departingFlight = DepartingFlight(
+            "",
+            "flightNumber",
+            "airlineName",
+            "plannedDepartureTime"
+        )
 
-        // Act
-        val jsonResult = Json.encodeToString(departingFlight)
+        val expectedJson =
+            """{"destinationAirport3LCode":"","flightnumber":"flightNumber","airlineName":"airlineName","plannedDepartureTime":"plannedDepartureTime"}"""
 
-        // Assert
+        val jsonResult = jsonFormat.encodeToString(departingFlight)
+
         assertEquals(expectedJson, jsonResult)
     }
 
     @Test
     fun `test deserialization with missing destinationAirport3LCode`() {
-        // Arrange
-        val json = """{}""" // missing the "destinationAirport3LCode" field
+        val json = """{}""" // missing required fields
 
-        // Act & Assert
         assertFailsWith<SerializationException> {
-            Json.decodeFromString<DepartingFlight>(json)
+            jsonFormat.decodeFromString<DepartingFlight>(json)
         }
     }
 }
+
