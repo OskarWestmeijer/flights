@@ -69,10 +69,10 @@
 					{#if expandedRow === route.connectionAirport.airportCode}
 						<tr class="bg-gray-100">
 							<td colspan="7" class="p-4 text-left">
-								<div class="h-96 overflow-x-auto">
+								<div class="h-96 overflow-x-auto relative">
 									<table class="table table-xs table-pin-rows w-full">
 										<!-- global header (only once) -->
-										<thead>
+										<thead class="sticky top-0 z-20 bg-base-100">
 											<tr>
 												<th>Flight number</th>
 												<th>Airline</th>
@@ -82,13 +82,13 @@
 
 										<tbody>
 											<!-- Departures heading -->
-											<tr class="bg-base-200">
+											<tr class="bg-base-200 sticky top-[1.7rem] z-10">
 												<td colspan="3" class="font-semibold text-sm">Departures 🛫</td>
 											</tr>
 											{#each route.flights
 												.filter((f) => f.flightType === 'DEPARTURE_HAM')
 												.sort((a, b) => a.plannedTime.localeCompare(b.plannedTime)) as flight}
-												<tr class="bg-base-200 hover:bg-gray-200 transition-colors">
+												<tr class="bg-base-200 hover:!bg-gray-200 transition-colors">
 													<td>{flight.flightNumber}</td>
 													<td>{flight.airlineName}</td>
 													<td>{formatPlannedTime(flight.plannedTime)}</td>
@@ -98,7 +98,7 @@
 											{/each}
 
 											<!-- Arrivals heading -->
-											<tr class="bg-base-200">
+											<tr class="bg-base-200 sticky top-[1.7rem] z-10">
 												<td colspan="3" class="font-semibold text-sm">Arrivals 🛬</td>
 											</tr>
 											{#each route.flights
