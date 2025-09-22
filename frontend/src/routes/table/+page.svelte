@@ -10,19 +10,18 @@
 	let expandedRow: string | null = null; // track which row is expanded
 
 	function formatPlannedTime(time: string): string {
-	// Remove the zone ID "[Europe/Berlin]" because JS Date can't parse it
-	const sanitized = time.replace(/\[.*\]/, "");
-	const date = new Date(sanitized);
+		// Remove the zone ID "[Europe/Berlin]" because JS Date can't parse it
+		const sanitized = time.replace(/\[.*\]/, '');
+		const date = new Date(sanitized);
 
-	return new Intl.DateTimeFormat("de-DE", {
-		hour: "2-digit",
-		minute: "2-digit",
-		day: "2-digit",
-		month: "2-digit",
-		year: "2-digit"
-	}).format(date);
-}
-
+		return new Intl.DateTimeFormat('de-DE', {
+			hour: '2-digit',
+			minute: '2-digit',
+			day: '2-digit',
+			month: '2-digit',
+			year: '2-digit'
+		}).format(date);
+	}
 </script>
 
 <div class="flex flex-col items-center text-center py-4">
@@ -65,71 +64,60 @@
 						<td>{route.totalFlightCount}</td>
 					</tr>
 
+					<!-- start of arrival and departure subtable-->
 					{#if expandedRow === route.connectionAirport.airportCode}
 						<tr class="bg-gray-100">
 							<td colspan="7" class="p-4 text-left">
-								<div class="space-y-6">
-									<!-- Departures -->
-									<div>
-										<p class="font-semibold mb-2">Departures</p>
-										<div class="overflow-x-auto">
-											<table class="table table-compact w-full">
-												<thead>
-													<tr>
-														<th>Flight number</th>
-														<th>Airline</th>
-														<th>Planned Time</th>
-													</tr>
-												</thead>
-												<tbody>
-													{#each route.flights
-														.filter((f) => f.flightType === 'DEPARTURE_HAM')
-														.sort((a, b) => a.plannedTime.localeCompare(b.plannedTime)) as flight}
-														<tr>
-															<td>{flight.flightNumber}</td>
-															<td>{flight.airlineName}</td>
-															<td>{formatPlannedTime(flight.plannedTime)}</td>
-														</tr>
-													{:else}
-														<tr><td colspan="3" class="text-gray-500">No departing flights</td></tr>
-													{/each}
-												</tbody>
-											</table>
-										</div>
-									</div>
+								<div class="h-96 overflow-x-auto">
+									<table class="table table-xs table-pin-rows w-full">
+										<!-- global header (only once) -->
+										<thead>
+											<tr>
+												<th>Flight number</th>
+												<th>Airline</th>
+												<th>Planned Time</th>
+											</tr>
+										</thead>
 
-									<!-- Arrivals -->
-									<div>
-										<p class="font-semibold mb-2">Arrivals</p>
-										<div class="overflow-x-auto">
-											<table class="table table-compact w-full">
-												<thead>
-													<tr>
-														<th>Flight number</th>
-														<th>Airline</th>
-														<th>Planned Time</th>
-													</tr>
-												</thead>
-												<tbody>
-													{#each route.flights
-														.filter((f) => f.flightType === 'ARRIVAL_HAM')
-														.sort((a, b) => a.plannedTime.localeCompare(b.plannedTime)) as flight}
-														<tr>
-															<td>{flight.flightNumber}</td>
-															<td>{flight.airlineName}</td>
-															<td>{formatPlannedTime(flight.plannedTime)}</td>
-														</tr>
-													{:else}
-														<tr><td colspan="3" class="text-gray-500">No arriving flights</td></tr>
-													{/each}
-												</tbody>
-											</table>
-										</div>
-									</div>
+										<tbody>
+											<!-- Departures heading -->
+											<tr class="bg-base-200">
+												<td colspan="3" class="font-semibold">Departures</td>
+											</tr>
+											{#each route.flights
+												.filter((f) => f.flightType === 'DEPARTURE_HAM')
+												.sort((a, b) => a.plannedTime.localeCompare(b.plannedTime)) as flight}
+												<tr>
+													<td>{flight.flightNumber}</td>
+													<td>{flight.airlineName}</td>
+													<td>{formatPlannedTime(flight.plannedTime)}</td>
+												</tr>
+											{:else}
+												<tr><td colspan="3" class="text-gray-500">No departing flights</td></tr>
+											{/each}
+
+											<!-- Arrivals heading -->
+											<tr class="bg-base-200">
+												<td colspan="3" class="font-semibold">Arrivals</td>
+											</tr>
+											{#each route.flights
+												.filter((f) => f.flightType === 'ARRIVAL_HAM')
+												.sort((a, b) => a.plannedTime.localeCompare(b.plannedTime)) as flight}
+												<tr>
+													<td>{flight.flightNumber}</td>
+													<td>{flight.airlineName}</td>
+													<td>{formatPlannedTime(flight.plannedTime)}</td>
+												</tr>
+											{:else}
+												<tr><td colspan="3" class="text-gray-500">No arriving flights</td></tr>
+											{/each}
+										</tbody>
+									</table>
 								</div>
 							</td>
 						</tr>
 					{/if}
+					<!-- end of arrival and departure subtable-->
 				{/each}
 			</tbody>
 		</table>
