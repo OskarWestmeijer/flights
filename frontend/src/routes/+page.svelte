@@ -12,6 +12,7 @@
 	const connectionsCount = globeData.length;
 
 	onMount(async () => {
+		console.log('On mount start');
 		const Globe = await import('globe.gl');
 
 		// belgrade
@@ -20,6 +21,8 @@
 		const globeElement = document.getElementById('helloWorld') as HTMLElement;
 
 		const instance: GlobeInstance = Globe.default()
+			//.width(600)
+			//.height(600)
 			.globeImageUrl('earth-night.jpg')
 			.backgroundImageUrl('night-sky.png')
 			.pointOfView(MAP_CENTER, 0.1)
@@ -31,7 +34,10 @@
 			.arcColor((d) => d.color)
 			.arcsTransitionDuration(0)
 			.arcDashAnimateTime(4000)
-			.arcLabel((arc) => `${arc.startName} - ${arc.endName}<br>total flights: ${arc.flightCount}<br>distance: ${arc.distance} km`)
+			.arcLabel(
+				(arc) =>
+					`${arc.startName} - ${arc.endName}<br>total flights: ${arc.flightCount}<br>distance: ${arc.distance} km`
+			)
 
 			// city labels
 			.labelsData(labelData)
@@ -46,24 +52,28 @@
 		// init globe
 		instance(globeElement);
 
+		const resizeObserver = new ResizeObserver(() => {
+			instance.width(globeElement.clientWidth);
+			instance.height(globeElement.clientHeight);
+			console.log('Resizing globe.');
+		});
+		resizeObserver.observe(globeElement);
+
 		// example of programatic access
 		// instance.onArcHover((hover) => console.log('hovering over ' + JSON.stringify(hover)));
 		// instance.onLabelHover((label) => console.log(label));
+		console.log('End of mount');
 	});
 </script>
 
-<div id="helloWorld"></div>
-
-<div id="connectionsCount" class="text-white">
-	<p>HAM connections today: {connectionsCount}</p>
-	<p>Imported at: {importedAt}</p>
+<div class="flex flex-col items-center text-center py-4">
+	<p class="text-lg font-semibold">Todays Hamburg airport (HAM) connections</p>
+	<p>Connections count: {connectionsCount}</p>
+	<p class="text-sm text-gray-400">Updated at: {importedAt}</p>
 </div>
 
-<style>
-	#connectionsCount {
-		position: fixed;
-		bottom: 1%;
-		left: 1%;
-		z-index: 9998;
-	}
-</style>
+<div class="flex justify-center">
+	<div class="w-full max-w-7xl h-[90vh] rounded-2xl shadow-xl bg-base-400 p-4 bg-primary">
+		<div id="helloWorld" class="w-full h-full"></div>
+	</div>
+</div>

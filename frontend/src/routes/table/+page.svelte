@@ -5,13 +5,19 @@
 	export let data: PageData;
 	const importedAt: string = data.props.responseData.importedAt;
 	const routes: Connection[] = data.props.responseData.connections;
-	console.log(importedAt);
+	const connectionsCount = routes.length;
 </script>
 
-<div class="container pt-20 bg-primary pb-8">
+<div class="flex flex-col items-center text-center py-4">
+	<p class="text-lg font-semibold">Todays Hamburg airport (HAM) connections</p>
+	<p>Connections count: {connectionsCount}</p>
+	<p class="text-sm text-gray-400">Updated at: {importedAt}</p>
+</div>
+
+<div class="container pb-8">
 	<div class="overflow-x-auto">
-		<table class="table text-white">
-			<thead class="text-white">
+		<table class="table">
+			<thead class="">
 				<tr>
 					<th>Connection airport</th>
 					<th>Airport code</th>
@@ -35,10 +41,6 @@
 			</tbody>
 		</table>
 	</div>
-	<div id="connectionsCount" class="text-white">
-		<p>HAM connections today: {routes.length}</p>
-		<p>Imported at: {importedAt}</p>
-	</div>
 </div>
 
 <style>
@@ -48,12 +50,5 @@
 		align-items: center;
 		margin: auto;
 		width: 100%;
-	}
-
-	#connectionsCount {
-		position: fixed;
-		bottom: 1%;
-		left: 1%;
-		z-index: 9998;
 	}
 </style>
