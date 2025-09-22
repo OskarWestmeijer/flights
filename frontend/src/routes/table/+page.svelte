@@ -35,7 +35,8 @@
 		<table class="table table-zebra w-full">
 			<thead>
 				<tr>
-					<th></th> <!-- Expand/collapse symbol -->
+					<th></th>
+					<!-- Expand/collapse symbol -->
 					<th>Connection airport</th>
 					<th>Airport code</th>
 					<th>Country Code</th>
@@ -45,7 +46,10 @@
 			<tbody>
 				{#each routes as route}
 					<tr
-						class="hover cursor-pointer"
+						class="cursor-pointer hover:bg-gray-200 {expandedRow ===
+						route.connectionAirport.airportCode
+							? 'bg-gray-200'
+							: ''}"
 						on:click={() =>
 							(expandedRow =
 								expandedRow === route.connectionAirport.airportCode
@@ -84,7 +88,7 @@
 											{#each route.flights
 												.filter((f) => f.flightType === 'DEPARTURE_HAM')
 												.sort((a, b) => a.plannedTime.localeCompare(b.plannedTime)) as flight}
-												<tr>
+												<tr class="bg-base-200 hover:bg-gray-200 transition-colors">
 													<td>{flight.flightNumber}</td>
 													<td>{flight.airlineName}</td>
 													<td>{formatPlannedTime(flight.plannedTime)}</td>
@@ -100,7 +104,7 @@
 											{#each route.flights
 												.filter((f) => f.flightType === 'ARRIVAL_HAM')
 												.sort((a, b) => a.plannedTime.localeCompare(b.plannedTime)) as flight}
-												<tr>
+												<tr class="bg-base-200 hover:!bg-gray-200 transition-colors">
 													<td>{flight.flightNumber}</td>
 													<td>{flight.airlineName}</td>
 													<td>{formatPlannedTime(flight.plannedTime)}</td>
