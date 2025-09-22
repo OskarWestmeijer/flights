@@ -7,5 +7,5 @@ test('Loads globe element', async ({ page }) => {
 
 test('Shows connections count', async ({ page }) => {
 	await page.goto('/');
-	await expect(page.locator('text=HAM connections today: 102')).toBeVisible();
+	await expect(page.locator('text=Connections count: 102')).toBeVisible();
 });
