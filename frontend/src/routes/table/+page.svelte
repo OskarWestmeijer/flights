@@ -35,11 +35,10 @@
 		<table class="table table-zebra w-full">
 			<thead>
 				<tr>
+					<th></th> <!-- Expand/collapse symbol -->
 					<th>Connection airport</th>
 					<th>Airport code</th>
 					<th>Country Code</th>
-					<th>Departures</th>
-					<th>Arrivals</th>
 					<th>Total flights</th>
 				</tr>
 			</thead>
@@ -59,8 +58,6 @@
 						<td>{route.connectionAirport.airportName}</td>
 						<td>{route.connectionAirport.airportCode}</td>
 						<td>{route.connectionAirport.countryCode}</td>
-						<td>{route.departureFlightCount}</td>
-						<td>{route.arrivalFlightCount}</td>
 						<td>{route.totalFlightCount}</td>
 					</tr>
 
@@ -82,7 +79,7 @@
 										<tbody>
 											<!-- Departures heading -->
 											<tr class="bg-base-200">
-												<td colspan="3" class="font-semibold">Departures</td>
+												<td colspan="3" class="font-semibold text-sm">Departures 🛫</td>
 											</tr>
 											{#each route.flights
 												.filter((f) => f.flightType === 'DEPARTURE_HAM')
@@ -98,7 +95,7 @@
 
 											<!-- Arrivals heading -->
 											<tr class="bg-base-200">
-												<td colspan="3" class="font-semibold">Arrivals</td>
+												<td colspan="3" class="font-semibold text-sm">Arrivals 🛬</td>
 											</tr>
 											{#each route.flights
 												.filter((f) => f.flightType === 'ARRIVAL_HAM')
