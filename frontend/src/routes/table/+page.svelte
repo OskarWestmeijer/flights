@@ -6,6 +6,23 @@
 	const importedAt: string = data.props.responseData.importedAt;
 	const routes: Connection[] = data.props.responseData.connections;
 	const connectionsCount = routes.length;
+
+	let expandedRow: string | null = null; // track which row is expanded
+
+	function formatPlannedTime(time: string): string {
+	// Remove the zone ID "[Europe/Berlin]" because JS Date can't parse it
+	const sanitized = time.replace(/\[.*\]/, "");
+	const date = new Date(sanitized);
+
+	return new Intl.DateTimeFormat("de-DE", {
+		hour: "2-digit",
+		minute: "2-digit",
+		day: "2-digit",
+		month: "2-digit",
+		year: "2-digit"
+	}).format(date);
+}
+
 </script>
 
 <div class="flex flex-col items-center text-center py-4">
@@ -14,10 +31,10 @@
 	<p class="text-sm text-gray-400">Updated at: {importedAt}</p>
 </div>
 
-<div class="container pb-8">
-	<div class="overflow-x-auto">
-		<table class="table">
-			<thead class="">
+<div class="w-full flex justify-center pb-8">
+	<div class="overflow-x-auto max-w-5xl w-full">
+		<table class="table table-zebra w-full">
+			<thead>
 				<tr>
 					<th>Connection airport</th>
 					<th>Airport code</th>
@@ -29,7 +46,17 @@
 			</thead>
 			<tbody>
 				{#each routes as route}
-					<tr>
+					<tr
+						class="hover cursor-pointer"
+						on:click={() =>
+							(expandedRow =
+								expandedRow === route.connectionAirport.airportCode
+									? null
+									: route.connectionAirport.airportCode)}
+					>
+						<td class="w-6 text-center">
+							{expandedRow === route.connectionAirport.airportCode ? '⯆' : '⯈'}
+						</td>
 						<td>{route.connectionAirport.airportName}</td>
 						<td>{route.connectionAirport.airportCode}</td>
 						<td>{route.connectionAirport.countryCode}</td>
@@ -37,18 +64,74 @@
 						<td>{route.arrivalFlightCount}</td>
 						<td>{route.totalFlightCount}</td>
 					</tr>
+
+					{#if expandedRow === route.connectionAirport.airportCode}
+						<tr class="bg-gray-100">
+							<td colspan="7" class="p-4 text-left">
+								<div class="space-y-6">
+									<!-- Departures -->
+									<div>
+										<p class="font-semibold mb-2">Departures</p>
+										<div class="overflow-x-auto">
+											<table class="table table-compact w-full">
+												<thead>
+													<tr>
+														<th>Flight number</th>
+														<th>Airline</th>
+														<th>Planned Time</th>
+													</tr>
+												</thead>
+												<tbody>
+													{#each route.flights
+														.filter((f) => f.flightType === 'DEPARTURE_HAM')
+														.sort((a, b) => a.plannedTime.localeCompare(b.plannedTime)) as flight}
+														<tr>
+															<td>{flight.flightNumber}</td>
+															<td>{flight.airlineName}</td>
+															<td>{formatPlannedTime(flight.plannedTime)}</td>
+														</tr>
+													{:else}
+														<tr><td colspan="3" class="text-gray-500">No departing flights</td></tr>
+													{/each}
+												</tbody>
+											</table>
+										</div>
+									</div>
+
+									<!-- Arrivals -->
+									<div>
+										<p class="font-semibold mb-2">Arrivals</p>
+										<div class="overflow-x-auto">
+											<table class="table table-compact w-full">
+												<thead>
+													<tr>
+														<th>Flight number</th>
+														<th>Airline</th>
+														<th>Planned Time</th>
+													</tr>
+												</thead>
+												<tbody>
+													{#each route.flights
+														.filter((f) => f.flightType === 'ARRIVAL_HAM')
+														.sort((a, b) => a.plannedTime.localeCompare(b.plannedTime)) as flight}
+														<tr>
+															<td>{flight.flightNumber}</td>
+															<td>{flight.airlineName}</td>
+															<td>{formatPlannedTime(flight.plannedTime)}</td>
+														</tr>
+													{:else}
+														<tr><td colspan="3" class="text-gray-500">No arriving flights</td></tr>
+													{/each}
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					{/if}
 				{/each}
 			</tbody>
 		</table>
 	</div>
 </div>
-
-<style>
-	.container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: auto;
-		width: 100%;
-	}
-</style>
