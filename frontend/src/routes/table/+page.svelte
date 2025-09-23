@@ -1,8 +1,13 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import type { Connection } from './global';
+	import { createLogger } from '$lib/logger';
+	
+	const log = createLogger("table.page");
 
 	export let data: PageData;
+	log('Received props')
+
 	const importedAt: string = data.props.responseData.importedAt;
 	const routes: Connection[] = data.props.responseData.connections;
 	const connectionsCount = routes.length;

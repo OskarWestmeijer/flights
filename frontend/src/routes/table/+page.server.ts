@@ -1,22 +1,17 @@
 import type { PageLoad } from './$types';
+import { fetchConnections } from '$lib/api-connections-client';
+import { createLogger } from '$lib/logger';
 import type { ConnectionsResponse } from './global';
 
-export const load: PageLoad = async ({ fetch }) => {
-	let apiUrl;
-	if (process.env.NODE_ENV === 'production') {
-		apiUrl = 'http://flights-api:8080/connections';
-	} else {
-		console.log("Development run. Requesting localhost.")
-		apiUrl = 'http://localhost:8080/connections';
-	}
+const log = createLogger("table.server");
 
-	const res = await fetch(apiUrl);
-	const response: ConnectionsResponse = await res.json();
-
-	const responseData = response;
+export const load: PageLoad = async () => {
+	log("Initate fetch")
+	const response: ConnectionsResponse = await fetchConnections();
+	log("Pass response as props to page")
 	return {
 		props: {
-			responseData: responseData,
+			responseData: response,
 		}
 	};
 };

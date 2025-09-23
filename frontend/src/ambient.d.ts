@@ -1,3 +1,5 @@
+// src/ambient.d.ts
+
 declare global {
 	interface Airport {
 		airportCode: string;
@@ -42,5 +44,11 @@ declare global {
 		resolution: number;
 		flightCount: number;
 		distance: number;
+	}
+
+	interface GlobeDataTuple {
+		arcData: ArcData[];
+		labelData: LabelData[];
+		apiImportedAt: string;
 	}
 }

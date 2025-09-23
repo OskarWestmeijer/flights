@@ -3,6 +3,9 @@
 	import './styles.css';
 	import type { PageData } from './$types';
 	import type { GlobeInstance } from 'globe.gl';
+	import { createLogger } from '$lib/logger';
+
+	const log = createLogger('globe.page');
 
 	export let data: PageData;
 
@@ -12,7 +15,7 @@
 	const connectionsCount = globeData.length;
 
 	onMount(async () => {
-		console.log('On mount start');
+		log('On mount start');
 		const Globe = await import('globe.gl');
 
 		// belgrade
@@ -21,8 +24,6 @@
 		const globeElement = document.getElementById('helloWorld') as HTMLElement;
 
 		const instance: GlobeInstance = Globe.default()
-			//.width(600)
-			//.height(600)
 			.globeImageUrl('earth-night.jpg')
 			.backgroundImageUrl('night-sky.png')
 			.pointOfView(MAP_CENTER, 0.1)
@@ -55,14 +56,14 @@
 		const resizeObserver = new ResizeObserver(() => {
 			instance.width(globeElement.clientWidth);
 			instance.height(globeElement.clientHeight);
-			console.log('Resizing globe.');
+			log('Resizing globe.');
 		});
 		resizeObserver.observe(globeElement);
 
 		// example of programatic access
 		// instance.onArcHover((hover) => console.log('hovering over ' + JSON.stringify(hover)));
 		// instance.onLabelHover((label) => console.log(label));
-		console.log('End of mount');
+		log('End of mount');
 	});
 </script>
 
