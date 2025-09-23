@@ -20,16 +20,20 @@
 
 	const MAP_CENTER = { lat: 44.787197, lng: 20.457273, altitude: 0.9 };
 
-	// States for hovered items
 	let hoveredArc: ArcData | null = null;
-	let hoveredLabel: LabelData | null = null;
+	let selectedArc: ArcData | null = null;
+
+	function clearSelection() {
+		selectedArc = null;
+		hoveredArc = null;
+		if (globeInstance) globeInstance.arcsData(globeData); // redraw arcs
+	}
 
 	onMount(async () => {
 		log('Mounting globe...');
 
 		const GlobeClass = (await import('globe.gl')).default;
 
-		// Create globe instance with animateIn disabled
 		globeInstance = new GlobeClass(globeElement, {
 			waitForGlobeReady: false,
 			animateIn: false
@@ -38,13 +42,22 @@
 			.backgroundImageUrl('night-sky.png')
 			.pointOfView(MAP_CENTER, 0.1)
 			.arcsData(globeData)
-			.arcStroke(d => d.stroke)
-			.arcDashLength(1)
-			.arcDashGap(0.8)
-			.arcDashInitialGap(() => Math.random())
-			.arcColor(d => d.color)
-			.arcsTransitionDuration(0)
-			.arcDashAnimateTime(8000)
+			.arcAltitude(0)
+			.arcStroke((d) => {
+				if (selectedArc) return d === selectedArc ? 0.5 : 0.1; // thick selected, slim others
+				if (hoveredArc) return d === hoveredArc ? 0.5 : 0.1; // highlight hover
+				return d.stroke;
+			})
+			.arcColor((d) => {
+				if (selectedArc) return d === selectedArc ? d.color : '#888888';
+				if (hoveredArc) return d === hoveredArc ? d.color : '#888888';
+				return d.color;
+			})
+			.arcsTransitionDuration(0) // instant update, no animation
+			.arcLabel(
+				(arc) =>
+					`${arc.startName} → ${arc.endName}<br>Flights: ${arc.flightCount}<br>Distance: ${arc.distance} km`
+			)
 			.labelsData(labelData)
 			.labelLat('lat')
 			.labelLng('lng')
@@ -56,17 +69,17 @@
 
 		globeInstance(globeElement);
 
-		// Set up hover callbacks
 		globeInstance.onArcHover((arc: ArcData | null) => {
-			hoveredArc = arc;
-			hoveredLabel = null; // reset label hover when hovering an arc
-		});
-		globeInstance.onLabelHover((label: LabelData | null) => {
-			hoveredLabel = label;
-			hoveredArc = null; // reset arc hover when hovering a label
+			if (!selectedArc) hoveredArc = arc;
+			globeInstance.arcsData(globeData);
 		});
 
-		// Resize observer
+		globeInstance.onArcClick((arc: ArcData) => {
+			selectedArc = arc;
+			hoveredArc = null;
+			globeInstance.arcsData(globeData);
+		});
+
 		resizeObserver = new ResizeObserver(() => {
 			globeInstance.width(globeElement.clientWidth);
 			globeInstance.height(globeElement.clientHeight);
@@ -93,21 +106,31 @@
 </div>
 
 <div class="flex justify-center relative">
-	<div class="w-full max-w-7xl h-[90vh] rounded-2xl shadow-xl bg-base-400 p-4 bg-primary relative overflow-hidden">
+	<div
+		class="w-full max-w-7xl h-[90vh] rounded-2xl shadow-xl bg-base-400 p-4 bg-primary relative overflow-hidden"
+	>
 		<div bind:this={globeElement} class="w-full h-full"></div>
 
-		<!-- Hover overlay -->
-		{#if hoveredArc}
-			<div class="absolute top-6 right-6 p-3 bg-white bg-opacity-90 rounded-lg shadow-lg text-sm z-50 max-w-[30%]">
-				<p><strong>{hoveredArc.startName} → {hoveredArc.endName}</strong></p>
-				<p>Flights: {hoveredArc.flightCount}</p>
-				<p>Distance: {hoveredArc.distance} km</p>
-			</div>
-		{:else if hoveredLabel}
-			<div class="absolute top-6 right-6 p-3 bg-white bg-opacity-90 rounded-lg shadow-lg text-sm z-50 max-w-[30%]">
-				<p><strong>{hoveredLabel.name}</strong></p>
-				<p>Flights: {hoveredLabel.flightCount}</p>
-				<p>Distance: {hoveredLabel.distance} km</p>
+		<!-- Hover / selected overlay -->
+		{#if selectedArc || hoveredArc}
+			<div
+				class="absolute top-6 right-6 p-3 bg-white bg-opacity-90 rounded-lg shadow-lg text-sm z-50 max-w-[30%]"
+			>
+				<p>
+					<strong
+						>{(selectedArc || hoveredArc).startName} → {(selectedArc || hoveredArc).endName}</strong
+					>
+				</p>
+				<p>Flights: {(selectedArc || hoveredArc).flightCount}</p>
+				<p>Distance: {(selectedArc || hoveredArc).distance} km</p>
+				{#if selectedArc}
+					<button
+						class="mt-2 px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600"
+						on:click={clearSelection}
+					>
+						Clear Selection
+					</button>
+				{/if}
 			</div>
 		{/if}
 	</div>
