@@ -85,9 +85,9 @@ function computeLabelData(arcData: ArcData[]): LabelData[] {
 			lat: d.endLat,
 			lng: d.endLng,
 			name: d.endName,
-			size: 0.5,
+			size: 1,
 			dotRadius: 0.2,
-			color: 'rgba(255, 165, 0, 0.75)',
+			color: 'rgba(66, 135, 245, 1)',
 			resolution: 2,
 			flightCount: d.flightCount,
 			distance: d.distance
@@ -97,32 +97,14 @@ function computeLabelData(arcData: ArcData[]): LabelData[] {
 }
 
 function styleArc(arc: ArcData): ArcData {
-	if (arc.flightCount > 10) {
-		arc.stroke = 0.35;
-		arc.color = [`rgba(0, 255, 0, 1)`, `rgba(255, 0, 0, 1)`];
-	} else if (arc.flightCount > 5) {
-		arc.stroke = 0.2;
-		arc.color = [`rgba(0, 255, 0, 1)`, `rgba(255, 0, 0, 1)`];
-	} else {
-		arc.stroke = 0.1;
-		arc.color = [`rgba(0, 255, 0, 1)`, `rgba(255, 0, 0, 1)`];
-	}
+	arc.stroke = 0.1;
+	arc.color = [`rgba(255, 0, 0, 0.5)`, `rgba(255, 0, 0, 0.5)`];
 	return arc;
 }
 
 function styleLabel(label: LabelData): LabelData {
-	if (label.flightCount > 10) {
-		label.dotRadius = 0.35;
-		label.size = 0.5;
-		label.color = 'rgba(255, 165, 0, 1)';
-	} else if (label.flightCount > 5) {
-		label.dotRadius = 0.25;
-		label.size = 0.4;
-		label.color = 'rgba(255, 165, 0, 1)';
-	} else {
-		label.dotRadius = 0.15;
-		label.size = 0.3;
-		label.color = 'rgba(255, 165, 0, 1)';
-	}
+	label.dotRadius = 0.2;
+	label.size = 0.2;
+	label.color = 'rgba(66, 135, 245, 1)';
 	return label;
 }

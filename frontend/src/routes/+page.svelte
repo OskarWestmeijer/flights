@@ -38,7 +38,7 @@
 			waitForGlobeReady: false,
 			animateIn: false
 		})
-			.globeImageUrl('earth-night.jpg')
+			.globeImageUrl('earth-blue-marble.jpg')
 			.backgroundImageUrl('night-sky.png')
 			.pointOfView(MAP_CENTER, 0.1)
 			.arcsData(globeData)

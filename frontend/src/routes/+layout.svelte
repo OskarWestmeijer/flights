@@ -8,7 +8,7 @@
 	<title>Flights</title>
 
 	<!-- Browser preload hints -->
-	<link rel="preload" as="image" href="/earth-night.jpg" crossorigin="anonymous" />
+	<link rel="preload" as="image" href="/earth-day-2020.jpg" crossorigin="anonymous" />
 	<link rel="preload" as="image" href="/night-sky.png" crossorigin="anonymous" />
 </svelte:head>
 
