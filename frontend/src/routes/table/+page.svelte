@@ -1,11 +1,18 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import type { Connection } from './global';
+	import type { Connection, ConnectionsResponse } from '$lib/types';
+	import { createLogger } from '$lib/logger';
+
+	const log = createLogger('table.page');
 
 	export let data: PageData;
-	const importedAt: string = data.props.responseData.importedAt;
-	const routes: Connection[] = data.props.responseData.connections;
-	const connectionsCount = routes.length;
+	const connectionsResponse: ConnectionsResponse = data.props.responseData;
+	const flightsCount: number = data.props.flightsCount;
+	log('Received props');
+
+	const importedAt: string = connectionsResponse.importedAt;
+	const connections: Connection[] = connectionsResponse.connections;
+	const connectionsCount = connections.length;
 
 	let expandedRow: string | null = null; // track which row is expanded
 
@@ -26,7 +33,7 @@
 
 <div class="flex flex-col items-center text-center py-4">
 	<p class="text-lg font-semibold">Todays Hamburg airport (HAM) connections</p>
-	<p>Connections count: {connectionsCount}</p>
+	<p>Connections: {connectionsCount}, Flights: {flightsCount}</p>
 	<p class="text-sm text-gray-400">Updated at: {importedAt}</p>
 </div>
 
@@ -44,7 +51,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				{#each routes as route}
+				{#each connections as route}
 					<tr
 						class="cursor-pointer hover:bg-gray-200 {expandedRow ===
 						route.connectionAirport.airportCode

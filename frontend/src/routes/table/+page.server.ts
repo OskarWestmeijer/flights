@@ -1,22 +1,20 @@
-import type { PageLoad } from './$types';
-import type { ConnectionsResponse } from './global';
+import type { PageServerLoad } from './$types';
+import { fetchConnections } from '$lib/api-connections-client';
+import { createLogger } from '$lib/logger';
+import type { ConnectionsResponse } from '$lib/types';
+import { getFlightsCount } from '$lib/flights';
 
-export const load: PageLoad = async ({ fetch }) => {
-	let apiUrl;
-	if (process.env.NODE_ENV === 'production') {
-		apiUrl = 'http://flights-api:8080/connections';
-	} else {
-		console.log("Development run. Requesting localhost.")
-		apiUrl = 'http://localhost:8080/connections';
-	}
+const log = createLogger('table.server');
 
-	const res = await fetch(apiUrl);
-	const response: ConnectionsResponse = await res.json();
-
-	const responseData = response;
+export const load: PageServerLoad = async () => {
+	log('Initate fetch');
+	const response: ConnectionsResponse = await fetchConnections();
+	const flightsCount: number = getFlightsCount(response.connections);
+	log('Pass response as props to page');
 	return {
 		props: {
-			responseData: responseData,
+			responseData: response,
+			flightsCount: flightsCount
 		}
 	};
 };
