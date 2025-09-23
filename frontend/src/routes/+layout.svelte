@@ -6,6 +6,10 @@
 <svelte:head>
 	<link rel="icon" href="/favicon.ico" />
 	<title>Flights</title>
+
+	<!-- Browser preload hints -->
+	<link rel="preload" as="image" href="/earth-night.jpg" crossorigin="anonymous" />
+	<link rel="preload" as="image" href="/night-sky.png" crossorigin="anonymous" />
 </svelte:head>
 
 <div class="flex flex-col min-h-screen bg-base-100">

@@ -1,31 +1,35 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import type { PageData } from './$types';
-	import './styles.css';
-	import type { GlobeInstance } from 'globe.gl';
-	import { createLogger } from '$lib/logger';
+	import { onMount, onDestroy } from 'svelte';
 	import type { ArcData, LabelData, GlobeDataTuple } from '$lib/types';
+	import { createLogger } from '$lib/logger';
 
 	const log = createLogger('globe.page');
 
-	export let data: PageData;
+	export let data: { props: { globeDataTuple: GlobeDataTuple } };
+
+	let globeElement: HTMLElement;
+	let globeInstance: any = null;
+	let resizeObserver: ResizeObserver;
+
 	const globeDataTuple: GlobeDataTuple = data.props.globeDataTuple;
 	const globeData: ArcData[] = globeDataTuple.arcData;
 	const labelData: LabelData[] = globeDataTuple.labelData;
 	const importedAt: string = globeDataTuple.apiImportedAt;
-	const connectionsCount = globeDataTuple.connectionsCount;
-	const flightsCount = globeDataTuple.flightsCount;
+	const connectionsCount: number = globeDataTuple.connectionsCount;
+	const flightsCount: number = globeDataTuple.flightsCount;
+
+	const MAP_CENTER = { lat: 44.787197, lng: 20.457273, altitude: 0.9 };
 
 	onMount(async () => {
-		log('On mount start');
-		const Globe = await import('globe.gl');
+		log('Mounting globe...');
 
-		// belgrade
-		const MAP_CENTER = { lat: 44.787197, lng: 20.457273, altitude: 0.9 };
+		const Globe = (await import('globe.gl')).default;
 
-		const globeElement = document.getElementById('helloWorld') as HTMLElement;
-
-		const instance: GlobeInstance = Globe.default()
+		// Create globe instance with animateIn disabled
+		globeInstance = Globe({
+			waitForGlobeReady: false,
+			animateIn: false
+		})
 			.globeImageUrl('earth-night.jpg')
 			.backgroundImageUrl('night-sky.png')
 			.pointOfView(MAP_CENTER, 0.1)
@@ -36,13 +40,11 @@
 			.arcDashInitialGap(() => Math.random())
 			.arcColor((d) => d.color)
 			.arcsTransitionDuration(0)
-			.arcDashAnimateTime(4000)
+			.arcDashAnimateTime(8000)
 			.arcLabel(
 				(arc) =>
-					`${arc.startName} - ${arc.endName}<br>total flights: ${arc.flightCount}<br>distance: ${arc.distance} km`
+					`${arc.startName} → ${arc.endName}<br>Flights: ${arc.flightCount}<br>Distance: ${arc.distance} km`
 			)
-
-			// city labels
 			.labelsData(labelData)
 			.labelLat('lat')
 			.labelLng('lng')
@@ -52,20 +54,25 @@
 			.labelColor('color')
 			.labelResolution(2);
 
-		// init globe
-		instance(globeElement);
+		globeInstance(globeElement);
 
-		const resizeObserver = new ResizeObserver(() => {
-			instance.width(globeElement.clientWidth);
-			instance.height(globeElement.clientHeight);
+		// Resize observer
+		resizeObserver = new ResizeObserver(() => {
+			globeInstance.width(globeElement.clientWidth);
+			globeInstance.height(globeElement.clientHeight);
 			log('Resizing globe.');
 		});
 		resizeObserver.observe(globeElement);
 
-		// example of programatic access
-		// instance.onArcHover((hover) => console.log('hovering over ' + JSON.stringify(hover)));
-		// instance.onLabelHover((label) => console.log(label));
-		log('End of mount');
+		log('Globe mounted.');
+	});
+
+	onDestroy(() => {
+		log('Destroying globe...');
+		if (resizeObserver) resizeObserver.disconnect();
+		if (globeInstance) globeInstance.renderer()?.dispose?.();
+		if (globeElement) globeElement.innerHTML = '';
+		log('Globe destroyed.');
 	});
 </script>
 
@@ -77,6 +84,6 @@
 
 <div class="flex justify-center">
 	<div class="w-full max-w-7xl h-[90vh] rounded-2xl shadow-xl bg-base-400 p-4 bg-primary">
-		<div id="helloWorld" class="w-full h-full"></div>
+		<div bind:this={globeElement} class="w-full h-full"></div>
 	</div>
 </div>
