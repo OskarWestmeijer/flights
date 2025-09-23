@@ -1,7 +1,13 @@
 import { createLogger } from '$lib/logger';
 import { getDistance, convertDistance } from 'geolib';
 import type { GeolibInputCoordinates } from 'geolib/es/types';
-import type { ConnectionsResponse, GlobeDataTuple, GlobeData, LabelData } from '$lib/types';
+import type {
+	Connection,
+	ConnectionsResponse,
+	GlobeDataTuple,
+	ArcData,
+	LabelData
+} from '$lib/types';
 import { fetchConnections } from '$lib/api-connections-client';
 
 const log = createLogger('globe-data');
@@ -28,17 +34,17 @@ export async function fetchGlobeDataTuple(): Promise<GlobeDataTuple> {
 	cachedTuple = {
 		arcData,
 		labelData,
-		importedAt: response.importedAt
+		apiImportedAt: response.importedAt
 	};
 	lastApiResponse = response;
 
-    log('Return new computed cache.')
+	log('Return new computed cache.');
 	return cachedTuple;
 }
 
 // --- helpers ---
 
-function computeArcData(response: ConnectionsResponse): GlobeData[] {
+function computeArcData(response: ConnectionsResponse): ArcData[] {
 	return response.connections.map((connection: Connection) => {
 		const from: GeolibInputCoordinates = {
 			latitude: connection.hamAirport.latitude,
@@ -51,7 +57,7 @@ function computeArcData(response: ConnectionsResponse): GlobeData[] {
 
 		const distKm: number = Math.floor(convertDistance(getDistance(from, to), 'km'));
 
-		const tmpGlobeData: GlobeData = {
+		const tmpGlobeData: ArcData = {
 			startName: connection.hamAirport.airportCode,
 			startLat: connection.hamAirport.latitude,
 			startLng: connection.hamAirport.longitude,
@@ -68,7 +74,7 @@ function computeArcData(response: ConnectionsResponse): GlobeData[] {
 	});
 }
 
-function computeLabelData(arcData: GlobeData[]): LabelData[] {
+function computeLabelData(arcData: ArcData[]): LabelData[] {
 	return arcData.map((d) => {
 		const tmpLabelData: LabelData = {
 			lat: d.endLat,
@@ -85,7 +91,7 @@ function computeLabelData(arcData: GlobeData[]): LabelData[] {
 	});
 }
 
-function styleArc(arc: GlobeData): GlobeData {
+function styleArc(arc: ArcData): ArcData {
 	if (arc.flightCount > 10) {
 		arc.stroke = 0.35;
 		arc.color = [`rgba(0, 255, 0, 1)`, `rgba(255, 0, 0, 1)`];

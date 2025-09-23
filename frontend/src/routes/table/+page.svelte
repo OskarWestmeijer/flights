@@ -1,16 +1,16 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import type { Connection } from './global';
+	import type { Connection } from '$lib/types';
 	import { createLogger } from '$lib/logger';
-	
-	const log = createLogger("table.page");
+
+	const log = createLogger('table.page');
 
 	export let data: PageData;
-	log('Received props')
+	log('Received props');
 
 	const importedAt: string = data.props.responseData.importedAt;
-	const routes: Connection[] = data.props.responseData.connections;
-	const connectionsCount = routes.length;
+	const connections: Connection[] = data.props.responseData.connections;
+	const connectionsCount = connections.length;
 
 	let expandedRow: string | null = null; // track which row is expanded
 
@@ -49,7 +49,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				{#each routes as route}
+				{#each connections as route}
 					<tr
 						class="cursor-pointer hover:bg-gray-200 {expandedRow ===
 						route.connectionAirport.airportCode

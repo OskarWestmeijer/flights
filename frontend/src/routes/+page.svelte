@@ -4,13 +4,14 @@
 	import type { PageData } from './$types';
 	import type { GlobeInstance } from 'globe.gl';
 	import { createLogger } from '$lib/logger';
+	import type { ArcData, LabelData } from '$lib/types';
 
 	const log = createLogger('globe.page');
 
 	export let data: PageData;
 
 	const importedAt: string = data.props.importedAt;
-	const globeData: GlobeData[] = data.props.arcData;
+	const globeData: ArcData[] = data.props.arcData;
 	const labelData: LabelData[] = data.props.labelData;
 	const connectionsCount = globeData.length;
 
