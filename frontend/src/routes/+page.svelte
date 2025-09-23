@@ -20,13 +20,17 @@
 
 	const MAP_CENTER = { lat: 44.787197, lng: 20.457273, altitude: 0.9 };
 
+	// States for hovered items
+	let hoveredArc: ArcData | null = null;
+	let hoveredLabel: LabelData | null = null;
+
 	onMount(async () => {
 		log('Mounting globe...');
 
-		const Globe = (await import('globe.gl')).default;
+		const GlobeClass = (await import('globe.gl')).default;
 
 		// Create globe instance with animateIn disabled
-		globeInstance = Globe({
+		globeInstance = new GlobeClass(globeElement, {
 			waitForGlobeReady: false,
 			animateIn: false
 		})
@@ -34,17 +38,13 @@
 			.backgroundImageUrl('night-sky.png')
 			.pointOfView(MAP_CENTER, 0.1)
 			.arcsData(globeData)
-			.arcStroke((d) => d.stroke)
+			.arcStroke(d => d.stroke)
 			.arcDashLength(1)
 			.arcDashGap(0.8)
 			.arcDashInitialGap(() => Math.random())
-			.arcColor((d) => d.color)
+			.arcColor(d => d.color)
 			.arcsTransitionDuration(0)
 			.arcDashAnimateTime(8000)
-			.arcLabel(
-				(arc) =>
-					`${arc.startName} → ${arc.endName}<br>Flights: ${arc.flightCount}<br>Distance: ${arc.distance} km`
-			)
 			.labelsData(labelData)
 			.labelLat('lat')
 			.labelLng('lng')
@@ -55,6 +55,16 @@
 			.labelResolution(2);
 
 		globeInstance(globeElement);
+
+		// Set up hover callbacks
+		globeInstance.onArcHover((arc: ArcData | null) => {
+			hoveredArc = arc;
+			hoveredLabel = null; // reset label hover when hovering an arc
+		});
+		globeInstance.onLabelHover((label: LabelData | null) => {
+			hoveredLabel = label;
+			hoveredArc = null; // reset arc hover when hovering a label
+		});
 
 		// Resize observer
 		resizeObserver = new ResizeObserver(() => {
@@ -82,8 +92,23 @@
 	<p class="text-sm text-gray-400">Updated at: {importedAt}</p>
 </div>
 
-<div class="flex justify-center">
-	<div class="w-full max-w-7xl h-[90vh] rounded-2xl shadow-xl bg-base-400 p-4 bg-primary">
+<div class="flex justify-center relative">
+	<div class="w-full max-w-7xl h-[90vh] rounded-2xl shadow-xl bg-base-400 p-4 bg-primary relative overflow-hidden">
 		<div bind:this={globeElement} class="w-full h-full"></div>
+
+		<!-- Hover overlay -->
+		{#if hoveredArc}
+			<div class="absolute top-6 right-6 p-3 bg-white bg-opacity-90 rounded-lg shadow-lg text-sm z-50 max-w-[30%]">
+				<p><strong>{hoveredArc.startName} → {hoveredArc.endName}</strong></p>
+				<p>Flights: {hoveredArc.flightCount}</p>
+				<p>Distance: {hoveredArc.distance} km</p>
+			</div>
+		{:else if hoveredLabel}
+			<div class="absolute top-6 right-6 p-3 bg-white bg-opacity-90 rounded-lg shadow-lg text-sm z-50 max-w-[30%]">
+				<p><strong>{hoveredLabel.name}</strong></p>
+				<p>Flights: {hoveredLabel.flightCount}</p>
+				<p>Distance: {hoveredLabel.distance} km</p>
+			</div>
+		{/if}
 	</div>
 </div>

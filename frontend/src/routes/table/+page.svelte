@@ -76,7 +76,7 @@
 					{#if expandedRow === route.connectionAirport.airportCode}
 						<tr class="bg-gray-100">
 							<td colspan="7" class="p-4 text-left">
-								<div class="h-96 overflow-x-auto relative">
+								<div class="h-auto max-h-[40rem] overflow-y-auto relative">
 									<table class="table table-xs table-pin-rows w-full">
 										<!-- global header (only once) -->
 										<thead class="sticky top-0 z-20 bg-base-100">
@@ -89,7 +89,7 @@
 
 										<tbody>
 											<!-- Departures heading -->
-											<tr class="bg-base-200 sticky top-[1.7rem] z-10">
+											<tr class="bg-base-200 sticky top-[1.8rem] z-10">
 												<td colspan="3" class="font-semibold text-sm">Departures 🛫</td>
 											</tr>
 											{#each route.flights
@@ -105,7 +105,7 @@
 											{/each}
 
 											<!-- Arrivals heading -->
-											<tr class="bg-base-200 sticky top-[1.7rem] z-10">
+											<tr class="bg-base-200 sticky top-[1.8rem] z-10">
 												<td colspan="3" class="font-semibold text-sm">Arrivals 🛬</td>
 											</tr>
 											{#each route.flights
