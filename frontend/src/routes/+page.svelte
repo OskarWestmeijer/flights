@@ -14,6 +14,7 @@
 	const labelData: LabelData[] = globeDataTuple.labelData;
 	const importedAt: string = globeDataTuple.apiImportedAt;
 	const connectionsCount = globeDataTuple.connectionsCount;
+	const flightsCount = globeDataTuple.flightsCount;
 
 	onMount(async () => {
 		log('On mount start');
@@ -70,7 +71,7 @@
 
 <div class="flex flex-col items-center text-center py-4">
 	<p class="text-lg font-semibold">Todays Hamburg airport (HAM) connections</p>
-	<p>Connections count: {connectionsCount}</p>
+	<p>Connections: {connectionsCount}, Flights: {flightsCount}</p>
 	<p class="text-sm text-gray-400">Updated at: {importedAt}</p>
 </div>
 

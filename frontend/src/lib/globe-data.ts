@@ -9,6 +9,7 @@ import type {
 	LabelData
 } from '$lib/types';
 import { fetchConnections } from '$lib/api-connections-client';
+import { getFlightsCount } from './flights';
 
 const log = createLogger('globe-data');
 
@@ -31,11 +32,13 @@ export async function fetchGlobeDataTuple(): Promise<GlobeDataTuple> {
 	const arcData = computeArcData(response);
 	const labelData = computeLabelData(arcData);
 	const connectionsCount = response.connections.length;
+	const flightsCount = getFlightsCount(response.connections);
 
 	cachedTuple = {
 		arcData,
 		labelData,
 		connectionsCount,
+		flightsCount,
 		apiImportedAt: response.importedAt
 	};
 	lastApiResponse = response;

@@ -22,7 +22,13 @@ export async function fetchConnections(): Promise<ConnectionsResponse> {
 
 	log('Cache empty or expired. Requesting backend for new connections.');
 
-	const apiUrl = dev ? 'http://localhost:8080/connections' : 'http://flights-api:8080/connections';
+	let apiUrl: string;
+	if (process.env.NODE_ENV === 'production') {
+		apiUrl = 'http://flights-api:8080/connections';
+	} else {
+		log('Development run. Requesting localhost.');
+		apiUrl = 'http://localhost:8080/connections';
+	}
 
 	const res = await fetch(apiUrl);
 	if (!res.ok) throw new Error(`Failed to fetch connections: ${res.statusText}`);
