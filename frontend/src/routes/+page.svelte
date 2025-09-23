@@ -109,7 +109,7 @@
 	<div
 		class="w-full max-w-7xl h-[90vh] rounded-2xl shadow-xl bg-base-400 p-4 bg-primary relative overflow-hidden"
 	>
-		<div bind:this={globeElement} class="w-full h-full"></div>
+		<div bind:this={globeElement} id="helloWorld" class="w-full h-full"></div>
 
 		<!-- Hover / selected overlay -->
 		{#if selectedArc || hoveredArc}
