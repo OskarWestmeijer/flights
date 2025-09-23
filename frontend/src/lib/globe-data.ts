@@ -30,10 +30,12 @@ export async function fetchGlobeDataTuple(): Promise<GlobeDataTuple> {
 	log('API changed or first run — computing globe data');
 	const arcData = computeArcData(response);
 	const labelData = computeLabelData(arcData);
+	const connectionsCount = response.connections.length;
 
 	cachedTuple = {
 		arcData,
 		labelData,
+		connectionsCount,
 		apiImportedAt: response.importedAt
 	};
 	lastApiResponse = response;

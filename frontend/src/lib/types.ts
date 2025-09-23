@@ -57,5 +57,6 @@ export interface LabelData {
 export interface GlobeDataTuple {
 	arcData: ArcData[];
 	labelData: LabelData[];
+	connectionsCount: number;
 	apiImportedAt: string;
 }

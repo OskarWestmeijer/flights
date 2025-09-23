@@ -1,19 +1,19 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import './styles.css';
 	import type { PageData } from './$types';
+	import './styles.css';
 	import type { GlobeInstance } from 'globe.gl';
 	import { createLogger } from '$lib/logger';
-	import type { ArcData, LabelData } from '$lib/types';
+	import type { ArcData, LabelData, GlobeDataTuple } from '$lib/types';
 
 	const log = createLogger('globe.page');
 
 	export let data: PageData;
-
-	const importedAt: string = data.props.importedAt;
-	const globeData: ArcData[] = data.props.arcData;
-	const labelData: LabelData[] = data.props.labelData;
-	const connectionsCount = globeData.length;
+	const globeDataTuple: GlobeDataTuple = data.props.globeDataTuple;
+	const globeData: ArcData[] = globeDataTuple.arcData;
+	const labelData: LabelData[] = globeDataTuple.labelData;
+	const importedAt: string = globeDataTuple.apiImportedAt;
+	const connectionsCount = globeDataTuple.connectionsCount;
 
 	onMount(async () => {
 		log('On mount start');
