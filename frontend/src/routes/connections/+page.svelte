@@ -15,6 +15,18 @@
 	const connectionsCount = connections.length;
 
 	let expandedRow: string | null = null; // track which row is expanded
+	let searchTerm: string = ''; // search input binding
+
+	// reactive filtered list
+	$: filteredConnections = connections.filter((c) => {
+		if (!searchTerm) return true;
+		const term = searchTerm.toLowerCase();
+		return (
+			c.connectionAirport.airportName.toLowerCase().includes(term) ||
+			c.connectionAirport.airportCode.toLowerCase().includes(term) ||
+			c.connectionAirport.countryCode.toLowerCase().includes(term)
+		);
+	});
 </script>
 
 <div class="flex flex-col items-center text-center py-6 space-y-1">
@@ -25,13 +37,22 @@
 	<p class="text-xs text-gray-400">Last updated: {importedAt}</p>
 </div>
 
+<!-- Search input -->
+<div class="flex justify-center pb-4">
+	<input
+		type="text"
+		placeholder="Search by airport, code, or country..."
+		bind:value={searchTerm}
+		class="input input-bordered w-full max-w-md"
+	/>
+</div>
+
 <div class="w-full flex justify-center pb-8">
 	<div class="overflow-x-auto max-w-5xl w-full">
 		<table class="table table-zebra w-full">
 			<thead>
 				<tr>
 					<th></th>
-					<!-- Expand/collapse symbol -->
 					<th>Connection airport</th>
 					<th>Airport code</th>
 					<th>Country Code</th>
@@ -39,7 +60,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				{#each connections as route}
+				{#each filteredConnections as route}
 					<tr
 						class="cursor-pointer hover:bg-gray-200 {expandedRow ===
 						route.connectionAirport.airportCode
@@ -66,7 +87,6 @@
 							<td colspan="7" class="p-4 text-left">
 								<div class="h-auto max-h-[40rem] overflow-y-auto relative">
 									<table class="table table-xs table-pin-rows w-full">
-										<!-- global header (only once) -->
 										<thead class="sticky top-0 z-20 bg-base-100">
 											<tr>
 												<th>Flight number</th>
@@ -74,9 +94,7 @@
 												<th>Planned Time</th>
 											</tr>
 										</thead>
-
 										<tbody>
-											<!-- Departures heading -->
 											<tr class="bg-base-200 sticky top-[1.8rem] z-10">
 												<td colspan="3" class="font-semibold text-sm">Departures 🛫</td>
 											</tr>
@@ -92,7 +110,6 @@
 												<tr><td colspan="3" class="text-gray-500">No departing flights</td></tr>
 											{/each}
 
-											<!-- Arrivals heading -->
 											<tr class="bg-base-200 sticky top-[1.8rem] z-10">
 												<td colspan="3" class="font-semibold text-sm">Arrivals 🛬</td>
 											</tr>
@@ -114,6 +131,12 @@
 						</tr>
 					{/if}
 					<!-- end of arrival and departure subtable-->
+				{:else}
+					<tr>
+						<td colspan="5" class="text-center text-gray-500">
+							No connections match your search
+						</td>
+					</tr>
 				{/each}
 			</tbody>
 		</table>

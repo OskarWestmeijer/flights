@@ -24,9 +24,9 @@
 			</div>
 		</div>
 		<div class="navbar-center">
-			<a href="/" class="btn btn-ghost text-xl">🌍 Globe</a>
+			<a href="/" class="btn btn-ghost text-xl">🛫 Flights</a>
 			<a href="/connections" class="btn btn-ghost text-xl">↔️ Connections</a>
-			<a href="/flights" class="btn btn-ghost text-xl">🛫 Flights</a>
+			<a href="/network" class="btn btn-ghost text-xl">🌍 Network</a>
 		</div>
 		<div class="navbar-end">
 			<div class="mobile-hide">
