@@ -57,7 +57,7 @@
 			.then((data) => data.features);
 
 		globeInstance = new GlobeClass(globeElement, { waitForGlobeReady: false, animateIn: false })
-			.backgroundImageUrl('')
+			.backgroundImageUrl('/night-sky.png')
 			.pointOfView(MAP_CENTER, 0.1)
 
 			.polygonsData(countries.filter((d) => d.properties.ISO_A2 !== 'AQ'))
@@ -116,7 +116,7 @@
 
 		globeInstance
 			.ringsData(rings)
-			.ringAltitude(0.02) // slightly above globe surface
+			.ringAltitude(0.008) // slightly above globe surface
 			.ringColor(() => '#f54242')
 			.ringResolution(100)
 			.ringMaxRadius('maxR')
@@ -167,7 +167,7 @@
 	<div
 		class="w-full max-w-7xl h-[90vh] rounded-2xl shadow-xl bg-white p-4 relative overflow-hidden"
 	>
-		<div bind:this={globeElement} class="w-full h-full"></div>
+		<div bind:this={globeElement} class="w-full h-full" id="helloWorld"></div>
 
 		<!-- Upper-right info popup -->
 		{#if selectedLabel || hoveredLabel}
