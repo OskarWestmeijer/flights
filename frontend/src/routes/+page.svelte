@@ -1,137 +1,109 @@
 <script lang="ts">
-	import { onMount, onDestroy } from 'svelte';
-	import type { ArcData, LabelData, GlobeDataTuple } from '$lib/types';
-	import { createLogger } from '$lib/logger';
+	import type { PageData } from './$types';
+	import type { Flight } from '$lib/types';
+	import { FlightType } from '$lib/types';
+	import { createLogger, formatDate, formatPlannedTime } from '$lib/logger';
 
-	const log = createLogger('globe.page');
+	const log = createLogger('flights.page');
 
-	export let data: { props: { globeDataTuple: GlobeDataTuple } };
+	export let data: PageData;
 
-	let globeElement: HTMLElement;
-	let globeInstance: any = null;
-	let resizeObserver: ResizeObserver;
+	const connectionsCount: number = data.props.connectionsCount;
+	const flightsCount: number = data.props.flightsCount;
+	const importedAt: string = data.props.responseData.importedAt;
+	const arrivalFlights: Flight[] = data.props.arrivalFlights;
+	const departureFlights: Flight[] = data.props.departureFlights;
 
-	const globeDataTuple: GlobeDataTuple = data.props.globeDataTuple;
-	const globeData: ArcData[] = globeDataTuple.arcData;
-	const labelData: LabelData[] = globeDataTuple.labelData;
-	const importedAt: string = globeDataTuple.apiImportedAt;
-	const connectionsCount: number = globeDataTuple.connectionsCount;
-	const flightsCount: number = globeDataTuple.flightsCount;
+	let currentTab: FlightType = FlightType.ARRIVAL_HAM;
+	let searchTerm: string = '';
 
-	const MAP_CENTER = { lat: 44.787197, lng: 20.457273, altitude: 0.9 };
+	// reactive sorted flights depending on the currentTab
+	$: displayedFlights =
+		currentTab === FlightType.ARRIVAL_HAM
+			? [...arrivalFlights].sort((a, b) => a.plannedTime.localeCompare(b.plannedTime))
+			: [...departureFlights].sort((a, b) => a.plannedTime.localeCompare(b.plannedTime));
 
-	let hoveredArc: ArcData | null = null;
-	let selectedArc: ArcData | null = null;
-
-	function clearSelection() {
-		selectedArc = null;
-		hoveredArc = null;
-		if (globeInstance) globeInstance.arcsData(globeData); // redraw arcs
-	}
-
-	onMount(async () => {
-		log('Mounting globe...');
-
-		const GlobeClass = (await import('globe.gl')).default;
-
-		globeInstance = new GlobeClass(globeElement, {
-			waitForGlobeReady: false,
-			animateIn: false
-		})
-			.globeImageUrl('earth-blue-marble.jpg')
-			.backgroundImageUrl('night-sky.png')
-			.pointOfView(MAP_CENTER, 0.1)
-			.arcsData(globeData)
-			.arcAltitude(0)
-			.arcStroke((d) => {
-				if (selectedArc) return d === selectedArc ? 0.5 : 0.1; // thick selected, slim others
-				if (hoveredArc) return d === hoveredArc ? 0.5 : 0.1; // highlight hover
-				return d.stroke;
-			})
-			.arcColor((d) => {
-				if (selectedArc) return d === selectedArc ? d.color : '#888888';
-				if (hoveredArc) return d === hoveredArc ? d.color : '#888888';
-				return d.color;
-			})
-			.arcsTransitionDuration(0) // instant update, no animation
-			.arcLabel(
-				(arc) =>
-					`${arc.startName} → ${arc.endName}<br>Flights: ${arc.flightCount}<br>Distance: ${arc.distance} km`
-			)
-			.labelsData(labelData)
-			.labelLat('lat')
-			.labelLng('lng')
-			.labelText('name')
-			.labelSize('size')
-			.labelDotRadius('dotRadius')
-			.labelColor('color')
-			.labelResolution(2);
-
-		globeInstance(globeElement);
-
-		globeInstance.onArcHover((arc: ArcData | null) => {
-			if (!selectedArc) hoveredArc = arc;
-			globeInstance.arcsData(globeData);
-		});
-
-		globeInstance.onArcClick((arc: ArcData) => {
-			selectedArc = arc;
-			hoveredArc = null;
-			globeInstance.arcsData(globeData);
-		});
-
-		resizeObserver = new ResizeObserver(() => {
-			globeInstance.width(globeElement.clientWidth);
-			globeInstance.height(globeElement.clientHeight);
-			log('Resizing globe.');
-		});
-		resizeObserver.observe(globeElement);
-
-		log('Globe mounted.');
-	});
-
-	onDestroy(() => {
-		log('Destroying globe...');
-		if (resizeObserver) resizeObserver.disconnect();
-		if (globeInstance) globeInstance.renderer()?.dispose?.();
-		if (globeElement) globeElement.innerHTML = '';
-		log('Globe destroyed.');
+	// filter flights based on search term
+	$: filteredFlights = displayedFlights.filter((flight) => {
+		if (!searchTerm) return true;
+		const term = searchTerm.toLowerCase();
+		return (
+			flight.plannedTime.includes(term) ||
+			flight.flightNumber.toLowerCase().includes(term) ||
+			flight.airlineName.toLowerCase().includes(term) ||
+			flight.connectionAirport.airportName.toLowerCase().includes(term) ||
+			flight.connectionAirport.airportCode.toLowerCase().includes(term) ||
+			flight.connectionAirport.countryCode.toLowerCase().includes(term)
+		);
 	});
 </script>
 
-<div class="flex flex-col items-center text-center py-4">
-	<p class="text-lg font-semibold">Todays Hamburg airport (HAM) connections</p>
-	<p>Connections: {connectionsCount}, Flights: {flightsCount}</p>
-	<p class="text-sm text-gray-400">Updated at: {importedAt}</p>
+<div class="flex flex-col items-center text-center py-6 space-y-1">
+	<h2 class="text-xl font-bold">
+		Hamburg Airport (HAM) flights — {formatDate(importedAt)}
+	</h2>
+	<p class="text-base">Total connections: {connectionsCount}, Total flights: {flightsCount}</p>
+	<p class="text-xs text-gray-400">Last updated: {importedAt}</p>
 </div>
 
-<div class="flex justify-center relative">
-	<div
-		class="w-full max-w-7xl h-[90vh] rounded-2xl shadow-xl bg-base-400 p-4 bg-primary relative overflow-hidden"
-	>
-		<div bind:this={globeElement} id="helloWorld" class="w-full h-full"></div>
+<!-- Toggle Tabs -->
+<div class="flex flex-col items-center pb-6 space-y-3">
+	<div class="tabs tabs-boxed">
+		<button
+			type="button"
+			class="tab {currentTab === FlightType.ARRIVAL_HAM ? 'tab-active' : ''}"
+			on:click={() => (currentTab = FlightType.ARRIVAL_HAM)}
+		>
+			🛬 Arrivals ({arrivalFlights.length})
+		</button>
+		<button
+			type="button"
+			class="tab {currentTab === FlightType.DEPARTURE_HAM ? 'tab-active' : ''}"
+			on:click={() => (currentTab = FlightType.DEPARTURE_HAM)}
+		>
+			🛫 Departures ({departureFlights.length})
+		</button>
+	</div>
 
-		<!-- Hover / selected overlay -->
-		{#if selectedArc || hoveredArc}
-			<div
-				class="absolute top-6 right-6 p-3 bg-white bg-opacity-90 rounded-lg shadow-lg text-sm z-50 max-w-[30%]"
-			>
-				<p>
-					<strong
-						>{(selectedArc || hoveredArc).startName} → {(selectedArc || hoveredArc).endName}</strong
-					>
-				</p>
-				<p>Flights: {(selectedArc || hoveredArc).flightCount}</p>
-				<p>Distance: {(selectedArc || hoveredArc).distance} km</p>
-				{#if selectedArc}
-					<button
-						class="mt-2 px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600"
-						on:click={clearSelection}
-					>
-						Clear Selection
-					</button>
-				{/if}
-			</div>
-		{/if}
+	<!-- Search input -->
+	<input
+		type="text"
+		placeholder="Search flights (number, airline, airport...)"
+		bind:value={searchTerm}
+		class="input input-bordered w-full max-w-md"
+	/>
+</div>
+
+<!-- Flights Table -->
+<div class="w-full flex justify-center">
+	<div class="overflow-x-auto max-w-6xl w-full max-h-[70vh] overflow-y-auto">
+		<table class="table table-zebra table-xs table-pin-rows w-full">
+			<thead class="bg-base-200">
+				<tr>
+					<th class="sticky top-0 z-10">Planned Time</th>
+					<th class="sticky top-0 z-10">Flight #</th>
+					<th class="sticky top-0 z-10">Airline</th>
+					<th class="sticky top-0 z-10">Airport Name</th>
+					<th class="sticky top-0 z-10">Airport Code</th>
+					<th class="sticky top-0 z-10">Country</th>
+				</tr>
+			</thead>
+			<tbody>
+				{#each filteredFlights as flight}
+					<tr class="hover:bg-gray-200 transition-colors">
+						<td>{formatPlannedTime(flight.plannedTime)}</td>
+						<td>{flight.flightNumber}</td>
+						<td>{flight.airlineName}</td>
+						<td>{flight.connectionAirport.airportName}</td>
+						<td>{flight.connectionAirport.airportCode}</td>
+						<td>{flight.connectionAirport.countryCode}</td>
+					</tr>
+				{:else}
+					<tr>
+						<td colspan="6" class="text-center text-gray-500"> No flights match your search </td>
+					</tr>
+				{/each}
+			</tbody>
+		</table>
 	</div>
 </div>

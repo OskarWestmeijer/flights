@@ -5,7 +5,16 @@ const config: PlaywrightTestConfig = {
 		command: 'npm run build && npm run preview',
 		port: 4173
 	},
-	testDir: 'e2e'
+	testDir: 'e2e',
+	projects: [
+		{
+			name: 'chromium',
+			use: {
+				browserName: 'chromium',
+				headless: true // optional
+			}
+		}
+	]
 };
 
 export default config;

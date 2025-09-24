@@ -69,30 +69,37 @@ internal object FlightsImportService {
     private fun aggregateDepartingFlights(departingFlights: List<DepartingFlight>): Map<AirportCode, List<Flight>> {
         return departingFlights
             .groupBy { AirportCode(it.destinationAirport3LCode) }
-            .mapValues { (_, flights) ->
-                flights.map { df ->
-                    Flight(
-                        flightType = FlightType.DEPARTURE_HAM,
-                        flightNumber = df.flightNumber,
-                        airlineName = df.airlineName,
-                        plannedTime = df.plannedDepartureTime
-                    )
+            .mapValues { (airportCode, flights) ->
+                val airport = AirportService.getAirport(airportCode.code)
+                flights.mapNotNull { df ->
+                    airport?.let {
+                        Flight(
+                            flightType = FlightType.DEPARTURE_HAM,
+                            flightNumber = df.flightNumber,
+                            airlineName = df.airlineName,
+                            plannedTime = df.plannedDepartureTime,
+                            connectionAirport = it
+                        )
+                    }
                 }
             }
     }
 
-
     private fun aggregateArrivingFlights(arrivingFlights: List<ArrivingFlight>): Map<AirportCode, List<Flight>> {
         return arrivingFlights
             .groupBy { AirportCode(it.originAirport3LCode) }
-            .mapValues { (_, flights) ->
-                flights.map { af ->
-                    Flight(
-                        flightType = FlightType.ARRIVAL_HAM,
-                        flightNumber = af.flightNumber,
-                        airlineName = af.airlineName,
-                        plannedTime = af.plannedArrivalTime
-                    )
+            .mapValues { (airportCode, flights) ->
+                val airport = AirportService.getAirport(airportCode.code)
+                flights.mapNotNull { af ->
+                    airport?.let {
+                        Flight(
+                            flightType = FlightType.ARRIVAL_HAM,
+                            flightNumber = af.flightNumber,
+                            airlineName = af.airlineName,
+                            plannedTime = af.plannedArrivalTime,
+                            connectionAirport = it
+                        )
+                    }
                 }
             }
     }

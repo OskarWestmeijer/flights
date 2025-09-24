@@ -6,3 +6,24 @@ export function log(msg: string, context?: string) {
 export function createLogger(context: string) {
 	return (msg: string) => log(msg, context);
 }
+
+export function formatPlannedTime(time: string): string {
+	const sanitized = time.replace(/\[.*\]/, '');
+	const date = new Date(sanitized);
+
+	return new Intl.DateTimeFormat('de-DE', {
+		hour: '2-digit',
+		minute: '2-digit'
+	}).format(date);
+}
+
+export function formatDate(time: string): string {
+	const sanitized = time.replace(/\[.*\]/, '');
+	const date = new Date(sanitized);
+
+	return new Intl.DateTimeFormat('de-DE', {
+		day: '2-digit',
+		month: '2-digit',
+		year: '2-digit'
+	}).format(date);
+}
