@@ -32,6 +32,7 @@ runs:
 
     - name: Upload test HTML report
       uses: actions/upload-artifact@v4
+      if: ${{ !cancelled() }}
       with:
         name: kotlin-test-report
         path: build/reports/tests
