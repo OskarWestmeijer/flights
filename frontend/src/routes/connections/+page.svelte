@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import type { Connection, ConnectionsResponse } from '$lib/types';
-	import { createLogger } from '$lib/logger';
+	import { createLogger, formatPlannedTime, formatDate } from '$lib/logger';
 
 	const log = createLogger('table.page');
 
@@ -15,26 +15,14 @@
 	const connectionsCount = connections.length;
 
 	let expandedRow: string | null = null; // track which row is expanded
-
-	function formatPlannedTime(time: string): string {
-		// Remove the zone ID "[Europe/Berlin]" because JS Date can't parse it
-		const sanitized = time.replace(/\[.*\]/, '');
-		const date = new Date(sanitized);
-
-		return new Intl.DateTimeFormat('de-DE', {
-			hour: '2-digit',
-			minute: '2-digit',
-			day: '2-digit',
-			month: '2-digit',
-			year: '2-digit'
-		}).format(date);
-	}
 </script>
 
-<div class="flex flex-col items-center text-center py-4">
-	<p class="text-lg font-semibold">Todays Hamburg airport (HAM) connections</p>
-	<p>Connections: {connectionsCount}, Flights: {flightsCount}</p>
-	<p class="text-sm text-gray-400">Updated at: {importedAt}</p>
+<div class="flex flex-col items-center text-center py-6 space-y-1">
+	<h2 class="text-xl font-bold">
+		Hamburg Airport (HAM) connections — {formatDate(importedAt)}
+	</h2>
+	<p class="text-base">Total connections: {connectionsCount}, Total flights: {flightsCount}</p>
+	<p class="text-xs text-gray-400">Last updated: {importedAt}</p>
 </div>
 
 <div class="w-full flex justify-center pb-8">

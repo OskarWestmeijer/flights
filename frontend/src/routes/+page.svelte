@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
 	import type { ArcData, LabelData, GlobeDataTuple } from '$lib/types';
-	import { createLogger } from '$lib/logger';
+	import { createLogger, formatDate } from '$lib/logger';
 
 	const log = createLogger('globe.page');
 
@@ -99,10 +99,12 @@
 	});
 </script>
 
-<div class="flex flex-col items-center text-center py-4">
-	<p class="text-lg font-semibold">Todays Hamburg airport (HAM) connections</p>
-	<p>Connections: {connectionsCount}, Flights: {flightsCount}</p>
-	<p class="text-sm text-gray-400">Updated at: {importedAt}</p>
+<div class="flex flex-col items-center text-center py-6 space-y-1">
+	<h2 class="text-xl font-bold">
+		Hamburg Airport (HAM) distances — {formatDate(importedAt)}
+	</h2>
+	<p class="text-base">Total connections: {connectionsCount}, Total flights: {flightsCount}</p>
+	<p class="text-xs text-gray-400">Last updated: {importedAt}</p>
 </div>
 
 <div class="flex justify-center relative">
