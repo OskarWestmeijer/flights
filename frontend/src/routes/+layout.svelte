@@ -7,8 +7,12 @@
 	<link rel="icon" href="/favicon.ico" />
 	<title>Flights</title>
 
-	<!-- Browser preload hints -->
-	<link rel="preload" as="image" href="/night-sky.png" crossorigin="anonymous" />
+	<link
+		rel="prefetch"
+		as="fetch"
+		href="/ne_110m_admin_0_countries.geojson"
+		crossorigin="anonymous"
+	/>
 </svelte:head>
 
 <div class="flex flex-col min-h-screen bg-base-100">

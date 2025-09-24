@@ -25,8 +25,6 @@
 	let displayedArcs: ArcData[] = []; // arcs currently shown
 
 	function updateArcs(labelName: string | null) {
-		log('labelName: ' + labelName);
-
 		if (!labelName) {
 			displayedArcs = [];
 		} else {
@@ -36,29 +34,45 @@
 		}
 
 		if (globeInstance) globeInstance.arcsData(displayedArcs);
-
-		log('displayed arcs:', displayedArcs);
-	}
-
-	function clearSelection() {
-		selectedLabel = null;
-		hoveredLabel = null;
-		updateArcs(null);
-		if (globeInstance) globeInstance.labelsData(labelData);
 	}
 
 	onMount(async () => {
 		log('Mounting globe...');
-		const GlobeClass = (await import('globe.gl')).default;
 		const THREE = await import('https://esm.sh/three');
 
 		const countries: any[] = await fetch('/ne_110m_admin_0_countries.geojson')
 			.then((res) => res.json())
 			.then((data) => data.features);
 
-		globeInstance = new GlobeClass(globeElement, { waitForGlobeReady: false, animateIn: false })
-			.backgroundImageUrl('/night-sky.png')
+		// rings
+		const rings = [
+			{
+				lat: MAP_CENTER.lat,
+				lng: MAP_CENTER.lng,
+				maxR: 0.9, // max radius of ring
+				propagationSpeed: 0.25, // speed of expansion
+				repeatPeriod: 1500 // ms for pulsing loop
+			}
+		];
+
+		// material
+		const mat = new THREE.MeshPhongMaterial({
+			color: '#5DADE2',
+			shininess: 15,
+			specular: new THREE.Color('#888888'),
+			transparent: false,
+			opacity: 1
+		});
+
+		const GlobeClass = (await import('globe.gl')).default;
+
+		globeInstance = new GlobeClass(globeElement, {
+			waitForGlobeReady: false,
+			animateIn: false
+		})
+			.backgroundColor('black')
 			.pointOfView(MAP_CENTER, 0.1)
+			.globeMaterial(mat)
 
 			.polygonsData(countries.filter((d) => d.properties.ISO_A2 !== 'AQ'))
 			.polygonCapColor(() => '#f5f5f5')
@@ -88,33 +102,9 @@
 				return 'darkblue';
 			})
 			.labelResolution(2)
-			.labelAltitude(0.01);
+			.labelAltitude(0.01)
 
-		globeInstance(globeElement);
-
-		// material
-		const mat = new THREE.MeshPhongMaterial({
-			color: '#5DADE2',
-			shininess: 15,
-			specular: new THREE.Color('#888888'),
-			transparent: false,
-			opacity: 1
-		});
-
-		globeInstance.globeMaterial(mat);
-
-		// rings
-		const rings = [
-			{
-				lat: MAP_CENTER.lat,
-				lng: MAP_CENTER.lng,
-				maxR: 0.9, // max radius of ring
-				propagationSpeed: 0.25, // speed of expansion
-				repeatPeriod: 1500 // ms for pulsing loop
-			}
-		];
-
-		globeInstance
+			// rings
 			.ringsData(rings)
 			.ringAltitude(0.008) // slightly above globe surface
 			.ringColor(() => '#f54242')
@@ -148,9 +138,15 @@
 
 	onDestroy(() => {
 		log('Destroying globe...');
-		if (resizeObserver) resizeObserver.disconnect();
-		if (globeInstance) globeInstance.renderer()?.dispose?.();
-		if (globeElement) globeElement.innerHTML = '';
+
+		if (resizeObserver) {
+			resizeObserver.disconnect();
+		}
+
+		if (globeInstance) {
+			globeInstance._destructor();
+		}
+
 		log('Globe destroyed.');
 	});
 </script>
