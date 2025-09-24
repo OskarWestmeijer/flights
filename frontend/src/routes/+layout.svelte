@@ -19,13 +19,14 @@
 			<div class="mobile-hide">
 				<a
 					href="https://flights.oskar-westmeijer.com"
-					class="btn btn-ghost rounded-lg text-xl font-bold">✈️ Flights</a
+					class="btn btn-ghost rounded-lg text-xl font-bold">✈️ HAM-airport</a
 				>
 			</div>
 		</div>
 		<div class="navbar-center">
 			<a href="/" class="btn btn-ghost text-xl">🌍 Globe</a>
-			<a href="/table" class="btn btn-ghost text-xl">📋 Table</a>
+			<a href="/table" class="btn btn-ghost text-xl">📋 Connections</a>
+			<a href="/flights" class="btn btn-ghost text-xl">✈️ Flights</a>
 		</div>
 		<div class="navbar-end">
 			<div class="mobile-hide">

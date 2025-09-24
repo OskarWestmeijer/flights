@@ -9,6 +9,7 @@ import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
+import io.ktor.util.logging.*
 import kotlinx.serialization.json.Json
 import westmeijer.oskar.Secrets
 import westmeijer.oskar.service.importer.model.ArrivingFlight
@@ -43,13 +44,17 @@ private val client = HttpClient(CIO) {
     }
 }
 
+
 internal object HamAirportApiClient {
+
+    private val log = KtorSimpleLogger("westmeijer.oskar.services.importer.HamAirportApiClient")
 
     suspend fun getDepartingFlights(): List<DepartingFlight> {
         val today = Instant.now().truncatedTo(ChronoUnit.DAYS)
         val tomorrow = Instant.now().plus(1, ChronoUnit.DAYS).truncatedTo(ChronoUnit.DAYS)
-
-        val response: HttpResponse = client.get("${Secrets.baseUrl}/v2/flights/departures?from=${today}&to=${tomorrow}") {
+        val requestString = "${Secrets.baseUrl}/v2/flights/departures?from=${today}&to=${tomorrow}"
+        log.info("Importing with url: $requestString")
+        val response: HttpResponse = client.get(requestString) {
             headers {
                 append("Ocp-Apim-Subscription-Key", Secrets.apiKey)
                 append("Content-Type", "application/json")

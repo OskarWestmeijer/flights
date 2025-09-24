@@ -9,10 +9,16 @@ export interface Airport {
 }
 
 export interface Flight {
-	flightType: string;
+	flightType: FlightType;
 	flightNumber: string;
 	airlineName: string;
 	plannedTime: string;
+	connectionAirport: Airport;
+}
+
+export enum FlightType {
+	ARRIVAL_HAM = 'ARRIVAL_HAM',
+	DEPARTURE_HAM = 'DEPARTURE_HAM'
 }
 
 export interface Connection {
