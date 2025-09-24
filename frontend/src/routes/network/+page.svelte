@@ -20,16 +20,19 @@
 
 	const MAP_CENTER = { lat: 53.6304, lng: 9.9882, altitude: 0.6 }; // HAM
 
-	let hoveredLabel: string | null = null;
-	let selectedLabel: string | null = null;
+	let hoveredLabel: LabelData | null = null;
+	let selectedLabel: LabelData | null = null;
 	let displayedArcs: ArcData[] = []; // arcs currently shown
 
-	function updateArcs(labelName: string | null) {
-		if (!labelName) {
+	function updateArcs(label: LabelData | null) {
+		if (!label) {
 			displayedArcs = [];
 		} else {
 			displayedArcs = globeData.filter(
-				(arc) => arc.startName === 'HAM' && arc.endName === labelName
+				(arc) =>
+					arc.connection.hamAirport.airportCode === 'HAM' &&
+					arc.connection.connectionAirport.airportCode ===
+						label.connection.connectionAirport.airportCode
 			);
 		}
 
@@ -90,15 +93,15 @@
 			.arcsTransitionDuration(0)
 
 			.labelsData(labelData)
-			.labelLat('lat')
-			.labelLng('lng')
-			.labelText('name')
-			.labelSize('size')
+			.labelLat((d: any) => d.connection.connectionAirport.latitude)
+			.labelLng((d: any) => d.connection.connectionAirport.longitude)
+			.labelText((d: any) => d.connection.connectionAirport.airportCode)
+			.labelSize(0.25)
 			.labelIncludeDot(true)
-			.labelDotRadius(0.5)
-			.labelColor((d) => {
-				if (selectedLabel === d.name) return '#f54242';
-				if (hoveredLabel === d.name) return 'darkred';
+			.labelDotRadius(0.3)
+			.labelColor((label: any) => {
+				if (selectedLabel === label) return '#f54242';
+				if (hoveredLabel === label) return 'darkred';
 				return 'darkblue';
 			})
 			.labelResolution(2)
@@ -115,13 +118,13 @@
 
 		// Hover and click for labels
 		globeInstance.onLabelHover((label: LabelData | null) => {
-			hoveredLabel = label ? label.name : null;
+			hoveredLabel = label ? label : null;
 			updateArcs(hoveredLabel || selectedLabel);
 			globeInstance.labelsData(labelData);
 		});
 
 		globeInstance.onLabelClick((label: LabelData) => {
-			selectedLabel = label.name;
+			selectedLabel = label;
 			updateArcs(selectedLabel);
 			globeInstance.labelsData(labelData);
 		});
@@ -165,13 +168,88 @@
 	>
 		<div bind:this={globeElement} class="w-full h-full" id="helloWorld"></div>
 
-		<!-- Upper-right info popup -->
 		{#if selectedLabel || hoveredLabel}
 			<div
-				class="absolute top-6 right-6 p-3 bg-white bg-opacity-90 rounded-lg shadow-lg text-sm z-50 max-w-[30%]"
+				class="absolute top-6 right-6 bg-white bg-opacity-95 rounded-xl shadow-2xl p-4 text-sm z-50 max-w-[32rem] max-h-[60vh] overflow-y-auto border border-gray-200 flex flex-col"
 			>
-				<p><strong>{selectedLabel || hoveredLabel}</strong></p>
-				<!-- You can add more info per label here, e.g., flight count -->
+				<!-- Header row: left and right blocks -->
+				<div class="flex items-start justify-between mb-3 gap-4">
+					<!-- Left block: airport codes + city/country -->
+					<div class="flex flex-col">
+						<div class="flex items-center gap-1 font-bold text-gray-800">
+							<span
+								>{selectedLabel?.connection.hamAirport.airportCode ||
+									hoveredLabel?.connection.hamAirport.airportCode}</span
+							>
+							<span>→</span>
+							<span
+								>{selectedLabel?.connection.connectionAirport.airportCode ||
+									hoveredLabel?.connection.connectionAirport.airportCode}</span
+							>
+						</div>
+						<div class="text-xs text-gray-500 mt-1">
+							{selectedLabel?.connection.connectionAirport.airportName ||
+								hoveredLabel?.connection.connectionAirport.airportName},
+							{selectedLabel?.connection.connectionAirport.countryCode ||
+								hoveredLabel?.connection.connectionAirport.countryCode}
+						</div>
+					</div>
+
+					<!-- Right block: distance + flights -->
+					<div class="flex flex-col text-xs text-gray-500 text-right gap-1">
+						<div>
+							<span class="font-semibold text-gray-800"
+								>{selectedLabel?.distance || hoveredLabel?.distance} km</span
+							>
+							<span class="ml-1">Distance</span>
+						</div>
+						<div>
+							<span class="font-semibold text-gray-800"
+								>{selectedLabel?.connection.totalFlightCount ||
+									hoveredLabel?.connection.totalFlightCount}</span
+							>
+							<span class="ml-1">Flights</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Airlines Table -->
+				<div class="overflow-x-auto mb-3">
+					<table class="table table-xs table-pin-rows w-full">
+						<thead>
+							<tr>
+								<th>Airline</th>
+								<th>Flights</th>
+							</tr>
+						</thead>
+						<tbody>
+							{#each Object.entries((selectedLabel?.connection.flights || hoveredLabel?.connection.flights).reduce( (acc, flight) => {
+										acc[flight.airlineName] = (acc[flight.airlineName] || 0) + 1;
+										return acc;
+									}, {} )).sort(([, aCount], [, bCount]) => bCount - aCount) as [airline, count]}
+								<tr>
+									<td>{airline}</td>
+									<td>{count}</td>
+								</tr>
+							{/each}
+						</tbody>
+					</table>
+				</div>
+
+				<!-- Clear Selection Button -->
+				<div class="mt-auto flex justify-end">
+					<button
+						class="btn rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-700"
+						on:click={() => {
+							selectedLabel = null;
+							hoveredLabel = null;
+							displayedArcs = [];
+							if (globeInstance) globeInstance.arcsData(displayedArcs).labelsData(labelData);
+						}}
+					>
+						Close
+					</button>
+				</div>
 			</div>
 		{/if}
 	</div>

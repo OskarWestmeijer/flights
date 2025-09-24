@@ -30,7 +30,7 @@ export async function fetchGlobeDataTuple(): Promise<GlobeDataTuple> {
 
 	log('API changed or first run — computing globe data');
 	const arcData = computeArcData(response);
-	const labelData = computeLabelData(arcData);
+	const labelData = computeLabelData(response);
 	const connectionsCount = response.connections.length;
 	const flightsCount = getFlightsCount(response.connections);
 
@@ -51,6 +51,20 @@ export async function fetchGlobeDataTuple(): Promise<GlobeDataTuple> {
 
 function computeArcData(response: ConnectionsResponse): ArcData[] {
 	return response.connections.map((connection: Connection) => {
+		return {
+			startLat: connection.hamAirport.latitude,
+			startLng: connection.hamAirport.longitude,
+			endLat: connection.connectionAirport.latitude,
+			endLng: connection.connectionAirport.longitude,
+			connection: connection,
+			stroke: 0.1,
+			color: [`rgba(255, 0, 0, 0.5)`, `rgba(255, 0, 0, 0.5)`]
+		};
+	});
+}
+
+function computeLabelData(response: ConnectionsResponse): LabelData[] {
+	return response.connections.map((connection: Connection) => {
 		const from: GeolibInputCoordinates = {
 			latitude: connection.hamAirport.latitude,
 			longitude: connection.hamAirport.longitude
@@ -62,49 +76,9 @@ function computeArcData(response: ConnectionsResponse): ArcData[] {
 
 		const distKm: number = Math.floor(convertDistance(getDistance(from, to), 'km'));
 
-		const tmpGlobeData: ArcData = {
-			startName: connection.hamAirport.airportCode,
-			startLat: connection.hamAirport.latitude,
-			startLng: connection.hamAirport.longitude,
-			endName: connection.connectionAirport.airportCode,
-			endLat: connection.connectionAirport.latitude,
-			endLng: connection.connectionAirport.longitude,
-			color: [`rgba(0, 255, 0, 0.35)`, `rgba(255, 0, 0, 0.4)`],
-			flightCount: connection.totalFlightCount,
-			stroke: 0,
-			distance: distKm
+		return {
+			distance: distKm,
+			connection: connection
 		};
-
-		return styleArc(tmpGlobeData);
 	});
-}
-
-function computeLabelData(arcData: ArcData[]): LabelData[] {
-	return arcData.map((d) => {
-		const tmpLabelData: LabelData = {
-			lat: d.endLat,
-			lng: d.endLng,
-			name: d.endName,
-			size: 1,
-			dotRadius: 0.2,
-			color: 'rgba(66, 135, 245, 1)',
-			resolution: 2,
-			flightCount: d.flightCount,
-			distance: d.distance
-		};
-		return styleLabel(tmpLabelData);
-	});
-}
-
-function styleArc(arc: ArcData): ArcData {
-	arc.stroke = 0.1;
-	arc.color = [`rgba(255, 0, 0, 0.5)`, `rgba(255, 0, 0, 0.5)`];
-	return arc;
-}
-
-function styleLabel(label: LabelData): LabelData {
-	label.dotRadius = 0.2;
-	label.size = 0.2;
-	label.color = 'rgba(66, 135, 245, 1)';
-	return label;
 }
