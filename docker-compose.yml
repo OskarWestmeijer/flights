@@ -1,6 +1,6 @@
 services:
   ham-api:
-    image: wiremock/wiremock:3.3.1
+    image: wiremock/wiremock:3.13.1
     ports:
       - "9000:8080"
     volumes:
