@@ -18,72 +18,128 @@
 	const connectionsCount: number = globeDataTuple.connectionsCount;
 	const flightsCount: number = globeDataTuple.flightsCount;
 
-	const MAP_CENTER = { lat: 44.787197, lng: 20.457273, altitude: 0.9 };
+	const MAP_CENTER = { lat: 53.6304, lng: 9.9882, altitude: 0.6 }; // HAM
 
-	let hoveredArc: ArcData | null = null;
-	let selectedArc: ArcData | null = null;
+	let hoveredLabel: string | null = null;
+	let selectedLabel: string | null = null;
+	let displayedArcs: ArcData[] = []; // arcs currently shown
+
+	function updateArcs(labelName: string | null) {
+		log('labelName: ' + labelName);
+
+		if (!labelName) {
+			displayedArcs = [];
+		} else {
+			displayedArcs = globeData.filter(
+				(arc) => arc.startName === 'HAM' && arc.endName === labelName
+			);
+		}
+
+		if (globeInstance) globeInstance.arcsData(displayedArcs);
+
+		log('displayed arcs:', displayedArcs);
+	}
 
 	function clearSelection() {
-		selectedArc = null;
-		hoveredArc = null;
-		if (globeInstance) globeInstance.arcsData(globeData); // redraw arcs
+		selectedLabel = null;
+		hoveredLabel = null;
+		updateArcs(null);
+		if (globeInstance) globeInstance.labelsData(labelData);
 	}
 
 	onMount(async () => {
 		log('Mounting globe...');
-
 		const GlobeClass = (await import('globe.gl')).default;
+		const THREE = await import('https://esm.sh/three');
 
-		globeInstance = new GlobeClass(globeElement, {
-			waitForGlobeReady: false,
-			animateIn: false
-		})
-			.globeImageUrl('earth-blue-marble.jpg')
-			.backgroundImageUrl('night-sky.png')
+		const countries: any[] = await fetch('/ne_110m_admin_0_countries.geojson')
+			.then((res) => res.json())
+			.then((data) => data.features);
+
+		globeInstance = new GlobeClass(globeElement, { waitForGlobeReady: false, animateIn: false })
+			.backgroundImageUrl('')
 			.pointOfView(MAP_CENTER, 0.1)
-			.arcsData(globeData)
-			.arcAltitude(0)
-			.arcStroke((d) => {
-				if (selectedArc) return d === selectedArc ? 0.5 : 0.1; // thick selected, slim others
-				if (hoveredArc) return d === hoveredArc ? 0.5 : 0.1; // highlight hover
-				return d.stroke;
-			})
-			.arcColor((d) => {
-				if (selectedArc) return d === selectedArc ? d.color : '#888888';
-				if (hoveredArc) return d === hoveredArc ? d.color : '#888888';
-				return d.color;
-			})
-			.arcsTransitionDuration(0) // instant update, no animation
-			.arcLabel(
-				(arc) =>
-					`${arc.startName} → ${arc.endName}<br>Flights: ${arc.flightCount}<br>Distance: ${arc.distance} km`
-			)
+
+			.polygonsData(countries.filter((d) => d.properties.ISO_A2 !== 'AQ'))
+			.polygonCapColor(() => '#f5f5f5')
+			.polygonSideColor(() => '#c8c8c8')
+			.polygonStrokeColor(() => '#aaa')
+			.polygonAltitude(0.007)
+			.polygonsTransitionDuration(0)
+
+			.arcsData(displayedArcs) // initially empty
+			.arcAltitude(0.05)
+			.arcStartAltitude(0.008)
+			.arcEndAltitude(0.008)
+			.arcColor(() => 'red')
+			.arcStroke(0.1)
+			.arcsTransitionDuration(0)
+
 			.labelsData(labelData)
 			.labelLat('lat')
 			.labelLng('lng')
 			.labelText('name')
 			.labelSize('size')
-			.labelDotRadius('dotRadius')
-			.labelColor('color')
-			.labelResolution(2);
+			.labelIncludeDot(true)
+			.labelDotRadius(0.5)
+			.labelColor((d) => {
+				if (selectedLabel === d.name) return '#f54242';
+				if (hoveredLabel === d.name) return 'darkred';
+				return 'darkblue';
+			})
+			.labelResolution(2)
+			.labelAltitude(0.01);
 
 		globeInstance(globeElement);
 
-		globeInstance.onArcHover((arc: ArcData | null) => {
-			if (!selectedArc) hoveredArc = arc;
-			globeInstance.arcsData(globeData);
+		// material
+		const mat = new THREE.MeshPhongMaterial({
+			color: '#5DADE2',
+			shininess: 15,
+			specular: new THREE.Color('#888888'),
+			transparent: false,
+			opacity: 1
 		});
 
-		globeInstance.onArcClick((arc: ArcData) => {
-			selectedArc = arc;
-			hoveredArc = null;
-			globeInstance.arcsData(globeData);
+		globeInstance.globeMaterial(mat);
+
+		// rings
+		const rings = [
+			{
+				lat: MAP_CENTER.lat,
+				lng: MAP_CENTER.lng,
+				maxR: 0.9, // max radius of ring
+				propagationSpeed: 0.25, // speed of expansion
+				repeatPeriod: 1500 // ms for pulsing loop
+			}
+		];
+
+		globeInstance
+			.ringsData(rings)
+			.ringAltitude(0.02) // slightly above globe surface
+			.ringColor(() => '#f54242')
+			.ringResolution(100)
+			.ringMaxRadius('maxR')
+			.ringPropagationSpeed('propagationSpeed')
+			.ringRepeatPeriod('repeatPeriod');
+
+		// Hover and click for labels
+		globeInstance.onLabelHover((label: LabelData | null) => {
+			hoveredLabel = label ? label.name : null;
+			updateArcs(hoveredLabel || selectedLabel);
+			globeInstance.labelsData(labelData);
 		});
 
+		globeInstance.onLabelClick((label: LabelData) => {
+			selectedLabel = label.name;
+			updateArcs(selectedLabel);
+			globeInstance.labelsData(labelData);
+		});
+
+		// resize
 		resizeObserver = new ResizeObserver(() => {
 			globeInstance.width(globeElement.clientWidth);
 			globeInstance.height(globeElement.clientHeight);
-			log('Resizing globe.');
 		});
 		resizeObserver.observe(globeElement);
 
@@ -109,30 +165,17 @@
 
 <div class="flex justify-center relative">
 	<div
-		class="w-full max-w-7xl h-[90vh] rounded-2xl shadow-xl bg-base-400 p-4 bg-primary relative overflow-hidden"
+		class="w-full max-w-7xl h-[90vh] rounded-2xl shadow-xl bg-white p-4 relative overflow-hidden"
 	>
-		<div bind:this={globeElement} id="helloWorld" class="w-full h-full"></div>
+		<div bind:this={globeElement} class="w-full h-full"></div>
 
-		<!-- Hover / selected overlay -->
-		{#if selectedArc || hoveredArc}
+		<!-- Upper-right info popup -->
+		{#if selectedLabel || hoveredLabel}
 			<div
 				class="absolute top-6 right-6 p-3 bg-white bg-opacity-90 rounded-lg shadow-lg text-sm z-50 max-w-[30%]"
 			>
-				<p>
-					<strong
-						>{(selectedArc || hoveredArc).startName} → {(selectedArc || hoveredArc).endName}</strong
-					>
-				</p>
-				<p>Flights: {(selectedArc || hoveredArc).flightCount}</p>
-				<p>Distance: {(selectedArc || hoveredArc).distance} km</p>
-				{#if selectedArc}
-					<button
-						class="mt-2 px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600"
-						on:click={clearSelection}
-					>
-						Clear Selection
-					</button>
-				{/if}
+				<p><strong>{selectedLabel || hoveredLabel}</strong></p>
+				<!-- You can add more info per label here, e.g., flight count -->
 			</div>
 		{/if}
 	</div>
