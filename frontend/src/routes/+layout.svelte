@@ -5,8 +5,6 @@
 
 <svelte:head>
 	<link rel="icon" href="/favicon.ico" />
-	<title>Flights</title>
-
 	<link
 		rel="prefetch"
 		as="fetch"
@@ -94,9 +92,9 @@
 	</main>
 
 	<!-- Footer -->
-	<footer class="footer footer-center py-6">
-		<a href="https://oskar-westmeijer.com" class="btn btn-ghost text-xl">
-			Oskar Westmeijer 🐨 2025
+	<footer class="footer-center footer py-6">
+		<a href="https://oskar-westmeijer.com" class="text-base">
+			Created by Oskar Westmeijer 🐨 2025
 		</a>
 	</footer>
 </div>
