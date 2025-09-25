@@ -47,16 +47,17 @@
 	/>
 </div>
 
+<!-- connections table -->
 <div class="w-full flex justify-center pb-8">
-	<div class="overflow-x-auto max-w-5xl w-full">
-		<table class="table table-zebra w-full">
+	<div class="overflow-x-auto max-w-5xl w-full max-h-[80vh] overflow-y-auto">
+		<table class="table table-zebra table-sm table-pin-rows w-full">
 			<thead>
 				<tr>
 					<th></th>
 					<th>Connection airport</th>
-					<th>Airport code</th>
-					<th>Country Code</th>
-					<th>Total flights</th>
+					<th>Airport Code</th>
+					<th>Country</th>
+					<th>Flights</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -89,13 +90,13 @@
 									<table class="table table-xs table-pin-rows w-full">
 										<thead class="sticky top-0 z-20 bg-base-100">
 											<tr>
-												<th>Flight number</th>
+												<th>Flight #</th>
 												<th>Airline</th>
 												<th>Planned Time</th>
 											</tr>
 										</thead>
 										<tbody>
-											<tr class="bg-base-200 sticky top-[1.8rem] z-10">
+											<tr class="bg-base-200 sticky top-[1.6rem] z-10">
 												<td colspan="3" class="font-semibold text-sm">Departures 🛫</td>
 											</tr>
 											{#each route.flights
@@ -110,7 +111,7 @@
 												<tr><td colspan="3" class="text-gray-500">No departing flights</td></tr>
 											{/each}
 
-											<tr class="bg-base-200 sticky top-[1.8rem] z-10">
+											<tr class="bg-base-200 sticky top-[1.6rem] z-10">
 												<td colspan="3" class="font-semibold text-sm">Arrivals 🛬</td>
 											</tr>
 											{#each route.flights
