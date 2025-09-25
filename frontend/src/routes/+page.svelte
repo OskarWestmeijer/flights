@@ -75,8 +75,8 @@
 </div>
 
 <!-- Flights Table -->
-<div class="w-full flex justify-center">
-	<div class="overflow-x-auto max-w-6xl w-full max-h-[70vh] overflow-y-auto">
+<div class="w-full flex justify-center pb-8">
+	<div class="overflow-x-auto max-w-5xl w-full max-h-[80vh] overflow-y-auto">
 		<table class="table table-zebra table-xs table-pin-rows w-full">
 			<thead class="bg-base-200">
 				<tr>

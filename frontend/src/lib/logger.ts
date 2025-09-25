@@ -7,6 +7,12 @@ export function createLogger(context: string) {
 	return (msg: string) => log(msg, context);
 }
 
+/**
+ * Formats time using CET/CEST.
+ *
+ * @param time
+ * @returns
+ */
 export function formatPlannedTime(time: string): string {
 	const sanitized = time.replace(/\[.*\]/, '');
 	const date = new Date(sanitized);
@@ -17,6 +23,12 @@ export function formatPlannedTime(time: string): string {
 	}).format(date);
 }
 
+/**
+ * Formats time, keeping UTC.
+ *
+ * @param time
+ * @returns
+ */
 export function formatDate(time: string): string {
 	const sanitized = time.replace(/\[.*\]/, '');
 	const date = new Date(sanitized);
@@ -24,6 +36,7 @@ export function formatDate(time: string): string {
 	return new Intl.DateTimeFormat('de-DE', {
 		day: '2-digit',
 		month: '2-digit',
-		year: '2-digit'
+		year: '2-digit',
+		timeZone: 'UTC'
 	}).format(date);
 }

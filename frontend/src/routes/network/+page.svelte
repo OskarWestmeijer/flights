@@ -21,8 +21,9 @@
 	const MAP_CENTER = { lat: 53.6304, lng: 9.9882, altitude: 0.6 }; // HAM
 
 	let hoveredLabel: LabelData | null = null;
-	let selectedLabel: LabelData | null = null;
 	let displayedArcs: ArcData[] = []; // arcs currently shown
+	let selectedLabel: LabelData = labelData[0];
+	updateArcs(selectedLabel);
 
 	function updateArcs(label: LabelData | null) {
 		if (!label) {
@@ -162,9 +163,9 @@
 	<p class="text-xs text-gray-400">Last updated: {importedAt}</p>
 </div>
 
-<div class="flex justify-center relative">
+<div class="flex justify-center relative pb-8">
 	<div
-		class="w-full max-w-7xl h-[90vh] rounded-2xl shadow-xl bg-white p-4 relative overflow-hidden"
+		class="w-full max-w-6xl h-[90vh] rounded-2xl shadow-xl bg-white p-4 relative overflow-hidden"
 	>
 		<div bind:this={globeElement} class="w-full h-full" id="helloWorld"></div>
 
