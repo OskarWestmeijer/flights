@@ -23,7 +23,7 @@
 		"@sveltejs/adapter-node": "^5.3.2",
 		"@sveltejs/kit": "^2.43.5",
 		"@typescript-eslint/eslint-plugin": "^8.44.1",
-		"@typescript-eslint/parser": "^8.44.1",
+		"@typescript-eslint/parser": "^8.45.0",
 		"autoprefixer": "^10.4.21",
 		"daisyui": "^5.1.25",
 		"eslint": "^9.36.0",
