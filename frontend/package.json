@@ -18,7 +18,7 @@
 		"e2e": "playwright test"
 	},
 	"devDependencies": {
-		"@playwright/test": "^1.55.1",
+		"@playwright/test": "^1.56.0",
 		"@sveltejs/adapter-auto": "^6.1.1",
 		"@sveltejs/adapter-node": "^5.3.3",
 		"@sveltejs/kit": "^2.45.0",
