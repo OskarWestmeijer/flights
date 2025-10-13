@@ -46,6 +46,6 @@
 		"@tailwindcss/vite": "^4.1.14",
 		"cross-env": "^10.1.0",
 		"geolib": "^3.3.4",
-		"globe.gl": "^2.44.0"
+		"globe.gl": "^2.44.1"
 	}
 }
