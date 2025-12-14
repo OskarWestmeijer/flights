@@ -5,6 +5,11 @@ plugins {
     id("org.jetbrains.kotlinx.kover") version "0.9.4"
 }
 
+kotlin {
+    // TODO 14.12.25: "Kotlin does not yet support 25 JDK target, falling back to Kotlin JVM_24 JVM target"
+    jvmToolchain(24)
+}
+
 group = "westmeijer.oskar"
 version = "1.0.0"
 
