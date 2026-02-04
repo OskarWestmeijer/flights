@@ -1,6 +1,5 @@
 FROM node:24.12.0-alpine3.23
 
-
 LABEL Developers="Oskar Westmeijer"
 
 WORKDIR /app
@@ -15,4 +14,4 @@ RUN rm -rf src/ static/
 
 USER node:node
 
-CMD ["node","build/index.js"]
+CMD sh -c 'echo "[INFO] Flights-UI Container started" && node build/index.js'
