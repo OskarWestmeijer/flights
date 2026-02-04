@@ -6,8 +6,7 @@ plugins {
 }
 
 kotlin {
-    // TODO 14.12.25: "Kotlin does not yet support 25 JDK target, falling back to Kotlin JVM_24 JVM target"
-    jvmToolchain(24)
+    jvmToolchain(25)
 }
 
 group = "westmeijer.oskar"
