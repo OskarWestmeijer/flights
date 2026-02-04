@@ -45,12 +45,17 @@ services:
     depends_on:
       - flights-api
     container_name: flights-ui
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "25m"
+        max-file: "1"
     deploy:
       resources:
         limits:
-          memory: 100m
+          memory: 200m
         reservations:
-          memory: 100m
+          memory: 200m
     expose:
       - "3000"
     restart: always
