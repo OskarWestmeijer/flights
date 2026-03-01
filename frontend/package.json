@@ -21,7 +21,7 @@
 		"@playwright/test": "^1.57.0",
 		"@sveltejs/adapter-auto": "^7.0.0",
 		"@sveltejs/adapter-node": "^5.4.0",
-		"@sveltejs/kit": "^2.49.2",
+		"@sveltejs/kit": "^2.53.4",
 		"@typescript-eslint/eslint-plugin": "^8.49.0",
 		"@typescript-eslint/parser": "^8.49.0",
 		"autoprefixer": "^10.4.22",
