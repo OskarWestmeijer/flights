@@ -10,6 +10,7 @@ env:
 jobs:
   backend-build-and-test:
     runs-on: ubuntu-latest
+    environment: oskar-westmeijer-environment
     steps:
       - uses: actions/checkout@v6
       - uses: ./.github/actions/backend-build-and-test
