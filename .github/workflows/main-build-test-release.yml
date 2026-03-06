@@ -56,7 +56,7 @@ jobs:
           path: build/libs
       - name: image tagging
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{ secrets.DOCKER_USERNAME }}/flights-api
           tags: |
@@ -84,7 +84,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: image tagging
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{ secrets.DOCKER_USERNAME }}/flights-ui
           tags: |
