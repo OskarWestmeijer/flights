@@ -4,7 +4,7 @@ services:
     ports:
       - "9000:8080"
     volumes:
-      - ./src/test/resources/wiremock:/home/wiremock
+      - ./src/test/resources/wiremock:/home/wiremock:Z
   flights-redis:
     image: redis:8.4.2-alpine3.22
     ports:
