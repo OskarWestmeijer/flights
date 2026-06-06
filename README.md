@@ -15,7 +15,8 @@ minutes.
 ```
 - Kotlin & Ktor
 - Redis
-- Typescript, Sveltekit & Playwright
+- Typescript, Sveltekit & Vite
+- Vitest & Playwright
 - GlobeJs, Tailwindcss & DaisyUI
 ```
 

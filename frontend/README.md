@@ -7,27 +7,42 @@ npm install
 npm run build
 
 # unit-test (vitest)
-npm run test
+npm run test:unit
 ```
 
-### e2e test
+### Playwright e2e test
 
+I develop on Linux Fedora, which does not natively support playwright. Use distrobox. 
+
+
+#### Prerequisites
 ```bash
-npx playwright install --with-deps
+sudo dnf install distrobox
+mkdir ~/distrobox
+distrobox create \
+--name ubuntu --image ubuntu:24.04 \
+--home ~/distrobox/ubuntu \
+--additional-packages "git vim nodejs npm"
+```
+
+#### Test execution
+```bash
 docker compose up -d
-npm run e2e
+distrobox enter ubuntu
+npx playwright install --with-deps
+npm run test:e2e
 ```
 
 ## local development
 
-### Wiremock Backend
+### using Wiremock Backend
 
 ```bash
 docker compose up -d
 npm run dev
 ```
 
-### Locally started Backend
+### using Locally started Backend
 
 ```bash
 # start the backend applications as described in the projects root README
