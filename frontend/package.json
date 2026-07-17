@@ -45,7 +45,7 @@
 	"type": "module",
 	"dependencies": {
 		"@tailwindcss/postcss": "^4.3.3",
-		"@tailwindcss/vite": "^4.3.2",
+		"@tailwindcss/vite": "^4.3.3",
 		"cross-env": "^10.1.0",
 		"geolib": "^3.3.14",
 		"globe.gl": "^2.46.1"
