@@ -36,6 +36,27 @@ docker compose up -d
 KTOR_DEVELOPMENT=true ./gradlew run
 ```
 
+## Deployment
+
+Deploys are automated: every push to `main` runs `main-build-test-release.yml`, and once both
+image-release jobs succeed its final `deploy` job calls the reusable `.github/workflows/deploy.yml`,
+which SSHes to the host, `cd /deployments/flights && git pull`, and runs `./deploy.sh <image_tag>`.
+
+The same workflow can be run manually (`workflow_dispatch`) to deploy or roll back by hand. Its
+`image_tag` input defaults to `latest`; any `sha-<full-commit-sha>` tag pushed by
+`docker/metadata-action` can be given instead (a bare 40-char SHA is normalised to `sha-<sha>` by
+`deploy.sh`). It needs `SSH_HOST`, `SSH_USER` and `SSH_PRIVATE_KEY` in the
+`oskar-westmeijer-environment` GitHub environment.
+
+Production runs from `cprod.yml` (distinct from the dev `docker-compose.yml`, which only provides
+Redis + Wiremock for local development). Both application images are pinned to
+`${FLIGHTS_IMAGE_TAG:-latest}` there, which `deploy.sh` exports — that indirection is what makes a
+tagged rollback possible, so keep the images referencing the variable rather than a hard-coded
+`:latest`. `deploy.sh` tears down and recreates the containers from the prebuilt
+`oskarwestmeijer/flights-api` / `flights-ui` images, restarts the `reverse-proxy` container
+(recreated containers get new IPs on the `proxy` network and the proxy only resolves upstreams at
+startup), then prunes the images the deploy orphaned.
+
 ## Architecture
 
 ![flights_c4_diagram.svg](docs/flights_c4_diagram.svg)

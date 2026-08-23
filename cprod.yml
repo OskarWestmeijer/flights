@@ -15,7 +15,7 @@ services:
       log_category: "infra"
 
   flights-api:
-    image: oskarwestmeijer/flights-api:latest
+    image: oskarwestmeijer/flights-api:${FLIGHTS_IMAGE_TAG:-latest}
     depends_on:
       - flights-redis
     container_name: flights-api
@@ -41,7 +41,7 @@ services:
       log_category: "application"
 
   flights-ui:
-    image: oskarwestmeijer/flights-ui:latest
+    image: oskarwestmeijer/flights-ui:${FLIGHTS_IMAGE_TAG:-latest}
     depends_on:
       - flights-api
     container_name: flights-ui
