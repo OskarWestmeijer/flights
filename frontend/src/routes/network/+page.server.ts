@@ -1,4 +1,4 @@
-import type { PageServerLoad } from '../$types';
+import type { PageServerLoad } from './$types';
 import { fetchGlobeDataTuple } from '$lib/globe-data';
 import { createLogger } from '$lib/logger';
 

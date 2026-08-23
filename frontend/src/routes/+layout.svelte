@@ -1,16 +1,15 @@
 <script lang="ts">
 	import '../app.css';
+	import { page } from '$app/state';
 	let { children } = $props();
+
+	// /network is a full-bleed globe; a footer under it would just add a scrollbar.
+	const fullBleed = $derived(page.url.pathname === '/network');
 </script>
 
 <svelte:head>
 	<link rel="icon" href="/favicon.ico" />
-	<link
-		rel="prefetch"
-		as="fetch"
-		href="/ne_110m_admin_0_countries.geojson"
-		crossorigin="anonymous"
-	/>
+	<link rel="prefetch" as="fetch" href="/ne_50m_countries.geojson" crossorigin="anonymous" />
 </svelte:head>
 
 <div class="flex flex-col min-h-screen bg-base-100">
@@ -21,7 +20,12 @@
 			<!-- hamburger: mobile only -->
 			<div class="dropdown lg:hidden">
 				<!-- using the same DaisyUI pattern you provided -->
-				<div tabindex="0" role="button" class="btn btn-ghost btn-circle" aria-label="Open menu">
+				<div
+					tabindex="0"
+					role="button"
+					class="btn btn-ghost btn-circle text-white hover:text-black"
+					aria-label="Open menu"
+				>
 					☰
 				</div>
 				<ul
@@ -46,7 +50,8 @@
 			<div class="hidden lg:flex">
 				<a
 					href="https://flights.oskar-westmeijer.com"
-					class="btn btn-ghost rounded-lg text-xl font-bold">✈️ HAM-airport</a
+					class="btn btn-ghost rounded-lg text-xl font-bold text-white hover:text-black"
+					>✈️ HAM-airport</a
 				>
 			</div>
 		</div>
@@ -56,16 +61,18 @@
 			<!-- mobile: central HAM-airport -->
 			<a
 				href="https://flights.oskar-westmeijer.com"
-				class="btn btn-ghost rounded-lg text-xl font-bold lg:hidden"
+				class="btn btn-ghost rounded-lg text-xl font-bold text-white hover:text-black lg:hidden"
 			>
 				✈️ HAM-airport
 			</a>
 
 			<!-- desktop: original center nav links -->
 			<div class="hidden lg:flex gap-2">
-				<a href="/" class="btn btn-ghost text-xl">🛫 Flights</a>
-				<a href="/connections" class="btn btn-ghost text-xl">↔️ Connections</a>
-				<a href="/network" class="btn btn-ghost text-xl">🌍 Network</a>
+				<a href="/" class="btn btn-ghost text-xl text-white hover:text-black">🛫 Flights</a>
+				<a href="/connections" class="btn btn-ghost text-xl text-white hover:text-black"
+					>↔️ Connections</a
+				>
+				<a href="/network" class="btn btn-ghost text-xl text-white hover:text-black">🌍 Network</a>
 			</div>
 		</div>
 
@@ -92,9 +99,11 @@
 	</main>
 
 	<!-- Footer -->
-	<footer class="footer-center footer py-6">
-		<a href="https://oskar-westmeijer.com" class="text-base">
-			Created by Oskar Westmeijer 🐨 2025
-		</a>
-	</footer>
+	{#if !fullBleed}
+		<footer class="footer-center footer py-6">
+			<a href="https://oskar-westmeijer.com" class="text-base">
+				Created by Oskar Westmeijer 🐨 2025
+			</a>
+		</footer>
+	{/if}
 </div>

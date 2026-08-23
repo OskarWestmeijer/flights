@@ -35,22 +35,23 @@ export interface ConnectionsResponse {
 	importedAt: string;
 }
 
-export interface ArcData {
-	startLat: string;
-	startLng: string;
-	endLat: string;
-	endLng: string;
-	connection: Connection;
-}
-
-export interface LabelData {
+export interface NetworkNode {
+	/** connectionAirport.airportCode — stable identity for hover/selection */
+	code: string;
+	/** Airport.latitude/longitude arrive from the API as strings; parsed once here */
+	lat: number;
+	lng: number;
+	/** great-circle distance from HAM in km */
 	distance: number;
+	/** hoisted from connection.totalFlightCount for arc/point scaling */
+	flightCount: number;
 	connection: Connection;
 }
 
 export interface GlobeDataTuple {
-	arcData: ArcData[];
-	labelData: LabelData[];
+	nodes: NetworkNode[];
+	hamLat: number;
+	hamLng: number;
 	connectionsCount: number;
 	flightsCount: number;
 	apiImportedAt: string;

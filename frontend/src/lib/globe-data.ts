@@ -1,17 +1,14 @@
 import { createLogger } from '$lib/logger';
 import { getDistance, convertDistance } from 'geolib';
 import type { GeolibInputCoordinates } from 'geolib/es/types';
-import type {
-	Connection,
-	ConnectionsResponse,
-	GlobeDataTuple,
-	ArcData,
-	LabelData
-} from '$lib/types';
+import type { Connection, ConnectionsResponse, GlobeDataTuple, NetworkNode } from '$lib/types';
 import { fetchConnections } from '$lib/api-connections-client';
 import { getFlightsCount } from './flights';
 
 const log = createLogger('globe-data');
+
+// fallback when the API returns no connections at all — Hamburg Airport
+const HAM_FALLBACK = { lat: 53.6304, lng: 9.9882 };
 
 // cache of computed globe data
 let cachedTuple: GlobeDataTuple | null = null;
@@ -29,16 +26,15 @@ export async function fetchGlobeDataTuple(): Promise<GlobeDataTuple> {
 	}
 
 	log('API changed or first run — computing globe data');
-	const arcData = computeArcData(response);
-	const labelData = computeLabelData(response);
-	const connectionsCount = response.connections.length;
-	const flightsCount = getFlightsCount(response.connections);
+	const nodes = computeNodes(response);
+	const ham = response.connections[0]?.hamAirport;
 
 	cachedTuple = {
-		arcData,
-		labelData,
-		connectionsCount,
-		flightsCount,
+		nodes,
+		hamLat: ham ? parseFloat(ham.latitude) : HAM_FALLBACK.lat,
+		hamLng: ham ? parseFloat(ham.longitude) : HAM_FALLBACK.lng,
+		connectionsCount: response.connections.length,
+		flightsCount: getFlightsCount(response.connections),
 		apiImportedAt: response.importedAt
 	};
 	lastApiResponse = response;
@@ -49,21 +45,13 @@ export async function fetchGlobeDataTuple(): Promise<GlobeDataTuple> {
 
 // --- helpers ---
 
-function computeArcData(response: ConnectionsResponse): ArcData[] {
-	return response.connections.map((connection: Connection) => {
-		return {
-			startLat: connection.hamAirport.latitude,
-			startLng: connection.hamAirport.longitude,
-			endLat: connection.connectionAirport.latitude,
-			endLng: connection.connectionAirport.longitude,
-			connection: connection,
-			stroke: 0.1,
-			color: [`rgba(255, 0, 0, 0.5)`, `rgba(255, 0, 0, 0.5)`]
-		};
-	});
-}
-
-function computeLabelData(response: ConnectionsResponse): LabelData[] {
+/**
+ * One node per connection, carrying everything the globe needs.
+ *
+ * The API returns latitude/longitude as strings ("53.6304"); they are parsed to numbers
+ * exactly once, here, so nothing downstream has to remember to.
+ */
+export function computeNodes(response: ConnectionsResponse): NetworkNode[] {
 	return response.connections.map((connection: Connection) => {
 		const from: GeolibInputCoordinates = {
 			latitude: connection.hamAirport.latitude,
@@ -74,10 +62,12 @@ function computeLabelData(response: ConnectionsResponse): LabelData[] {
 			longitude: connection.connectionAirport.longitude
 		};
 
-		const distKm: number = Math.floor(convertDistance(getDistance(from, to), 'km'));
-
 		return {
-			distance: distKm,
+			code: connection.connectionAirport.airportCode,
+			lat: parseFloat(connection.connectionAirport.latitude),
+			lng: parseFloat(connection.connectionAirport.longitude),
+			distance: Math.floor(convertDistance(getDistance(from, to), 'km')),
+			flightCount: connection.totalFlightCount,
 			connection: connection
 		};
 	});
