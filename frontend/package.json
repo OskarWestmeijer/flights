@@ -24,7 +24,7 @@
 		"@sveltejs/adapter-auto": "^7.0.1",
 		"@sveltejs/adapter-node": "^5.5.7",
 		"@sveltejs/kit": "^2.70.3",
-		"@types/three": "^0.184.1",
+		"@types/three": "^0.185.4",
 		"@typescript-eslint/eslint-plugin": "^8.67.0",
 		"@typescript-eslint/parser": "^8.64.0",
 		"autoprefixer": "^10.5.4",
