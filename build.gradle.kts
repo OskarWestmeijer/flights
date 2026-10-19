@@ -34,7 +34,7 @@ dependencies {
     implementation("org.apache.commons:commons-csv:1.14.1")
     implementation("ch.qos.logback:logback-classic:1.6.4")
 
-    implementation("io.lettuce:lettuce-core:7.8.0.RELEASE")
+    implementation("io.lettuce:lettuce-core:7.9.0.RELEASE")
 
     testImplementation("io.ktor:ktor-server-tests-jvm:2.3.13")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
